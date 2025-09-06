@@ -46,17 +46,17 @@ function RealEstateApp() {
         background: 'white', 
         boxShadow: '0 2px 20px rgba(0,0,0,0.08)', 
         zIndex: 1000,
-        padding: '1rem 0'
+        padding: isMobile ? '0.75rem 0' : '1rem 0'
       }}>
-        <div className="container">
+        <div className="container" style={{ padding: isMobile ? '0 1rem' : '0 2rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '1rem' }}>
               <img 
                 src="/logo.jpg" 
                 alt="Lodge Paradise" 
                 style={{ 
-                  height: '50px', 
-                  width: '50px', 
+                  height: isMobile ? '40px' : '50px', 
+                  width: isMobile ? '40px' : '50px', 
                   objectFit: 'cover',
                   borderRadius: '8px'
                 }} 
@@ -67,29 +67,42 @@ function RealEstateApp() {
                   background: 'linear-gradient(135deg, #D4AF37, #FFD700)', 
                   WebkitBackgroundClip: 'text', 
                   WebkitTextFillColor: 'transparent',
-                  fontSize: '1.75rem',
+                  fontSize: isMobile ? '1.25rem' : '1.75rem',
                   fontWeight: '700',
                   letterSpacing: '0.05em'
                 }}>
                   LODGES PARADISE
                 </h2>
-                <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Promotion Immobilière à La Réunion</span>
+                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Promotion Immobilière à La Réunion</span>}
               </div>
             </div>
-            <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <a href="#projet" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Le Projet</a>
-              <a href="#lodges" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Nos Lodges</a>
-              <a href="#prestations" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Prestations</a>
-              <a href="#galerie" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Galerie</a>
+            {!isMobile && (
+              <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                <a href="#projet" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Le Projet</a>
+                <a href="#lodges" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Nos Lodges</a>
+                <a href="#prestations" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Prestations</a>
+                <a href="#galerie" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Galerie</a>
+                <a href="#contact" style={{ 
+                  background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+                  color: '#1e1b4b',
+                  padding: '0.625rem 1.5rem',
+                  borderRadius: '0.5rem',
+                  textDecoration: 'none',
+                  fontWeight: '600'
+                }}>Contact</a>
+              </nav>
+            )}
+            {isMobile && (
               <a href="#contact" style={{ 
                 background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
                 color: '#1e1b4b',
-                padding: '0.625rem 1.5rem',
+                padding: '0.5rem 1rem',
                 borderRadius: '0.5rem',
                 textDecoration: 'none',
-                fontWeight: '600'
+                fontWeight: '600',
+                fontSize: '0.875rem'
               }}>Contact</a>
-            </nav>
+            )}
           </div>
         </div>
       </header>

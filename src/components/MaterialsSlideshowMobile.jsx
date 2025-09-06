@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const MaterialsSlideshowMobile = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(-1);
   
   const materials = [
     {
@@ -58,13 +58,13 @@ const MaterialsSlideshowMobile = () => {
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
               <button
                 onClick={() => handleAccordionClick(index)}
-                className="w-full p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50"
               >
                 <h3 className="text-base font-semibold text-gray-900 pr-2 flex-1">
                   {material.title}
                 </h3>
                 <svg
-                  className={`w-5 h-5 text-yellow-600 transition-transform ${
+                  className={`w-5 h-5 text-yellow-600 transition-transform duration-300 ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -77,27 +77,14 @@ const MaterialsSlideshowMobile = () => {
               
               {activeIndex === index && (
                 <div className="px-4 pb-4">
-                  {/* Image intégrée dans l'accordéon après le titre */}
-                  {index === 2 && (
-                    <img 
-                      src={material.image} 
-                      alt={material.title}
-                      className="w-full h-48 object-cover rounded-lg mb-3"
-                    />
-                  )}
-                  
+                  <img 
+                    src={material.image} 
+                    alt={material.title}
+                    className="w-full h-48 object-cover rounded-lg mb-3"
+                  />
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {material.description}
                   </p>
-                  
-                  {/* Image pour les autres éléments */}
-                  {index !== 2 && (
-                    <img 
-                      src={material.image} 
-                      alt={material.title}
-                      className="w-full h-48 object-cover rounded-lg mt-3"
-                    />
-                  )}
                 </div>
               )}
             </div>

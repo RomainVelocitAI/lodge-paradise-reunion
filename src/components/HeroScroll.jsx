@@ -1,16 +1,29 @@
 'use client';
 import { useScroll, useTransform, motion } from 'motion/react';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 const HeroSection = ({ scrollYProgress }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   
+  const headerHeight = isMobile ? '56px' : '82px';
+  
   return (
     <motion.section
-      style={{ scale }}
-      className='sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden'
+      style={{ scale, top: headerHeight, height: `calc(100vh - ${headerHeight})` }}
+      className='sticky flex flex-col items-center justify-center overflow-hidden'
     >
       {/* Background avec vidéo et overlay */}
       <div className="absolute inset-0">
@@ -243,14 +256,27 @@ const EnterpriseSection = ({ scrollYProgress }) => {
 };
 
 const HeroScroll = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start start', 'end end'],
   });
+  
+  const headerHeight = isMobile ? '56px' : '82px';
 
   return (
-    <main ref={container} className='relative h-[200vh]'>
+    <main ref={container} className='relative h-[200vh]' style={{ marginTop: headerHeight }}>
       <HeroSection scrollYProgress={scrollYProgress} />
       <EnterpriseSection scrollYProgress={scrollYProgress} />
     </main>
