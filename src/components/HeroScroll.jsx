@@ -24,8 +24,9 @@ const HeroSection = ({ scrollYProgress }) => {
     <motion.section
       style={{ 
         scale, 
-        top: headerHeight, 
-        height: `calc(100vh - ${headerHeight})`,
+        top: 0, 
+        marginTop: headerHeight,
+        height: '100vh',
         clipPath: 'inset(0 0 0 0)'
       }}
       className='sticky flex flex-col items-center justify-center overflow-hidden bg-gray-900'
@@ -285,12 +286,27 @@ const EnterpriseSection = ({ scrollYProgress }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="mt-8 mb-8"
+              className="mt-8 mb-8 grid grid-cols-2 gap-4"
             >
               <img 
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop" 
-                alt="Lodge Paradise Construction" 
-                className="w-full rounded-lg shadow-lg"
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=300&h=300&fit=crop" 
+                alt="Lodge Paradise 1" 
+                className="w-full h-32 object-cover rounded-lg shadow-lg"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=300&fit=crop" 
+                alt="Lodge Paradise 2" 
+                className="w-full h-32 object-cover rounded-lg shadow-lg"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=300&fit=crop" 
+                alt="Lodge Paradise 3" 
+                className="w-full h-32 object-cover rounded-lg shadow-lg"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=300&h=300&fit=crop" 
+                alt="Lodge Paradise 4" 
+                className="w-full h-32 object-cover rounded-lg shadow-lg"
               />
             </motion.div>
           )}
@@ -323,7 +339,6 @@ const HeroScroll = () => {
   return (
     <main ref={container} className='relative' style={{ 
       height: isMobile ? 'auto' : '200vh',
-      marginTop: headerHeight,
       minHeight: isMobile ? 'auto' : 'auto',
       overflow: isMobile ? 'visible' : 'hidden'
     }}>
