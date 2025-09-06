@@ -211,7 +211,7 @@ const MaterialsInteractive = () => {
       </div>
       
       {/* Custom animations */}
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes slideFadeIn {
           0% {
             opacity: 0;

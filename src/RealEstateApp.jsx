@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 import HeroScroll from './components/HeroScroll';
@@ -6,12 +6,26 @@ import MaterialsSlideshow from './components/MaterialsSlideshow';
 import LaReunion3D from './components/LaReunion3D';
 import ProjectCatalog from './components/ProjectCatalog';
 import MaterialsInteractive from './components/MaterialsInteractive';
+import MaterialsInteractiveMobile from './components/MaterialsInteractiveMobile';
 import DefiscalisationSection from './components/DefiscalisationSection';
 import TestimonialsSection from './components/TestimonialsSection';
+import TestimonialsSectionMobile from './components/TestimonialsSectionMobile';
 
 function RealEstateApp() {
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedZone, setSelectedZone] = useState('ouest');
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   const images = [
     { url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop", caption: "Piscine privée et terrasse" },
@@ -255,7 +269,7 @@ function RealEstateApp() {
 
 
       {/* Section Matériaux Interactifs */}
-      <MaterialsInteractive />
+      {isMobile ? <MaterialsInteractiveMobile /> : <MaterialsInteractive />}
 
       {/* Section Zones Géographiques avec Carte Interactive */}
       <section id="zones" className="section" style={{ padding: '5rem 0', background: '#f9fafb' }}>
@@ -510,7 +524,7 @@ function RealEstateApp() {
       <DefiscalisationSection />
 
       {/* Section Témoignages */}
-      <TestimonialsSection />
+      {isMobile ? <TestimonialsSectionMobile /> : <TestimonialsSection />}
 
       {/* Section Contact Immobilier */}
       <section id="contact" className="section" style={{ padding: '5rem 0', background: 'white' }}>

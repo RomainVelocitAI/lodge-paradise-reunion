@@ -43,6 +43,8 @@ export const CircularProjects = ({
   const [hoverPrev, setHoverPrev] = useState(false);
   const [hoverNext, setHoverNext] = useState(false);
   const [containerWidth, setContainerWidth] = useState(1200);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const imageContainerRef = useRef(null);
   const autoplayIntervalRef = useRef(null);
@@ -94,6 +96,31 @@ export const CircularProjects = ({
     setActiveIndex((prev) => (prev - 1 + projectsLength) % projectsLength);
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [projectsLength]);
+
+  // Touch handlers for mobile swipe
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+    
+    if (isLeftSwipe) {
+      handleNext();
+    }
+    if (isRightSwipe) {
+      handlePrev();
+    }
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   // Compute transforms for each image (always show 3: left, center, right)
   function getImageStyle(index) {
@@ -150,7 +177,13 @@ export const CircularProjects = ({
     <div className="testimonial-container">
       <div className="testimonial-grid">
         {/* Images */}
-        <div className="image-container" ref={imageContainerRef}>
+        <div 
+          className="image-container" 
+          ref={imageContainerRef}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           {projects.map((project, index) => (
             <img
               key={project.src}
@@ -250,7 +283,7 @@ export const CircularProjects = ({
           </div>
         </div>
       </div>
-      <style jsx>{`
+      <style jsx="true">{`
         .testimonial-container {
           width: 100%;
           max-width: 56rem;
