@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const MaterialsSlideshowMobile = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(-1);
   
   const materials = [
     {
@@ -41,30 +41,51 @@ const MaterialsSlideshowMobile = () => {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-b from-gray-50 to-white" style={{ minHeight: '400px' }}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <span className="text-yellow-600 font-semibold text-xs uppercase tracking-wider">NOTRE APPROCHE</span>
-          <h2 className="text-2xl font-bold mt-2 text-gray-900">
+    <section className="relative py-16 bg-gradient-to-b from-gray-50 to-white" style={{ 
+      minHeight: '500px',
+      marginTop: '2rem',
+      zIndex: 10,
+      position: 'relative'
+    }}>
+      <div className="container mx-auto px-4" style={{ maxWidth: '800px' }}>
+        <div className="text-center mb-10">
+          <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wider block mb-3">NOTRE APPROCHE</span>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Votre Investissement<br/>Clé en Main
           </h2>
-          <p className="text-sm text-gray-600 mt-3">
+          <p className="text-base text-gray-600 px-4">
             <strong>Lodge Paradise</strong> accompagne les investisseurs de A à Z avec notre partenaire <strong>Île en Rêve</strong>.
           </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {materials.map((material, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl" style={{
+              border: activeIndex === index ? '2px solid #F59E0B' : '2px solid transparent'
+            }}>
               <button
                 onClick={() => handleAccordionClick(index)}
-                className="w-full p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50"
+                className="w-full p-5 text-left flex items-center justify-between hover:bg-yellow-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-inset"
+                aria-expanded={activeIndex === index}
+                aria-controls={`content-${index}`}
               >
-                <h3 className="text-base font-semibold text-gray-900 pr-2 flex-1">
-                  {material.title}
-                </h3>
+                <div className="flex items-start gap-4 flex-1">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    {index + 1}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">
+                      {material.title}
+                    </h3>
+                    {activeIndex !== index && (
+                      <p className="text-sm text-gray-500 line-clamp-2">
+                        {material.description}
+                      </p>
+                    )}
+                  </div>
+                </div>
                 <svg
-                  className={`w-5 h-5 text-yellow-600 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-yellow-600 transition-transform duration-300 flex-shrink-0 ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -75,18 +96,32 @@ const MaterialsSlideshowMobile = () => {
                 </svg>
               </button>
               
-              {activeIndex === index && (
-                <div className="px-4 pb-4">
+              <div 
+                id={`content-${index}`}
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  activeIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className="px-5 pb-5">
                   <img 
                     src={material.image} 
                     alt={material.title}
-                    className="w-full h-48 object-cover rounded-lg mb-3"
+                    className="w-full h-56 object-cover rounded-lg mb-4 shadow-md"
+                    loading="lazy"
                   />
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-base text-gray-700 leading-relaxed">
                     {material.description}
                   </p>
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <button className="text-yellow-600 font-semibold text-sm hover:text-yellow-700 transition-colors flex items-center gap-2">
+                      En savoir plus
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

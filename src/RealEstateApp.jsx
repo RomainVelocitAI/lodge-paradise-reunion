@@ -275,8 +275,14 @@ function RealEstateApp() {
       </section>
       )}
 
-      {/* Section avec Slideshow animé des Matériaux */}
-      {isMobile ? <MaterialsSlideshowMobile /> : <MaterialsSlideshow />}
+      {/* Section avec Slideshow animé des Matériaux - Notre Approche */}
+      <div style={{ 
+        position: 'relative', 
+        zIndex: 20,
+        marginTop: isMobile ? '3rem' : '0'
+      }}>
+        {isMobile ? <MaterialsSlideshowMobile /> : <MaterialsSlideshow />}
+      </div>
 
       {/* Section Notre Catalogue */}
       <ProjectCatalog />

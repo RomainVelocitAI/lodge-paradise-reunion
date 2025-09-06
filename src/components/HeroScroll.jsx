@@ -57,18 +57,23 @@ const HeroSection = ({ scrollYProgress }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-7xl md:text-8xl lg:text-9xl font-bold mb-6 leading-[0.9] tracking-tighter"
+          className={`font-bold mb-6 leading-[0.9] tracking-tighter ${
+            isMobile ? 'text-4xl' : 'text-7xl md:text-8xl lg:text-9xl'
+          }`}
         >
           <span style={{
             background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
             WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
+            WebkitTextFillColor: 'transparent',
+            display: 'inline'
           }}>
-            L'Immobilier
+            Votre Paradis
           </span>
           <br />
-          <span className="text-5xl md:text-6xl lg:text-7xl font-light text-white opacity-90">
-            Qui Rapporte à La Réunion
+          <span className={`font-light text-white opacity-90 ${
+            isMobile ? 'text-3xl' : 'text-5xl md:text-6xl lg:text-7xl'
+          }`}>
+            Tropical à La Réunion
           </span>
         </motion.h1>
         
@@ -149,10 +154,21 @@ const EnterpriseSection = ({ scrollYProgress }) => {
     "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop"
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <motion.section
       style={{ scale, rotate }}
-      className='relative min-h-screen bg-gradient-to-b from-gray-50 to-white py-20'
+      className={`relative bg-gradient-to-b from-gray-50 to-white ${isMobile ? 'py-12' : 'py-20 min-h-screen'}`}
     >
       <div className="container mx-auto px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -276,7 +292,10 @@ const HeroScroll = () => {
   const headerHeight = isMobile ? '80px' : '100px';
 
   return (
-    <main ref={container} className='relative h-[200vh]' style={{ marginTop: headerHeight }}>
+    <main ref={container} className='relative' style={{ 
+      height: isMobile ? '150vh' : '200vh',
+      marginTop: headerHeight 
+    }}>
       <HeroSection scrollYProgress={scrollYProgress} />
       <EnterpriseSection scrollYProgress={scrollYProgress} />
     </main>
