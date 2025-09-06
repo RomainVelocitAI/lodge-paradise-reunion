@@ -22,17 +22,23 @@ const HeroSection = ({ scrollYProgress }) => {
   
   return (
     <motion.section
-      style={{ scale, top: headerHeight, height: `calc(100vh - ${headerHeight})` }}
-      className='sticky flex flex-col items-center justify-center overflow-hidden'
+      style={{ 
+        scale, 
+        top: headerHeight, 
+        height: `calc(100vh - ${headerHeight})`,
+        clipPath: 'inset(0 0 0 0)'
+      }}
+      className='sticky flex flex-col items-center justify-center overflow-hidden bg-gray-900'
     >
       {/* Background avec vidéo et overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <video 
           autoPlay 
           muted 
           loop 
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: 'center' }}
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
@@ -167,7 +173,13 @@ const EnterpriseSection = ({ scrollYProgress }) => {
 
   return (
     <motion.section
-      style={{ scale, rotate }}
+      style={{ 
+        scale, 
+        rotate,
+        marginTop: '2rem',
+        position: 'relative',
+        zIndex: 10
+      }}
       className={`relative bg-gradient-to-b from-gray-50 to-white ${isMobile ? 'py-12' : 'py-20 min-h-screen'}`}
     >
       <div className="container mx-auto px-8">
@@ -292,9 +304,10 @@ const HeroScroll = () => {
   const headerHeight = isMobile ? '80px' : '100px';
 
   return (
-    <main ref={container} className='relative' style={{ 
+    <main ref={container} className='relative overflow-hidden' style={{ 
       height: isMobile ? '150vh' : '200vh',
-      marginTop: headerHeight 
+      marginTop: headerHeight,
+      background: '#f9fafb'
     }}>
       <HeroSection scrollYProgress={scrollYProgress} />
       <EnterpriseSection scrollYProgress={scrollYProgress} />
