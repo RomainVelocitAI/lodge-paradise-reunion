@@ -4,7 +4,7 @@ import './App.css';
 import HeroScroll from './components/HeroScroll';
 import MaterialsSlideshow from './components/MaterialsSlideshow';
 import MaterialsSlideshowMobile from './components/MaterialsSlideshowMobile';
-import LaReunion3D from './components/LaReunion3D';
+import LaReunion3DOptimized from './components/LaReunion3DOptimized';
 import ProjectCatalog from './components/ProjectCatalog';
 import MaterialsInteractive from './components/MaterialsInteractive';
 import MaterialsInteractiveMobile from './components/MaterialsInteractiveMobile';
@@ -353,7 +353,7 @@ function RealEstateApp() {
               flex: window.innerWidth > 768 ? '1.2' : 'none',
               width: '100%'
             }}>
-              <LaReunion3D onZoneSelect={setSelectedZone} />
+              <LaReunion3DOptimized onZoneSelect={setSelectedZone} />
             </div>
           </div>
           
