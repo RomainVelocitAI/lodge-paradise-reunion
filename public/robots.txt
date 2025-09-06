@@ -1,0 +1,26 @@
+# Robots.txt pour Lodges Paradise
+# https://lodgesparadise.com/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://lodgesparadise.com/sitemap.xml
+
+# Crawl-delay pour les bots respectueux
+User-agent: *
+Crawl-delay: 1
+
+# Autorisation spécifique pour Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Autorisation spécifique pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0

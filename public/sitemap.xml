@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://lodgesparadise.com/</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://lodgesparadise.com/materials-6-excellence-qualite.webp</image:loc>
+      <image:title>Excellence et Qualité - Lodges Paradise</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lodgesparadise.com/nos-projets</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lodgesparadise.com/catalogue-lodges</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lodgesparadise.com/materiaux-nobles</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://lodgesparadise.com/materials-1-bois-exotiques.webp</image:loc>
+      <image:title>Bois Exotiques Premium</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://lodgesparadise.com/materials-2-pierre-lave.webp</image:loc>
+      <image:title>Pierre de Lave Locale</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lodgesparadise.com/zones-implantation</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://lodgesparadise.com/materials-5-zones-strategiques.webp</image:loc>
+      <image:title>Zones Stratégiques Ouest et Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lodgesparadise.com/investissement-defiscalisation</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lodgesparadise.com/galerie</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lodgesparadise.com/contact</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
