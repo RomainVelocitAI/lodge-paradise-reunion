@@ -170,7 +170,7 @@ function RealEstateApp() {
       {false && (
       <section id="entreprise" className="section" style={{ padding: '5rem 0', background: '#fafafa' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', alignItems: 'center' }}>
             <div>
               <span style={{ 
                 color: '#6366f1', 
@@ -525,7 +525,7 @@ function RealEstateApp() {
             </p>
           </div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1000px', margin: '0 auto' }}>
             <div>
               <h3 style={{ marginBottom: '1.5rem' }}>Demande d'Information</h3>
               <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

@@ -173,7 +173,7 @@ export default function LaReunion3D({ onZoneSelect }) {
   };
 
   return (
-    <div style={{ width: '100%', height: '700px', position: 'relative' }}>
+    <div style={{ width: '100%', height: window.innerWidth < 768 ? '400px' : '700px', position: 'relative' }}>
       <Canvas
         camera={{ position: [-8, 8, 8], fov: 50 }}
         style={{ background: 'transparent' }}

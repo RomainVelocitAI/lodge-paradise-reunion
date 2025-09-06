@@ -96,9 +96,9 @@ const MaterialsInteractive = () => {
         <div className="h-8"></div>
         
         {/* Options Container */}
-        <div className="flex justify-center">
+        <div className="flex justify-center px-4 md:px-0">
           <div
-            className="options flex w-full max-w-[1200px] min-w-[800px] h-[500px] mx-0 items-stretch overflow-hidden relative rounded-xl">
+            className="options flex w-full max-w-[1200px] h-[300px] md:h-[400px] lg:h-[500px] mx-0 items-stretch overflow-x-auto md:overflow-hidden relative rounded-xl">
             {options.map((option, index) => (
               <div
                 key={index}
@@ -113,7 +113,7 @@ const MaterialsInteractive = () => {
                   backfaceVisibility: 'hidden',
                   opacity: animatedOptions.includes(index) ? 1 : 0,
                   transform: animatedOptions.includes(index) ? 'translateX(0)' : 'translateX(-60px)',
-                  minWidth: '80px',
+                  minWidth: '60px',
                   minHeight: '100px',
                   margin: 0,
                   borderRadius: 0,
@@ -183,16 +183,16 @@ const MaterialsInteractive = () => {
         </div>
         
         {/* Bouton vers la page dédiée */}
-        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+        <div style={{ textAlign: 'center', marginTop: '3rem', padding: '0 1rem' }}>
           <a href="/materiaux-nobles" style={{ 
             display: 'inline-block',
             background: 'linear-gradient(135deg, #F59E0B, #D97706)',
             color: 'white',
-            padding: '1rem 2.5rem',
+            padding: '0.875rem 1.5rem',
             borderRadius: '0.5rem',
             textDecoration: 'none',
             fontWeight: '600',
-            fontSize: '1.125rem',
+            fontSize: '1rem',
             boxShadow: '0 10px 30px rgba(245, 158, 11, 0.3)',
             transition: 'transform 0.3s, box-shadow 0.3s',
             cursor: 'pointer'

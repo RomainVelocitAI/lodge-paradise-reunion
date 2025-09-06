@@ -215,7 +215,7 @@ export const CircularProjects = ({
               >
                 <Link 
                   to={activeProject.link}
-                  className="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-3 rounded-full font-semibold hover:from-yellow-600 hover:to-yellow-700 transition-all transform hover:scale-105 shadow-lg"
+                  className="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-4 py-2 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold hover:from-yellow-600 hover:to-yellow-700 transition-all transform hover:scale-105 shadow-lg"
                   style={{ textDecoration: 'none' }}
                 >
                   En savoir plus →
@@ -254,17 +254,28 @@ export const CircularProjects = ({
         .testimonial-container {
           width: 100%;
           max-width: 56rem;
-          padding: 2rem;
+          padding: 1rem;
         }
         .testimonial-grid {
           display: grid;
-          gap: 5rem;
+          gap: 2rem;
         }
         .image-container {
           position: relative;
           width: 100%;
-          height: 24rem;
+          height: 20rem;
           perspective: 1000px;
+        }
+        @media (min-width: 640px) {
+          .testimonial-container {
+            padding: 2rem;
+          }
+          .testimonial-grid {
+            gap: 3rem;
+          }
+          .image-container {
+            height: 24rem;
+          }
         }
         .testimonial-image {
           position: absolute;

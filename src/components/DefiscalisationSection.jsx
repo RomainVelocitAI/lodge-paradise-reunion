@@ -180,7 +180,7 @@ const DefiscalisationSection = () => {
             Calculateur de Défiscalisation Personnalisé
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             {/* Formulaire */}
             <div className="space-y-6">
               <div>
@@ -299,7 +299,7 @@ const DefiscalisationSection = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="bg-white rounded-lg p-4">
                     <div className="text-sm text-gray-600 mb-1">Rendement net</div>
                     <div className="text-2xl font-bold text-blue-600">

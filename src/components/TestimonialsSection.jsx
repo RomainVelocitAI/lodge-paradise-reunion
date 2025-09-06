@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
   ];
 
   const TestimonialCard = ({ testimonial }) => (
-    <Card className="relative flex h-full w-[400px] cursor-pointer flex-col items-start justify-between overflow-hidden rounded-xl border border-yellow-200 bg-gradient-to-br from-white to-yellow-50 p-6 shadow-xl transition-all hover:scale-105 hover:shadow-2xl">
+    <Card className="relative flex h-full w-[280px] sm:w-[350px] md:w-[400px] cursor-pointer flex-col items-start justify-between overflow-hidden rounded-xl border border-yellow-200 bg-gradient-to-br from-white to-yellow-50 p-4 sm:p-5 md:p-6 shadow-xl transition-all hover:scale-105 hover:shadow-2xl">
       <div className="flex items-start gap-4 mb-4">
         <Avatar className="h-14 w-14 border-2 border-yellow-400">
           <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
