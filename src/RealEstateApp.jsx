@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import HeroScroll from './components/HeroScroll';
 import MaterialsSlideshow from './components/MaterialsSlideshow';
+import MaterialsSlideshowMobile from './components/MaterialsSlideshowMobile';
 import LaReunion3D from './components/LaReunion3D';
 import ProjectCatalog from './components/ProjectCatalog';
 import MaterialsInteractive from './components/MaterialsInteractive';
@@ -262,7 +263,7 @@ function RealEstateApp() {
       )}
 
       {/* Section avec Slideshow animé des Matériaux */}
-      <MaterialsSlideshow />
+      {isMobile ? <MaterialsSlideshowMobile /> : <MaterialsSlideshow />}
 
       {/* Section Notre Catalogue */}
       <ProjectCatalog />

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
 
 const TestimonialsSectionMobile = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
+  const touchStartRef = useRef(null);
   
   const testimonials = [
     {
@@ -56,8 +58,35 @@ const TestimonialsSectionMobile = () => {
     }
   ];
 
+  // Auto-scroll functionality
+  useEffect(() => {
+    startAutoScroll();
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [currentIndex]);
+
+  const startAutoScroll = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      handleNext();
+    }, 4000); // Change testimonial every 4 seconds
+  };
+
+  const stopAutoScroll = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+  };
+
   const handlePrevious = () => {
+    stopAutoScroll();
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    startAutoScroll();
   };
 
   const handleNext = () => {
@@ -65,20 +94,24 @@ const TestimonialsSectionMobile = () => {
   };
 
   const handleDotClick = (index) => {
+    stopAutoScroll();
     setCurrentIndex(index);
+    startAutoScroll();
   };
 
   const handleTouchStart = (e) => {
-    const touchDown = e.touches[0].clientX;
-    e.currentTarget.dataset.touchStart = touchDown;
+    stopAutoScroll();
+    touchStartRef.current = e.touches[0].clientX;
   };
 
-  const handleTouchMove = (e) => {
-    const touchDown = e.currentTarget.dataset.touchStart;
-    if (!touchDown) return;
+  const handleTouchEnd = (e) => {
+    if (!touchStartRef.current) {
+      startAutoScroll();
+      return;
+    }
     
-    const currentTouch = e.touches[0].clientX;
-    const diff = touchDown - currentTouch;
+    const touchEnd = e.changedTouches[0].clientX;
+    const diff = touchStartRef.current - touchEnd;
     
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
@@ -86,8 +119,10 @@ const TestimonialsSectionMobile = () => {
       } else {
         handlePrevious();
       }
-      e.currentTarget.dataset.touchStart = null;
     }
+    
+    touchStartRef.current = null;
+    startAutoScroll();
   };
 
   const currentTestimonial = testimonials[currentIndex];
@@ -112,7 +147,7 @@ const TestimonialsSectionMobile = () => {
         <div 
           className="relative px-4"
           onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div className="bg-white rounded-2xl shadow-xl p-6 relative overflow-hidden">
             {/* Quote Icon */}
