@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const MaterialsSlideshowMobile = () => {
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(0);
   
   const materials = [
     {
@@ -41,7 +41,7 @@ const MaterialsSlideshowMobile = () => {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-12 bg-gradient-to-b from-gray-50 to-white" style={{ minHeight: '400px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-yellow-600 font-semibold text-xs uppercase tracking-wider">NOTRE APPROCHE</span>

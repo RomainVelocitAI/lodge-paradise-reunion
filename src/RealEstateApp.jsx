@@ -15,7 +15,7 @@ import TestimonialsSectionMobile from './components/TestimonialsSectionMobile';
 function RealEstateApp() {
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedZone, setSelectedZone] = useState('ouest');
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
   
   useEffect(() => {
     const checkMobile = () => {
