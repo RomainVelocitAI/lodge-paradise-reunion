@@ -18,7 +18,7 @@ const HeroSection = ({ scrollYProgress }) => {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   
-  const headerHeight = isMobile ? '56px' : '82px';
+  const headerHeight = isMobile ? '70px' : '90px';
   
   return (
     <motion.section
@@ -273,7 +273,7 @@ const HeroScroll = () => {
     offset: ['start start', 'end end'],
   });
   
-  const headerHeight = isMobile ? '56px' : '82px';
+  const headerHeight = isMobile ? '70px' : '90px';
 
   return (
     <main ref={container} className='relative h-[200vh]' style={{ marginTop: headerHeight }}>
