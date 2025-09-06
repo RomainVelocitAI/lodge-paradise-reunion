@@ -18,7 +18,7 @@ const HeroSection = ({ scrollYProgress }) => {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   
-  const headerHeight = isMobile ? '70px' : '90px';
+  const headerHeight = isMobile ? '80px' : '100px';
   
   return (
     <motion.section
@@ -49,7 +49,7 @@ const HeroSection = ({ scrollYProgress }) => {
           className="mb-6"
         >
           <span className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold tracking-wider uppercase">
-            Matériaux Nobles & Construction Premium
+            Investissement Premium • Rendement Garanti
           </span>
         </motion.div>
         
@@ -64,11 +64,11 @@ const HeroSection = ({ scrollYProgress }) => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
-            Votre Paradis
+            L'Immobilier
           </span>
           <br />
           <span className="text-5xl md:text-6xl lg:text-7xl font-light text-white opacity-90">
-            Tropical à La Réunion
+            Qui Rapporte à La Réunion
           </span>
         </motion.h1>
         
@@ -78,8 +78,8 @@ const HeroSection = ({ scrollYProgress }) => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-xl md:text-2xl mb-8 opacity-90 font-light max-w-3xl mx-auto"
         >
-          Bois exotiques premium • Pierre de lave locale<br />
-          L'excellence des matériaux au service de votre investissement
+          Jusqu'à 7% de rendement locatif • Défiscalisation optimisée<br />
+          Votre patrimoine clés en main avec gestion 5 étoiles
         </motion.p>
 
         <motion.div
@@ -103,16 +103,16 @@ const HeroSection = ({ scrollYProgress }) => {
           className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
         >
           <div>
-            <div className="text-4xl font-bold mb-1">3</div>
-            <div className="text-sm opacity-80">Produits immobiliers</div>
+            <div className="text-4xl font-bold mb-1">200+</div>
+            <div className="text-sm opacity-80">Projets réalisés</div>
           </div>
           <div>
-            <div className="text-4xl font-bold mb-1">Ouest & Sud</div>
-            <div className="text-sm opacity-80">Zones stratégiques</div>
+            <div className="text-4xl font-bold mb-1">6.5%</div>
+            <div className="text-sm opacity-80">Rendement moyen</div>
           </div>
           <div>
-            <div className="text-4xl font-bold mb-1">100%</div>
-            <div className="text-sm opacity-80">Maîtrise interne</div>
+            <div className="text-4xl font-bold mb-1">98%</div>
+            <div className="text-sm opacity-80">Clients satisfaits</div>
           </div>
         </motion.div>
       </motion.div>
@@ -162,40 +162,40 @@ const EnterpriseSection = ({ scrollYProgress }) => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="text-indigo-600 font-semibold text-sm uppercase tracking-wider">L'Entreprise</span>
+            <span className="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Votre Partenaire Investissement</span>
             <h2 className="text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gray-900">
               Lodge Paradise
             </h2>
             <p className="text-2xl text-gray-600 mb-6">
-              Spécialiste des Matériaux Nobles & Exotiques
+              N°1 de l'Immobilier Locatif Premium à La Réunion
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              <strong>Lodge Paradise</strong> révolutionne la promotion immobilière à La Réunion avec une approche 
-              unique centrée sur les matériaux nobles et exotiques. Notre expertise intègre bois exotiques premium, 
-              pierre de lave locale et une démarche écologique durable.
+              <strong>10 ans d'expertise, 200+ projets réussis.</strong> Nous transformons votre capital 
+              en patrimoine rentable avec des rendements garantis jusqu'à 7% et une défiscalisation 
+              optimisée (Pinel Outre-Mer, LMNP).
             </p>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Avec une palette produits diversifiée - immeubles de rapport, villas individuelles et un catalogue 
-              en développement constant - nous ciblons les zones à forte croissance de l'Ouest et du Sud de l'île. 
-              Notre maîtrise d'œuvre intégrée garantit un contrôle qualité total et le respect des délais.
+              De l'acquisition du terrain à la gestion locative avec notre partenaire <strong>Île en Rêve</strong>, 
+              nous maîtrisons chaque étape. Zones Ouest et Sud exclusivement : Saint-Gilles, Saint-Pierre, 
+              les marchés les plus dynamiques de l'île.
             </p>
             
             <div className="grid grid-cols-2 gap-8 mt-12">
               <div>
-                <h3 className="text-4xl font-bold text-indigo-600">100%</h3>
-                <p className="text-gray-600 mt-2">Matériaux nobles</p>
+                <h3 className="text-4xl font-bold text-indigo-600">7%</h3>
+                <p className="text-gray-600 mt-2">Rendement max</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold text-emerald-500">3</h3>
-                <p className="text-gray-600 mt-2">Types de produits</p>
+                <h3 className="text-4xl font-bold text-emerald-500">-40%</h3>
+                <p className="text-gray-600 mt-2">Réduction d'impôts</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold text-indigo-600">2</h3>
-                <p className="text-gray-600 mt-2">Zones stratégiques</p>
+                <h3 className="text-4xl font-bold text-indigo-600">98%</h3>
+                <p className="text-gray-600 mt-2">Taux satisfaction</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold text-emerald-500">ECO</h3>
-                <p className="text-gray-600 mt-2">Approche durable</p>
+                <h3 className="text-4xl font-bold text-emerald-500">10 ans</h3>
+                <p className="text-gray-600 mt-2">D'expertise</p>
               </div>
             </div>
           </motion.div>
@@ -273,7 +273,7 @@ const HeroScroll = () => {
     offset: ['start start', 'end end'],
   });
   
-  const headerHeight = isMobile ? '70px' : '90px';
+  const headerHeight = isMobile ? '80px' : '100px';
 
   return (
     <main ref={container} className='relative h-[200vh]' style={{ marginTop: headerHeight }}>
