@@ -176,11 +176,10 @@ const EnterpriseSection = ({ scrollYProgress }) => {
       style={{ 
         scale, 
         rotate,
-        marginTop: '2rem',
         position: 'relative',
         zIndex: 10
       }}
-      className={`relative bg-gradient-to-b from-gray-50 to-white ${isMobile ? 'py-12' : 'py-20 min-h-screen'}`}
+      className={`relative bg-gradient-to-b from-gray-50 to-white ${isMobile ? 'py-16 pb-24' : 'py-20 min-h-screen'}`}
     >
       <div className="container mx-auto px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -228,6 +227,7 @@ const EnterpriseSection = ({ scrollYProgress }) => {
             </div>
           </motion.div>
 
+          {!isMobile && (
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -277,6 +277,23 @@ const EnterpriseSection = ({ scrollYProgress }) => {
               ))}
             </div>
           </motion.div>
+          )}
+
+          {isMobile && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mt-8 mb-8"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop" 
+                alt="Lodge Paradise Construction" 
+                className="w-full rounded-lg shadow-lg"
+              />
+            </motion.div>
+          )}
         </div>
       </div>
     </motion.section>
@@ -304,10 +321,11 @@ const HeroScroll = () => {
   const headerHeight = isMobile ? '80px' : '100px';
 
   return (
-    <main ref={container} className='relative overflow-hidden' style={{ 
-      height: isMobile ? '150vh' : '200vh',
+    <main ref={container} className='relative' style={{ 
+      height: isMobile ? 'auto' : '200vh',
       marginTop: headerHeight,
-      background: '#f9fafb'
+      minHeight: isMobile ? 'auto' : 'auto',
+      overflow: isMobile ? 'visible' : 'hidden'
     }}>
       <HeroSection scrollYProgress={scrollYProgress} />
       <EnterpriseSection scrollYProgress={scrollYProgress} />
