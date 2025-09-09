@@ -37,10 +37,10 @@ const CatalogueLodges = () => {
             </Link>
             <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none', margin: 0 }}>
               <li><Link to="/nos-projets" style={{ textDecoration: 'none', color: '#1f2937' }}>Nos Projets</Link></li>
-              <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#f59e0b', fontWeight: 'bold' }}>Catalogue</Link></li>
+              <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#D4AF37', fontWeight: 'bold' }}>Catalogue</Link></li>
               <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#1f2937' }}>Matériaux</Link></li>
               <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#1f2937' }}>Zones</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#f59e0b', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
+              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -64,7 +64,7 @@ const CatalogueLodges = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">Lodge Compact</h3>
                 <p className="text-gray-600 mb-4">40-60m², idéal pour jeunes couples ou investissement locatif</p>
-                <p className="text-3xl font-bold text-amber-500">À partir de 250 000€</p>
+                <p className="text-3xl font-bold text-gold-500">À partir de 250 000€</p>
               </div>
             </div>
             
@@ -73,7 +73,7 @@ const CatalogueLodges = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">Lodge Famille</h3>
                 <p className="text-gray-600 mb-4">80-120m², 3-4 chambres, parfait pour familles</p>
-                <p className="text-3xl font-bold text-amber-500">À partir de 450 000€</p>
+                <p className="text-3xl font-bold text-gold-500">À partir de 450 000€</p>
               </div>
             </div>
             
@@ -82,7 +82,7 @@ const CatalogueLodges = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">Lodge Prestige</h3>
                 <p className="text-gray-600 mb-4">150m²+, villa d'exception avec piscine et vue mer</p>
-                <p className="text-3xl font-bold text-amber-500">À partir de 750 000€</p>
+                <p className="text-3xl font-bold text-gold-500">À partir de 750 000€</p>
               </div>
             </div>
           </div>

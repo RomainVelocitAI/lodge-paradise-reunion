@@ -75,7 +75,7 @@ const TestimonialsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Texte à gauche */}
           <div className="text-left">
-            <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider">
               TÉMOIGNAGES CLIENTS
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold mt-4 text-gray-900">
@@ -85,26 +85,6 @@ const TestimonialsSection = () => {
               Découvrez les témoignages de nos clients satisfaits qui ont réalisé 
               leur projet immobilier à La Réunion avec notre accompagnement.
             </p>
-            <div className="mt-8 space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-                  <span className="text-yellow-600 font-bold text-lg">200+</span>
-                </div>
-                <p className="text-gray-700">Projets réalisés depuis 2014</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-                  <span className="text-yellow-600 font-bold text-lg">6.5%</span>
-                </div>
-                <p className="text-gray-700">Rendement moyen annuel</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-                  <span className="text-yellow-600 font-bold text-lg">98%</span>
-                </div>
-                <p className="text-gray-700">Taux de satisfaction client</p>
-              </div>
-            </div>
           </div>
 
           {/* Composant 3D à droite */}
@@ -153,17 +133,16 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Card CTA en dessous avec padding */}
-        <div className="mt-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl p-10 lg:p-12 text-center text-white shadow-2xl">
+        <div className="mt-16 bg-gradient-to-r from-gold-500 to-gold-600 rounded-2xl p-10 lg:p-12 text-center text-white shadow-2xl">
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">
             Rejoignez nos Investisseurs Satisfaits
           </h3>
           <p className="text-lg lg:text-xl mb-8 opacity-95 max-w-2xl mx-auto">
-            Plus de 200 projets réalisés avec succès depuis 2014. 
             Concrétisez votre projet immobilier à La Réunion avec notre expertise.
           </p>
           <a 
             href="/contact" 
-            className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all transform hover:scale-105"
+            className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full font-semibold text-lg hover:bg-darkblue-900 hover:text-white hover:shadow-lg transition-all transform hover:scale-105"
           >
             Démarrer Mon Projet →
           </a>

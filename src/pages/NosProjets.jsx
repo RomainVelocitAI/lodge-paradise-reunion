@@ -36,11 +36,11 @@ const NosProjets = () => {
               LODGES PARADISE
             </Link>
             <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none', margin: 0 }}>
-              <li><Link to="/nos-projets" style={{ textDecoration: 'none', color: '#f59e0b', fontWeight: 'bold' }}>Nos Projets</Link></li>
+              <li><Link to="/nos-projets" style={{ textDecoration: 'none', color: '#D4AF37', fontWeight: 'bold' }}>Nos Projets</Link></li>
               <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#1f2937' }}>Catalogue</Link></li>
               <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#1f2937' }}>Matériaux</Link></li>
               <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#1f2937' }}>Zones</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#f59e0b', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
+              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -64,7 +64,7 @@ const NosProjets = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">Villa Océan</h3>
                 <p className="text-gray-600 mb-4">Vue panoramique sur l'océan, 4 chambres, piscine à débordement</p>
-                <p className="text-amber-500 font-semibold">Saint-Gilles les Bains</p>
+                <p className="text-gold-500 font-semibold">Saint-Gilles les Bains</p>
               </div>
             </div>
             
@@ -73,7 +73,7 @@ const NosProjets = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">Lodge Tropical</h3>
                 <p className="text-gray-600 mb-4">Architecture bioclimatique, 3 chambres, jardin tropical</p>
-                <p className="text-amber-500 font-semibold">La Possession</p>
+                <p className="text-gold-500 font-semibold">La Possession</p>
               </div>
             </div>
             
@@ -82,7 +82,7 @@ const NosProjets = () => {
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">Résidence Émeraude</h3>
                 <p className="text-gray-600 mb-4">Programme de 12 lodges, espaces communs, sécurisé</p>
-                <p className="text-amber-500 font-semibold">Saint-Paul</p>
+                <p className="text-gold-500 font-semibold">Saint-Paul</p>
               </div>
             </div>
           </div>

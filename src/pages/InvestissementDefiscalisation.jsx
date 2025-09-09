@@ -40,8 +40,8 @@ const InvestissementDefiscalisation = () => {
               <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#1f2937' }}>Catalogue</Link></li>
               <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#1f2937' }}>Matériaux</Link></li>
               <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#1f2937' }}>Zones</Link></li>
-              <li><Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#f59e0b', fontWeight: 'bold' }}>Investir</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#f59e0b', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
+              <li><Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#D4AF37', fontWeight: 'bold' }}>Investir</Link></li>
+              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -61,7 +61,7 @@ const InvestissementDefiscalisation = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold mb-4 text-amber-500">Loi Pinel DOM</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gold-500">Loi Pinel DOM</h3>
               <p className="text-gray-600 mb-6">
                 Bénéficiez jusqu'à 32% de réduction d'impôts sur votre investissement locatif à La Réunion.
               </p>
@@ -86,7 +86,7 @@ const InvestissementDefiscalisation = () => {
             </div>
             
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold mb-4 text-amber-500">LMNP / LMP</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gold-500">LMNP / LMP</h3>
               <p className="text-gray-600 mb-6">
                 Location Meublée Non Professionnelle pour des revenus locatifs optimisés.
               </p>
@@ -111,7 +111,7 @@ const InvestissementDefiscalisation = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-12 text-white text-center">
+          <div className="bg-gradient-to-r from-gold-500 to-gold-600 rounded-2xl p-12 text-white text-center">
             <h2 className="text-3xl font-bold mb-8">Pourquoi Investir avec Lodges Paradise ?</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div>

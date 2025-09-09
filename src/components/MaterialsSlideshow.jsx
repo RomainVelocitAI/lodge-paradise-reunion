@@ -15,7 +15,7 @@ const MaterialsSlideshow = () => {
     },
     {
       title: "Construction Premium",
-      description: "Réalisation de villas haut de gamme avec matériaux nobles : bois exotiques, pierre de lave, finitions premium",
+      description: "Réalisation de villas haut de gamme avec matériaux nobles : structure métallique, bois exotiques, pierre de lave, grandes baies vitrées et garde-corps en verre",
       image: "/materials-1-bois-exotiques.webp"
     },
     {
@@ -39,7 +39,7 @@ const MaterialsSlideshow = () => {
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-8">
         <div className="text-center mb-12">
-          <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wider">NOTRE APPROCHE</span>
+          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider">NOTRE APPROCHE</span>
           <h2 className="text-5xl font-bold mt-4 text-gray-900">
             Votre Investissement Clé en Main
           </h2>
@@ -60,7 +60,7 @@ const MaterialsSlideshow = () => {
                     <TextStaggerHover
                       text={material.title}
                       index={index}
-                      className="cursor-pointer hover:text-yellow-600 transition-colors"
+                      className="cursor-pointer hover:text-gold-500 transition-colors"
                     />
                   </h3>
                   <p className="text-gray-600 leading-relaxed">

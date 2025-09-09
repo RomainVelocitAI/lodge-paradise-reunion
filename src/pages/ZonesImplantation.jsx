@@ -72,8 +72,8 @@ const ZonesImplantation = () => {
               <li><Link to="/nos-projets" style={{ textDecoration: 'none', color: '#1f2937' }}>Nos Projets</Link></li>
               <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#1f2937' }}>Catalogue</Link></li>
               <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#1f2937' }}>Matériaux</Link></li>
-              <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#f59e0b', fontWeight: 'bold' }}>Zones</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#f59e0b', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
+              <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#D4AF37', fontWeight: 'bold' }}>Zones</Link></li>
+              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -101,7 +101,7 @@ const ZonesImplantation = () => {
                   <div className="space-y-2">
                     {zone.attractions.map((attraction, idx) => (
                       <div key={idx} className="flex items-center">
-                        <span className="text-amber-500 mr-2">✓</span>
+                        <span className="text-gold-500 mr-2">✓</span>
                         <span className="text-gray-700">{attraction}</span>
                       </div>
                     ))}
@@ -111,7 +111,7 @@ const ZonesImplantation = () => {
             ))}
           </div>
 
-          <div className="mt-20 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-12 text-white">
+          <div className="mt-20 bg-gradient-to-r from-gold-500 to-gold-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl font-bold text-center mb-8">Pourquoi Ces Zones ?</h2>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>

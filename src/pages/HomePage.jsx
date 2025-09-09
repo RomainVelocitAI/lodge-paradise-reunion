@@ -9,8 +9,8 @@ const HomePage = () => {
     <>
       <SEO 
         title="Lodges Paradise - Promoteur Immobilier Premium La Réunion | Matériaux Nobles"
-        description="Lodges Paradise, promoteur immobilier spécialisé dans les matériaux nobles à La Réunion. Bois exotiques, pierre de lave locale. Investissement défiscalisé Ouest et Sud. Maîtrise d'œuvre intégrée."
-        keywords="lodges paradise, promoteur immobilier réunion, matériaux nobles, bois exotiques, pierre de lave, défiscalisation réunion, immobilier ouest réunion, immobilier sud réunion"
+        description="Lodges Paradise, promoteur immobilier spécialisé dans les matériaux nobles à La Réunion. Structure métallique, bois exotiques, pierre de lave locale, grandes baies vitrées et garde-corps en verre. Investissement défiscalisé Ouest et Sud. Maîtrise d'œuvre intégrée."
+        keywords="lodges paradise, promoteur immobilier réunion, matériaux nobles, structure métallique, bois exotiques, pierre de lave, grandes baies vitrées, garde-corps verre, défiscalisation réunion, immobilier ouest réunion, immobilier sud réunion"
         canonical="https://lodgesparadise.com/"
       />
       
@@ -44,7 +44,7 @@ const HomePage = () => {
               <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#1f2937' }}>Matériaux</Link></li>
               <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#1f2937' }}>Zones</Link></li>
               <li><Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#1f2937' }}>Investir</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', color: '#1f2937', background: '#f59e0b', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
+              <li><Link to="/contact" style={{ textDecoration: 'none', color: '#1f2937', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -63,7 +63,7 @@ const HomePage = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
           <div style={{ maxWidth: '800px' }}>
             <span style={{ 
-              background: '#f59e0b', 
+              background: '#D4AF37', 
               padding: '0.5rem 1rem', 
               borderRadius: '2rem',
               fontSize: '0.875rem',
@@ -88,15 +88,15 @@ const HomePage = () => {
               lineHeight: '1.6'
             }}>
               <strong>Lodges Paradise</strong> révolutionne la promotion immobilière à La Réunion. 
-              Spécialisés dans l'utilisation exclusive de matériaux nobles - bois exotiques premium 
-              et pierre de lave locale - nous créons des projets d'exception dans les zones 
-              stratégiques de l'Ouest et du Sud de l'île.
+              Spécialisés dans l'utilisation exclusive de matériaux nobles - structure métallique, 
+              bois exotiques premium, pierre de lave locale et verre architectural - nous créons 
+              des projets d'exception dans les zones stratégiques de l'Ouest et du Sud de l'île.
             </p>
             
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link to="/catalogue-lodges" style={{ 
                 padding: '1rem 2rem', 
-                background: '#f59e0b',
+                background: '#D4AF37',
                 color: 'white',
                 textDecoration: 'none',
                 borderRadius: '0.5rem',
@@ -126,15 +126,15 @@ const HomePage = () => {
               marginTop: '4rem'
             }}>
               <div>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#f59e0b' }}>3</div>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#D4AF37' }}>3</div>
                 <div style={{ fontSize: '0.875rem', opacity: 0.8 }}>Types de produits</div>
               </div>
               <div>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#f59e0b' }}>Ouest & Sud</div>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#D4AF37' }}>Ouest & Sud</div>
                 <div style={{ fontSize: '0.875rem', opacity: 0.8 }}>Zones stratégiques</div>
               </div>
               <div>
-                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#f59e0b' }}>100%</div>
+                <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#D4AF37' }}>100%</div>
                 <div style={{ fontSize: '0.875rem', opacity: 0.8 }}>Maîtrise interne</div>
               </div>
             </div>
@@ -146,7 +146,7 @@ const HomePage = () => {
       <section style={{ padding: '5rem 2rem', background: '#f9fafb' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <span style={{ color: '#f59e0b', fontWeight: '600', fontSize: '0.875rem' }}>L'ENTREPRISE</span>
+            <span style={{ color: '#D4AF37', fontWeight: '600', fontSize: '0.875rem' }}>L'ENTREPRISE</span>
             <h2 style={{ fontSize: '3rem', marginTop: '1rem', marginBottom: '2rem' }}>
               Lodges Paradise : L'Excellence Immobilière
             </h2>
@@ -154,8 +154,9 @@ const HomePage = () => {
             <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '2rem', textAlign: 'left' }}>
               <strong>Lodges Paradise</strong> est le premier promoteur immobilier de La Réunion 
               à faire le choix exclusif des matériaux nobles et exotiques. Notre approche unique 
-              combine l'utilisation de bois exotiques soigneusement sélectionnés pour leur durabilité 
-              et leur esthétique, avec la pierre de lave locale, matériau emblématique de notre île.
+              combine l'utilisation de structures métalliques galvanisées, de bois exotiques soigneusement 
+              sélectionnés, de pierre de lave locale emblématique de notre île, ainsi que de grandes 
+              baies vitrées et garde-corps en verre pour une luminosité et une élégance incomparables.
             </p>
             
             <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '2rem', textAlign: 'left' }}>
@@ -181,7 +182,7 @@ const HomePage = () => {
 
       {/* Section CTA */}
       <section style={{ 
-        background: 'linear-gradient(135deg, #f59e0b 0%, #f97316 100%)', 
+        background: 'linear-gradient(135deg, #D4AF37 0%, #B8941F 100%)', 
         padding: '4rem 2rem',
         textAlign: 'center'
       }}>
@@ -197,7 +198,7 @@ const HomePage = () => {
             display: 'inline-block',
             padding: '1rem 3rem',
             background: 'white',
-            color: '#f59e0b',
+            color: '#D4AF37',
             textDecoration: 'none',
             borderRadius: '0.5rem',
             fontWeight: 'bold',

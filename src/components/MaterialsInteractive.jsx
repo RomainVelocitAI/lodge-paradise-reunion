@@ -7,8 +7,14 @@ const MaterialsInteractive = () => {
   
   const options = [
     {
+      title: "Structure Métallique",
+      description: "Charpentes galvanisées résistantes aux cyclones",
+      image: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=80",
+      icon: <FaTools size={24} className="text-white" />
+    },
+    {
       title: "Bois Exotiques",
-      description: "Essences premium sélectionnées pour leur durabilité",
+      description: "Teck, ipé et padouk premium pour durabilité",
       image: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=80",
       icon: <FaTree size={24} className="text-white" />
     },
@@ -19,40 +25,34 @@ const MaterialsInteractive = () => {
       icon: <FaMountain size={24} className="text-white" />
     },
     {
+      title: "Grandes Baies Vitrées",
+      description: "Ouvertures jusqu'à 6m avec double vitrage solaire",
+      image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=800&q=80",
+      icon: <FaHome size={24} className="text-white" />
+    },
+    {
+      title: "Garde-Corps en Verre",
+      description: "Verre trempé 12mm avec fixations inox marine",
+      image: "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=800&q=80",
+      icon: <FaSnowflake size={24} className="text-white" />
+    },
+    {
       title: "Construction Écologique",
-      description: "Approche durable et respectueuse de l'environnement",
+      description: "Approche durable certifiée HQE tropicale",
       image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80",
       icon: <FaLeaf size={24} className="text-white" />
     },
     {
-      title: "Isolation Thermique",
-      description: "Matériaux haute performance adaptés au climat tropical",
-      image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=800&q=80",
-      icon: <FaSnowflake size={24} className="text-white" />
-    },
-    {
-      title: "Menuiseries Premium",
-      description: "Bois nobles et aluminium haut de gamme",
-      image: "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=800&q=80",
-      icon: <FaTools size={24} className="text-white" />
-    },
-    {
-      title: "Revêtements Naturels",
-      description: "Finitions en matériaux bruts et authentiques",
-      image: "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80",
-      icon: <FaPaintRoller size={24} className="text-white" />
-    },
-    {
       title: "Toiture Tropicale",
-      description: "Conception adaptée aux conditions cycloniques",
+      description: "Conception anti-cyclonique avec isolation renforcée",
       image: "https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=800&q=80",
       icon: <FaUmbrella size={24} className="text-white" />
     },
     {
       title: "Terrasses en Bois",
-      description: "Decking en bois exotique résistant",
+      description: "Decking en bois exotique classe 4 imputrescible",
       image: "https://images.unsplash.com/photo-1599619351208-3e6c839d6828?auto=format&fit=crop&w=800&q=80",
-      icon: <FaHome size={24} className="text-white" />
+      icon: <FaPaintRoller size={24} className="text-white" />
     }
   ];
 
@@ -82,7 +82,7 @@ const MaterialsInteractive = () => {
       <div className="container mx-auto px-8">
         {/* Header Section */}
         <div className="w-full max-w-4xl mx-auto px-6 mb-8 text-center">
-          <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4 block animate-fadeInTop delay-300">
+          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4 block animate-fadeInTop delay-300">
             NOS MATÉRIAUX D'EXCEPTION
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight drop-shadow-lg animate-fadeInTop delay-300">
@@ -119,11 +119,11 @@ const MaterialsInteractive = () => {
                   borderRadius: 0,
                   borderWidth: '2px',
                   borderStyle: 'solid',
-                  borderColor: activeIndex === index ? '#F59E0B' : '#3d3d3d',
+                  borderColor: activeIndex === index ? '#D4AF37' : '#3d3d3d',
                   cursor: 'pointer',
                   backgroundColor: '#18181b',
                   boxShadow: activeIndex === index 
-                    ? '0 20px 60px rgba(245, 158, 11, 0.3)' 
+                    ? '0 20px 60px rgba(212, 175, 55, 0.3)' 
                     : '0 10px 30px rgba(0,0,0,0.30)',
                   flex: activeIndex === index ? '6 1 0%' : '1 1 0%',
                   zIndex: activeIndex === index ? 10 : 1,
@@ -152,8 +152,8 @@ const MaterialsInteractive = () => {
                   <div
                     className="icon min-w-[44px] max-w-[44px] h-[44px] flex items-center justify-center rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.18)] border-2 flex-shrink-0 flex-grow-0 transition-all duration-200"
                     style={{
-                      background: 'linear-gradient(135deg, #F59E0B, #D97706)',
-                      borderColor: '#F59E0B',
+                      background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
+                      borderColor: '#D4AF37',
                       backdropFilter: 'blur(10px)'
                     }}>
                     {option.icon}
@@ -186,7 +186,7 @@ const MaterialsInteractive = () => {
         <div style={{ textAlign: 'center', marginTop: '3rem', padding: '0 1rem' }}>
           <a href="/materiaux-nobles" style={{ 
             display: 'inline-block',
-            background: 'linear-gradient(135deg, #F59E0B, #D97706)',
+            background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
             color: 'white',
             padding: '0.875rem 1.5rem',
             borderRadius: '0.5rem',

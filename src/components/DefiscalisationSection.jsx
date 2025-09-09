@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const DefiscalisationSection = () => {
   const [calculatorData, setCalculatorData] = useState({
     investissement: 300000,
-    dispositif: 'lmnp',
-    dureeEngagement: 9,
+    dispositif: 'ciop',
+    dureeEngagement: 5,
     regimeFiscal: 'reel',
     trancheImposition: 30,
     loyerMensuel: 2500
@@ -32,7 +32,22 @@ const DefiscalisationSection = () => {
     const { investissement, dispositif, dureeEngagement, regimeFiscal, trancheImposition, loyerMensuel } = calculatorData;
     const loyerAnnuel = loyerMensuel * 12;
 
-    if (dispositif === 'lmnp') {
+    if (dispositif === 'ciop') {
+      // CIOP : 35% de crédit d'impôt
+      const creditImpot = investissement * 0.35;
+      economieAnnuelle = creditImpot / 5; // Étalé sur 5 ans
+      economieTotale = creditImpot;
+      
+      // Calcul du rendement avec loyers plafonnés mais optimisés
+      const loyerOptimise = loyerMensuel * 0.9; // Loyer plafonné mais optimisé
+      const loyerAnnuelOptimise = loyerOptimise * 12;
+      const chargesEstimees = loyerAnnuelOptimise * 0.2; // 20% de charges
+      const impotLoyer = (loyerAnnuelOptimise - chargesEstimees) * (trancheImposition / 100);
+      
+      cashFlowMensuel = loyerOptimise - (chargesEstimees / 12) - (impotLoyer / 12) + (economieAnnuelle / 12);
+      rendementNet = ((loyerAnnuelOptimise - chargesEstimees - impotLoyer + economieAnnuelle) / investissement) * 100;
+      
+    } else if (dispositif === 'lmnp') {
       if (regimeFiscal === 'micro') {
         // Micro-BIC : 50% d'abattement
         const revenuImposable = loyerAnnuel * 0.5;
@@ -56,17 +71,6 @@ const DefiscalisationSection = () => {
       economieTotale = economieAnnuelle * Math.min(dureeEngagement, 20);
       rendementNet = ((loyerAnnuel - (loyerAnnuel * 0.25)) / investissement) * 100;
       
-    } else if (dispositif === 'denormandie') {
-      // Denormandie : réduction d'impôt sur le prix de revient
-      const tauxReduction = dureeEngagement === 6 ? 12 : dureeEngagement === 9 ? 18 : 21;
-      const reductionTotale = investissement * (tauxReduction / 100);
-      economieAnnuelle = Math.min(reductionTotale / dureeEngagement, 18000); // Plafond 18k€/an en outre-mer
-      economieTotale = economieAnnuelle * dureeEngagement;
-      
-      // Calcul du cash-flow après impôts
-      const impotLoyer = loyerAnnuel * (trancheImposition / 100);
-      cashFlowMensuel = loyerMensuel - (impotLoyer / 12);
-      rendementNet = ((loyerAnnuel - impotLoyer + economieAnnuelle) / investissement) * 100;
     }
 
     setResults({
@@ -83,7 +87,7 @@ const DefiscalisationSection = () => {
         {/* Contenu SEO */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="text-center mb-12">
-            <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider">
               EXPERTISE FISCALE
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mt-4 text-gray-900">
@@ -109,13 +113,26 @@ const DefiscalisationSection = () => {
               Les dispositifs de défiscalisation actifs en 2025
             </h3>
             <p className="mb-4">
-              Suite à la fin du dispositif Pinel Outre-mer en décembre 2024, Lodge Paradise vous oriente 
-              vers les meilleures alternatives de défiscalisation encore disponibles :
+              Lodge Paradise vous oriente vers les dispositifs de défiscalisation les plus avantageux,
+              notamment le nouveau <strong>CIOP (Crédit d'Impôt Outre-Mer)</strong> qui offre des opportunités
+              exceptionnelles jusqu'en 2029 :
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white p-6 rounded-lg shadow-md border-2 border-gold-500">
+                <h4 className="font-bold text-lg mb-2 text-gold-500">CIOP - Crédit d'Impôt Outre-Mer (Nouveau)</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>✓ <strong>35% de défiscalisation</strong> sur votre investissement</li>
+                  <li>✓ Engagement de <strong>5 ans en location non meublée</strong></li>
+                  <li>✓ Location longue durée avec loyers plafonnés</li>
+                  <li>✓ Optimisation des revenus locatifs garantie</li>
+                  <li>✓ <strong className="text-red-600">Disponible jusqu'en 2029 seulement</strong></li>
+                  <li>✓ <strong className="text-gold-500">Plus que 4 ans pour en profiter !</strong></li>
+                </ul>
+              </div>
+
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h4 className="font-bold text-lg mb-2 text-yellow-600">LMNP - Location Meublée Non Professionnelle</h4>
+                <h4 className="font-bold text-lg mb-2 text-gold-500">LMNP - Location Meublée Non Professionnelle</h4>
                 <ul className="space-y-2 text-sm">
                   <li>✓ Régime micro-BIC : 50% d'abattement forfaitaire</li>
                   <li>✓ Régime réel : amortissement du bien et des meubles</li>
@@ -124,43 +141,32 @@ const DefiscalisationSection = () => {
                   <li>✓ Idéal pour la location saisonnière à La Réunion</li>
                 </ul>
               </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h4 className="font-bold text-lg mb-2 text-yellow-600">Loi Denormandie - Rénovation dans l'ancien</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Réduction d'impôt de 12% à 21% du prix de revient</li>
-                  <li>✓ Sur 6, 9 ou 12 ans selon votre engagement</li>
-                  <li>✓ Travaux représentant minimum 25% du coût total</li>
-                  <li>✓ Plafond de 300 000€ par an</li>
-                  <li>✓ Disponible jusqu'au 31 décembre 2027</li>
-                </ul>
-              </div>
             </div>
 
             <h3 className="text-xl font-semibold mb-3 text-gray-800">
               Pourquoi choisir Lodge Paradise pour votre défiscalisation ?
             </h3>
             
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg mb-8">
+            <div className="bg-gradient-to-r from-gold-50 to-gold-100 p-6 rounded-lg mb-8">
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <span className="text-yellow-600 font-bold mr-2">→</span>
+                  <span className="text-gold-500 font-bold mr-2">→</span>
                   <span><strong>Expertise locale :</strong> Connaissance approfondie du marché immobilier réunionnais et des zones à fort potentiel</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-600 font-bold mr-2">→</span>
+                  <span className="text-gold-500 font-bold mr-2">→</span>
                   <span><strong>Accompagnement complet :</strong> De la recherche du bien jusqu'à la gestion locative avec notre partenaire Île en Rêve</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-600 font-bold mr-2">→</span>
+                  <span className="text-gold-500 font-bold mr-2">→</span>
                   <span><strong>Optimisation fiscale maximale :</strong> Montage personnalisé pour exploiter le plafond de 18 000€ de niches fiscales en outre-mer</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-600 font-bold mr-2">→</span>
+                  <span className="text-gold-500 font-bold mr-2">→</span>
                   <span><strong>Sécurisation juridique :</strong> Partenariat avec des notaires et fiscalistes spécialisés</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-600 font-bold mr-2">→</span>
+                  <span className="text-gold-500 font-bold mr-2">→</span>
                   <span><strong>Rentabilité garantie :</strong> Sélection rigoureuse de biens avec des rendements de 5% à 7%</span>
                 </li>
               </ul>
@@ -196,7 +202,7 @@ const DefiscalisationSection = () => {
                   onChange={(e) => setCalculatorData({...calculatorData, investissement: parseInt(e.target.value)})}
                   className="w-full"
                 />
-                <div className="text-2xl font-bold text-yellow-600 mt-2">
+                <div className="text-2xl font-bold text-gold-500 mt-2">
                   {calculatorData.investissement.toLocaleString('fr-FR')} €
                 </div>
               </div>
@@ -208,10 +214,10 @@ const DefiscalisationSection = () => {
                 <select 
                   value={calculatorData.dispositif}
                   onChange={(e) => setCalculatorData({...calculatorData, dispositif: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
                 >
+                  <option value="ciop">CIOP - Crédit d'Impôt Outre-Mer (35%)</option>
                   <option value="lmnp">LMNP - Location Meublée</option>
-                  <option value="denormandie">Denormandie - Rénovation</option>
                 </select>
               </div>
 
@@ -223,7 +229,7 @@ const DefiscalisationSection = () => {
                   <select 
                     value={calculatorData.regimeFiscal}
                     onChange={(e) => setCalculatorData({...calculatorData, regimeFiscal: e.target.value})}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
                   >
                     <option value="micro">Micro-BIC (50% abattement)</option>
                     <option value="reel">Réel (avec amortissement)</option>
@@ -231,20 +237,35 @@ const DefiscalisationSection = () => {
                 </div>
               )}
 
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Durée d'engagement (années)
-                </label>
-                <select 
-                  value={calculatorData.dureeEngagement}
-                  onChange={(e) => setCalculatorData({...calculatorData, dureeEngagement: parseInt(e.target.value)})}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
-                >
-                  <option value="6">6 ans</option>
-                  <option value="9">9 ans</option>
-                  <option value="12">12 ans</option>
-                </select>
-              </div>
+              {calculatorData.dispositif === 'ciop' ? (
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Durée d'engagement CIOP
+                  </label>
+                  <select 
+                    value={calculatorData.dureeEngagement}
+                    onChange={(e) => setCalculatorData({...calculatorData, dureeEngagement: parseInt(e.target.value)})}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
+                  >
+                    <option value="5">5 ans (engagement CIOP)</option>
+                  </select>
+                </div>
+              ) : (
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Durée d'engagement (années)
+                  </label>
+                  <select 
+                    value={calculatorData.dureeEngagement}
+                    onChange={(e) => setCalculatorData({...calculatorData, dureeEngagement: parseInt(e.target.value)})}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
+                  >
+                    <option value="6">6 ans</option>
+                    <option value="9">9 ans</option>
+                    <option value="12">12 ans</option>
+                  </select>
+                </div>
+              )}
 
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -253,7 +274,7 @@ const DefiscalisationSection = () => {
                 <select 
                   value={calculatorData.trancheImposition}
                   onChange={(e) => setCalculatorData({...calculatorData, trancheImposition: parseInt(e.target.value)})}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
                 >
                   <option value="11">11%</option>
                   <option value="30">30%</option>
@@ -273,13 +294,13 @@ const DefiscalisationSection = () => {
                   step="100"
                   value={calculatorData.loyerMensuel}
                   onChange={(e) => setCalculatorData({...calculatorData, loyerMensuel: parseInt(e.target.value)})}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
                 />
               </div>
             </div>
 
             {/* Résultats */}
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 space-y-6">
+            <div className="bg-gradient-to-br from-gold-50 to-gold-100 rounded-xl p-6 space-y-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Vos économies fiscales estimées
               </h3>
@@ -315,7 +336,7 @@ const DefiscalisationSection = () => {
                   </div>
                 </div>
 
-                <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mt-6">
+                <div className="bg-gold-100 border-l-4 border-gold-500 p-4 mt-6">
                   <p className="text-sm text-gray-700">
                     <strong>Note :</strong> Ces calculs sont des estimations basées sur les dispositifs fiscaux 
                     en vigueur en 2025. Pour une étude personnalisée, contactez nos experts Lodge Paradise.
@@ -327,7 +348,7 @@ const DefiscalisationSection = () => {
 
           {/* CTA */}
           <div className="text-center mt-10">
-            <Link to="/contact" className="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-600 hover:to-yellow-700 transition-all transform hover:scale-105 shadow-lg">
+            <Link to="/contact" className="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-darkblue-800 hover:to-darkblue-900 transition-all transform hover:scale-105 shadow-lg">
               Obtenir une étude personnalisée gratuite →
             </Link>
             <p className="text-sm text-gray-600 mt-4">

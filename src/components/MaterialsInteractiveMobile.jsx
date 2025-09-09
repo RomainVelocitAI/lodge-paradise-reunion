@@ -6,52 +6,52 @@ const MaterialsInteractiveMobile = () => {
   
   const options = [
     {
-      title: "Bois Exotiques",
-      description: "Essences premium sélectionnées pour leur durabilité",
+      title: "Structure Métallique",
+      description: "Charpentes galvanisées résistantes aux cyclones",
       image: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=80",
-      icon: <FaTree size={24} className="text-yellow-600" />
+      icon: <FaTools size={24} className="text-gold-500" />
+    },
+    {
+      title: "Bois Exotiques",
+      description: "Teck, ipé et padouk premium pour durabilité",
+      image: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=80",
+      icon: <FaTree size={24} className="text-gold-500" />
     },
     {
       title: "Pierre de Lave",
       description: "Pierre volcanique locale authentique de La Réunion",
       image: "https://images.unsplash.com/photo-1632164951241-5e135f2d16ce?auto=format&fit=crop&w=800&q=80",
-      icon: <FaMountain size={24} className="text-yellow-600" />
+      icon: <FaMountain size={24} className="text-gold-500" />
+    },
+    {
+      title: "Grandes Baies Vitrées",
+      description: "Ouvertures jusqu'à 6m avec double vitrage solaire",
+      image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=800&q=80",
+      icon: <FaHome size={24} className="text-gold-500" />
+    },
+    {
+      title: "Garde-Corps en Verre",
+      description: "Verre trempé 12mm avec fixations inox marine",
+      image: "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=800&q=80",
+      icon: <FaSnowflake size={24} className="text-gold-500" />
     },
     {
       title: "Construction Écologique",
-      description: "Approche durable et respectueuse de l'environnement",
+      description: "Approche durable certifiée HQE tropicale",
       image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80",
-      icon: <FaLeaf size={24} className="text-yellow-600" />
-    },
-    {
-      title: "Isolation Thermique",
-      description: "Matériaux haute performance adaptés au climat tropical",
-      image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=800&q=80",
-      icon: <FaSnowflake size={24} className="text-yellow-600" />
-    },
-    {
-      title: "Menuiseries Premium",
-      description: "Bois nobles et aluminium haut de gamme",
-      image: "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=800&q=80",
-      icon: <FaTools size={24} className="text-yellow-600" />
-    },
-    {
-      title: "Revêtements Naturels",
-      description: "Finitions en matériaux bruts et authentiques",
-      image: "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80",
-      icon: <FaPaintRoller size={24} className="text-yellow-600" />
+      icon: <FaLeaf size={24} className="text-gold-500" />
     },
     {
       title: "Toiture Tropicale",
-      description: "Conception adaptée aux conditions cycloniques",
+      description: "Conception anti-cyclonique avec isolation renforcée",
       image: "https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=800&q=80",
-      icon: <FaUmbrella size={24} className="text-yellow-600" />
+      icon: <FaUmbrella size={24} className="text-gold-500" />
     },
     {
       title: "Terrasses en Bois",
-      description: "Decking en bois exotique résistant",
+      description: "Decking en bois exotique classe 4 imputrescible",
       image: "https://images.unsplash.com/photo-1599619351208-3e6c839d6828?auto=format&fit=crop&w=800&q=80",
-      icon: <FaHome size={24} className="text-yellow-600" />
+      icon: <FaPaintRoller size={24} className="text-gold-500" />
     }
   ];
 
@@ -64,7 +64,7 @@ const MaterialsInteractiveMobile = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4 block">
+          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4 block">
             NOS MATÉRIAUX D'EXCEPTION
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
@@ -82,7 +82,7 @@ const MaterialsInteractiveMobile = () => {
               key={index} 
               className="mb-4 bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300"
               style={{
-                border: activeIndex === index ? '2px solid #F59E0B' : '2px solid transparent'
+                border: activeIndex === index ? '2px solid #D4AF37' : '2px solid transparent'
               }}
             >
               {/* En-tête cliquable */}
@@ -91,7 +91,7 @@ const MaterialsInteractiveMobile = () => {
                 className="w-full px-4 py-4 flex items-center justify-between text-left hover:bg-gray-700 transition-colors"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center shadow-lg">
                     {option.icon}
                   </div>
                   <div>
@@ -100,7 +100,7 @@ const MaterialsInteractiveMobile = () => {
                   </div>
                 </div>
                 <FaChevronDown 
-                  className={`text-yellow-500 transition-transform duration-300 ${
+                  className={`text-gold-500 transition-transform duration-300 ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`}
                   size={20}
@@ -134,7 +134,7 @@ const MaterialsInteractiveMobile = () => {
         <div className="text-center mt-8">
           <a 
             href="/materiaux-nobles" 
-            className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105"
+            className="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105"
           >
             Découvrir tous nos matériaux d'exception →
           </a>

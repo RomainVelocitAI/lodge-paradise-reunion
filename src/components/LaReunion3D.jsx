@@ -227,7 +227,7 @@ export default function LaReunion3D({ onZoneSelect }) {
             <div style={{ 
               width: '12px', 
               height: '12px', 
-              background: selectedZone === 'sud' ? '#D97706' : '#F59E0B', 
+              background: selectedZone === 'sud' ? '#BF9830' : '#D4AF37', 
               borderRadius: '2px',
               transition: 'all 0.3s ease'
             }}></div>

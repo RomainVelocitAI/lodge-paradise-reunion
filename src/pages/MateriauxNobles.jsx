@@ -14,43 +14,43 @@ const MateriauxNobles = () => {
 
   const materiaux = [
     {
-      title: "Aluminium & Menuiseries Haut de Gamme",
-      description: "Menuiseries aluminium thermolaquées avec rupture de pont thermique, baies vitrées coulissantes grand format, pergolas bioclimatiques motorisées. Résistance optimale aux conditions tropicales et cycloniques.",
-      features: ["Certification NF", "Garantie décennale", "Motorisation intégrée", "Finitions sur-mesure"]
+      title: "Structure Métallique Premium",
+      description: "Charpentes métalliques galvanisées résistantes aux conditions cycloniques, ossatures en acier thermolaqué, structures porteuses garantissant stabilité et durabilité exceptionnelles.",
+      features: ["Résistance cyclonique", "Galvanisation à chaud", "Garantie décennale", "Design sur-mesure"]
     },
     {
-      title: "Verre & Innovations Techniques",
-      description: "Vitrages feuilletés sécurisés, verres à contrôle solaire, garde-corps en verre trempé, cloisons vitrées intérieures. Technologies de pointe pour luminosité et protection.",
-      features: ["Protection UV", "Isolation acoustique", "Sécurité renforcée", "Traitement autonettoyant"]
+      title: "Bois Exotiques Nobles",
+      description: "Essences rares sélectionnées : teck de Birmanie, ipé du Brésil, padouk d'Afrique. Bois imputrescibles naturellement résistants aux termites et à l'humidité tropicale.",
+      features: ["Certification FSC", "Classe 4 naturelle", "Durée de vie 50+ ans", "Finition huilée naturelle"]
     },
     {
-      title: "Acier & Structures Métalliques",
-      description: "Charpentes métalliques galvanisées, escaliers design en acier, structures pergolas, bardages métalliques ventilés. Durabilité et esthétique contemporaine garanties.",
-      features: ["Galvanisation à chaud", "Résistance cyclonique", "Design personnalisé", "Maintenance réduite"]
+      title: "Pierre de Lave Authentique",
+      description: "Pierre volcanique extraite localement à La Réunion. Matériau noble offrant une isolation thermique naturelle et une esthétique unique avec ses nuances de gris anthracite.",
+      features: ["100% locale", "Isolation naturelle", "Résistance extrême", "Patine naturelle"]
     },
     {
-      title: "Béton Architectonique & Enduits",
-      description: "Béton matricé, béton ciré, enduits décoratifs à la chaux, revêtements minéraux. Finitions haut de gamme pour intérieurs et extérieurs d'exception.",
-      features: ["Finitions artisanales", "Personnalisation totale", "Durabilité extrême", "Entretien facile"]
+      title: "Verre Architectural & Baies Vitrées",
+      description: "Grandes baies vitrées coulissantes jusqu'à 6m d'ouverture, verres feuilletés sécurisés, double vitrage à contrôle solaire. Luminosité maximale et protection UV optimale.",
+      features: ["Anti-UV", "Isolation acoustique", "Sécurité renforcée", "Motorisation possible"]
     },
     {
-      title: "Composite & Matériaux Innovants",
-      description: "Terrasses en composite haute densité, bardages fibro-ciment, panneaux stratifiés HPL, résines techniques. Alliance de performance et d'esthétique moderne.",
-      features: ["Sans entretien", "Garantie 25 ans", "Résistance UV", "Écologique"]
+      title: "Garde-Corps en Verre Trempé",
+      description: "Garde-corps minimalistes en verre trempé 12mm, fixations inox marine 316L. Design épuré offrant une vue dégagée tout en garantissant sécurité et conformité aux normes.",
+      features: ["Verre securit 12mm", "Inox marine 316L", "Norme NF P01-012", "Transparence totale"]
     },
     {
-      title: "Toiture & Étanchéité Premium",
-      description: "Tuiles photovoltaïques, membranes EPDM, toitures végétalisées, systèmes d'étanchéité liquide. Solutions durables pour protection et performance énergétique.",
-      features: ["Production d'énergie", "Isolation thermique", "Étanchéité garantie", "Longévité 30 ans"]
+      title: "Finitions & Assemblages Premium",
+      description: "Assemblages traditionnels tenon-mortaise pour les structures bois, visserie inox marine, joints d'étanchéité EPDM. Chaque détail pensé pour la durabilité.",
+      features: ["Assemblages traditionnels", "Visserie marine", "Joints haute performance", "Garantie 25 ans"]
     }
   ];
 
   return (
     <>
       <SEO 
-        title="Matériaux Nobles | Bois Exotiques & Pierre de Lave - Lodges Paradise"
-        description="Découvrez notre sélection exclusive de matériaux nobles : bois exotiques premium (teck, ipé, padouk), pierre de lave locale de La Réunion. Construction écologique et durable garantie 25 ans."
-        keywords="matériaux nobles réunion, bois exotiques, teck, ipé, padouk, pierre de lave, construction écologique, matériaux durables, certification FSC, HQE réunion"
+        title="Matériaux Nobles | Structure Métallique, Bois Exotiques & Pierre de Lave - Lodges Paradise"
+        description="Découvrez notre sélection exclusive de matériaux nobles : structure métallique galvanisée, bois exotiques premium (teck, ipé, padouk), pierre de lave locale de La Réunion, grandes baies vitrées et garde-corps en verre. Construction durable garantie 25 ans."
+        keywords="matériaux nobles réunion, structure métallique, bois exotiques, teck, ipé, padouk, pierre de lave, grandes baies vitrées, garde-corps verre, construction durable, certification FSC, HQE réunion"
         canonical="https://lodgesparadise.com/materiaux-nobles"
       />
       
@@ -71,9 +71,9 @@ const MateriauxNobles = () => {
             <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none', margin: 0 }}>
               <li><Link to="/nos-projets" style={{ textDecoration: 'none', color: '#1f2937' }}>Nos Projets</Link></li>
               <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#1f2937' }}>Catalogue</Link></li>
-              <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#f59e0b', fontWeight: 'bold' }}>Matériaux</Link></li>
+              <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#D4AF37', fontWeight: 'bold' }}>Matériaux</Link></li>
               <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#1f2937' }}>Zones</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#f59e0b', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
+              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -99,14 +99,14 @@ const MateriauxNobles = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {materiaux.map((material, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-amber-400 to-amber-600"></div>
+                <div className="h-48 bg-gradient-to-br from-gold-400 to-gold-600"></div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">{material.title}</h3>
                   <p className="text-gray-600 text-sm mb-4">{material.description}</p>
                   <div className="space-y-2">
                     {material.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center">
-                        <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-gold-500 rounded-full mr-3"></span>
                         <span className="text-gray-700 text-sm">{feature}</span>
                       </div>
                     ))}
@@ -120,7 +120,7 @@ const MateriauxNobles = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Les Avantages de Nos Matériaux Nobles</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Durabilité Exceptionnelle</h3>
                 <p className="text-gray-600">
@@ -128,7 +128,7 @@ const MateriauxNobles = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Esthétique Intemporelle</h3>
                 <p className="text-gray-600">
@@ -136,7 +136,7 @@ const MateriauxNobles = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Valeur Patrimoniale</h3>
                 <p className="text-gray-600">

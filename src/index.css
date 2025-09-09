@@ -24,8 +24,8 @@
 }
 
 :root {
-  --color-primary: #6366f1;
-  --color-secondary: #10b981;
+  --color-primary: #0a0f1c;
+  --color-secondary: #D4AF37;
   --color-dark: #111827;
   --color-light: #f9fafb;
   --color-text: #374151;
@@ -118,9 +118,7 @@ a {
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: var(--color-secondary);
-}
+/* Removed global hover color that was making all links green */
 
 .container {
   width: 100%;

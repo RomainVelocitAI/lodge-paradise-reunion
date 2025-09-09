@@ -49,7 +49,7 @@ const MaterialsSlideshowMobile = () => {
     }}>
       <div className="container mx-auto px-4" style={{ maxWidth: '800px' }}>
         <div className="text-center mb-10">
-          <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wider block mb-3">NOTRE APPROCHE</span>
+          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider block mb-3">NOTRE APPROCHE</span>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Votre Investissement<br/>Clé en Main
           </h2>
@@ -61,16 +61,16 @@ const MaterialsSlideshowMobile = () => {
         <div className="space-y-4">
           {materials.map((material, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl" style={{
-              border: activeIndex === index ? '2px solid #F59E0B' : '2px solid transparent'
+              border: activeIndex === index ? '2px solid #D4AF37' : '2px solid transparent'
             }}>
               <button
                 onClick={() => handleAccordionClick(index)}
-                className="w-full p-5 text-left flex items-center justify-between hover:bg-yellow-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-inset"
+                className="w-full p-5 text-left flex items-center justify-between hover:bg-gold-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-inset"
                 aria-expanded={activeIndex === index}
                 aria-controls={`content-${index}`}
               >
                 <div className="flex items-start gap-4 flex-1">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                     {index + 1}
                   </div>
                   <div className="flex-1">
@@ -85,7 +85,7 @@ const MaterialsSlideshowMobile = () => {
                   </div>
                 </div>
                 <svg
-                  className={`w-6 h-6 text-yellow-600 transition-transform duration-300 flex-shrink-0 ${
+                  className={`w-6 h-6 text-gold-500 transition-transform duration-300 flex-shrink-0 ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -113,7 +113,7 @@ const MaterialsSlideshowMobile = () => {
                     {material.description}
                   </p>
                   <div className="mt-4 pt-4 border-t border-gray-200">
-                    <button className="text-yellow-600 font-semibold text-sm hover:text-yellow-700 transition-colors flex items-center gap-2">
+                    <button className="text-gold-500 font-semibold text-sm hover:text-gold-600 transition-colors flex items-center gap-2">
                       En savoir plus
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

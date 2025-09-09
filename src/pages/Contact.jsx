@@ -31,7 +31,7 @@ const Contact = () => {
               <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#1f2937' }}>Catalogue</Link></li>
               <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#1f2937' }}>Matériaux</Link></li>
               <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#1f2937' }}>Zones</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#f59e0b', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
+              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -49,7 +49,7 @@ const Contact = () => {
             <div style={{ background: 'white', padding: '2rem', borderRadius: '1rem', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
               <h2 style={{ fontSize: '1.75rem', marginBottom: '2rem', color: '#1f2937' }}>Bureau de Vente</h2>
               <div style={{ marginBottom: '1.5rem' }}>
-                <strong style={{ color: '#f59e0b' }}>Adresse :</strong>
+                <strong style={{ color: '#D4AF37' }}>Adresse :</strong>
                 <p style={{ marginTop: '0.5rem', lineHeight: '1.6' }}>
                   2 rue Jean Paul Sartre<br />
                   97419 La Possession<br />
@@ -57,19 +57,19 @@ const Contact = () => {
                 </p>
               </div>
               <div style={{ marginBottom: '1.5rem' }}>
-                <strong style={{ color: '#f59e0b' }}>Téléphone :</strong>
+                <strong style={{ color: '#D4AF37' }}>Téléphone :</strong>
                 <p style={{ marginTop: '0.5rem' }}>
                   <a href="tel:+262262667988" style={{ color: '#1f2937', textDecoration: 'none' }}>0262 66 79 88</a>
                 </p>
               </div>
               <div style={{ marginBottom: '1.5rem' }}>
-                <strong style={{ color: '#f59e0b' }}>Email :</strong>
+                <strong style={{ color: '#D4AF37' }}>Email :</strong>
                 <p style={{ marginTop: '0.5rem' }}>
                   <a href="mailto:info@lodgesparadise.com" style={{ color: '#1f2937', textDecoration: 'none' }}>info@lodgesparadise.com</a>
                 </p>
               </div>
               <div>
-                <strong style={{ color: '#f59e0b' }}>Horaires :</strong>
+                <strong style={{ color: '#D4AF37' }}>Horaires :</strong>
                 <p style={{ marginTop: '0.5rem', lineHeight: '1.6' }}>
                   Lundi - Vendredi : 9h - 18h<br />
                   Samedi : 9h - 13h<br />
@@ -139,7 +139,7 @@ const Contact = () => {
                   style={{
                     width: '100%',
                     padding: '1rem',
-                    background: '#f59e0b',
+                    background: '#D4AF37',
                     color: 'white',
                     border: 'none',
                     borderRadius: '0.5rem',

@@ -87,7 +87,7 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
           }}
         >
           <div style={{
-            background: selectedZone === 'sud' ? '#D97706' : '#F59E0B',
+            background: selectedZone === 'sud' ? '#BF9830' : '#D4AF37',
             color: 'white',
             padding: '12px 20px',
             borderRadius: '8px',
@@ -103,7 +103,7 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
           <div style={{
             width: '12px',
             height: '12px',
-            background: selectedZone === 'sud' ? '#D97706' : '#F59E0B',
+            background: selectedZone === 'sud' ? '#BF9830' : '#D4AF37',
             borderRadius: '50%',
             position: 'absolute',
             top: '-6px',
@@ -431,7 +431,7 @@ export default function LaReunion3DOptimized({ onZoneSelect }) {
             <div style={{ 
               width: '12px', 
               height: '12px', 
-              background: selectedZone === 'sud' ? '#D97706' : '#F59E0B', 
+              background: selectedZone === 'sud' ? '#BF9830' : '#D4AF37', 
               borderRadius: '2px',
               transition: 'all 0.3s ease'
             }}></div>

@@ -132,7 +132,7 @@ const TestimonialsSectionMobile = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
-          <span className="text-yellow-600 font-semibold text-xs uppercase tracking-wider">
+          <span className="text-gold-500 font-semibold text-xs uppercase tracking-wider">
             TÉMOIGNAGES CLIENTS
           </span>
           <h2 className="text-3xl font-bold mt-2 text-gray-900">
@@ -151,20 +151,20 @@ const TestimonialsSectionMobile = () => {
         >
           <div className="bg-white rounded-2xl shadow-xl p-6 relative overflow-hidden">
             {/* Quote Icon */}
-            <FaQuoteLeft className="absolute top-4 right-4 text-yellow-200 text-4xl opacity-50" />
+            <FaQuoteLeft className="absolute top-4 right-4 text-gold-200 text-4xl opacity-50" />
             
             {/* Avatar and Info */}
             <div className="flex items-start gap-4 mb-4">
-              <Avatar className="h-16 w-16 border-3 border-yellow-400 shadow-lg">
+              <Avatar className="h-16 w-16 border-3 border-gold-400 shadow-lg">
                 <AvatarImage src={currentTestimonial.avatar} alt={currentTestimonial.name} />
-                <AvatarFallback className="bg-yellow-200 text-gray-800 text-lg font-bold">
+                <AvatarFallback className="bg-gold-200 text-gray-800 text-lg font-bold">
                   {currentTestimonial.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
               <div className="flex-1">
                 <h3 className="font-bold text-lg text-gray-900">{currentTestimonial.name}</h3>
                 <p className="text-sm text-gray-600 leading-tight">{currentTestimonial.role}</p>
-                <p className="text-sm text-yellow-600 font-bold mt-1">
+                <p className="text-sm text-gold-500 font-bold mt-1">
                   {currentTestimonial.investment}
                 </p>
               </div>
@@ -175,7 +175,7 @@ const TestimonialsSectionMobile = () => {
               {[...Array(currentTestimonial.rating)].map((_, i) => (
                 <svg
                   key={i}
-                  className="h-6 w-6 text-yellow-500"
+                  className="h-6 w-6 text-gold-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -190,7 +190,7 @@ const TestimonialsSectionMobile = () => {
             </blockquote>
             
             {/* Decorative gradient */}
-            <div className="absolute -bottom-20 -right-20 h-40 w-40 rounded-full bg-gradient-to-br from-yellow-300 to-orange-400 opacity-10 blur-3xl" />
+            <div className="absolute -bottom-20 -right-20 h-40 w-40 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 opacity-10 blur-3xl" />
           </div>
 
           {/* Navigation Arrows */}
@@ -219,7 +219,7 @@ const TestimonialsSectionMobile = () => {
               onClick={() => handleDotClick(index)}
               className={`transition-all duration-300 ${
                 index === currentIndex 
-                  ? 'w-8 h-2 bg-yellow-500 rounded-full' 
+                  ? 'w-8 h-2 bg-gold-500 rounded-full' 
                   : 'w-2 h-2 bg-gray-300 rounded-full hover:bg-gray-400'
               }`}
               aria-label={`Aller au témoignage ${index + 1}`}
@@ -228,7 +228,7 @@ const TestimonialsSectionMobile = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-10 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl p-6 text-center text-white">
+        <div className="mt-10 bg-gradient-to-r from-gold-500 to-gold-600 rounded-2xl p-6 text-center text-white">
           <h3 className="text-xl font-bold mb-2">
             Rejoignez nos Investisseurs
           </h3>
@@ -237,7 +237,7 @@ const TestimonialsSectionMobile = () => {
           </p>
           <a 
             href="/contact" 
-            className="inline-block bg-white text-gray-900 px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg transition-all transform hover:scale-105"
+            className="inline-block bg-white text-gray-900 px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-darkblue-900 hover:text-white hover:shadow-lg transition-all transform hover:scale-105"
           >
             Démarrer Mon Projet →
           </a>
@@ -246,19 +246,19 @@ const TestimonialsSectionMobile = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 gap-4 mt-8">
           <div className="bg-white rounded-lg p-4 text-center shadow-md">
-            <p className="text-2xl font-bold text-yellow-600">200+</p>
+            <p className="text-2xl font-bold text-gold-500">200+</p>
             <p className="text-xs text-gray-600">Projets Réalisés</p>
           </div>
           <div className="bg-white rounded-lg p-4 text-center shadow-md">
-            <p className="text-2xl font-bold text-yellow-600">6.5%</p>
+            <p className="text-2xl font-bold text-gold-500">6.5%</p>
             <p className="text-xs text-gray-600">Rendement Moyen</p>
           </div>
           <div className="bg-white rounded-lg p-4 text-center shadow-md">
-            <p className="text-2xl font-bold text-yellow-600">10 ans</p>
+            <p className="text-2xl font-bold text-gold-500">10 ans</p>
             <p className="text-xs text-gray-600">D'Expertise</p>
           </div>
           <div className="bg-white rounded-lg p-4 text-center shadow-md">
-            <p className="text-2xl font-bold text-yellow-600">98%</p>
+            <p className="text-2xl font-bold text-gold-500">98%</p>
             <p className="text-xs text-gray-600">Clients Satisfaits</p>
           </div>
         </div>

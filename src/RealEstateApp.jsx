@@ -64,16 +64,14 @@ function RealEstateApp() {
               <div>
                 <h2 style={{ 
                   margin: 0, 
-                  background: 'linear-gradient(135deg, #D4AF37, #FFD700)', 
-                  WebkitBackgroundClip: 'text', 
-                  WebkitTextFillColor: 'transparent',
+                  color: '#0a0f1c',
                   fontSize: isMobile ? '1.25rem' : '1.75rem',
                   fontWeight: '700',
                   letterSpacing: '0.05em'
                 }}>
                   LODGES PARADISE
                 </h2>
-                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Promotion Immobilière à La Réunion</span>}
+                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Ouest et Sud de La Réunion</span>}
               </div>
             </div>
             {!isMobile && (
@@ -83,7 +81,7 @@ function RealEstateApp() {
                 <a href="#prestations" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Prestations</a>
                 <a href="#galerie" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Galerie</a>
                 <a href="#contact" style={{ 
-                  background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+                  background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
                   color: '#1e1b4b',
                   padding: '0.625rem 1.5rem',
                   borderRadius: '0.5rem',
@@ -94,7 +92,7 @@ function RealEstateApp() {
             )}
             {isMobile && (
               <a href="#contact" style={{ 
-                background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+                background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
                 color: '#1e1b4b',
                 padding: '0.5rem 1rem',
                 borderRadius: '0.5rem',
@@ -145,7 +143,7 @@ function RealEstateApp() {
             <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem', flexWrap: 'wrap' }}>
               <a href="#lodges" style={{ 
                 background: 'white', 
-                color: '#6366f1', 
+                color: '#0a0f1c', 
                 padding: '1rem 2rem',
                 borderRadius: '0.5rem',
                 textDecoration: 'none',
@@ -201,7 +199,7 @@ function RealEstateApp() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', alignItems: 'center' }}>
             <div>
               <span style={{ 
-                color: '#6366f1', 
+                color: '#0a0f1c', 
                 fontWeight: '600', 
                 fontSize: '0.875rem',
                 textTransform: 'uppercase',
@@ -227,19 +225,19 @@ function RealEstateApp() {
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', marginTop: '3rem' }}>
                 <div>
-                  <h3 style={{ fontSize: '2.5rem', color: '#6366f1', marginBottom: '0.5rem', fontWeight: '700' }}>15+</h3>
+                  <h3 style={{ fontSize: '2.5rem', color: '#D4AF37', marginBottom: '0.5rem', fontWeight: '700' }}>15+</h3>
                   <p style={{ color: '#6b7280' }}>Années d'expérience</p>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: '2.5rem', color: '#10b981', marginBottom: '0.5rem', fontWeight: '700' }}>47</h3>
+                  <h3 style={{ fontSize: '2.5rem', color: '#D4AF37', marginBottom: '0.5rem', fontWeight: '700' }}>47</h3>
                   <p style={{ color: '#6b7280' }}>Lodges construits</p>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: '2.5rem', color: '#6366f1', marginBottom: '0.5rem', fontWeight: '700' }}>100%</h3>
+                  <h3 style={{ fontSize: '2.5rem', color: '#D4AF37', marginBottom: '0.5rem', fontWeight: '700' }}>100%</h3>
                   <p style={{ color: '#6b7280' }}>Clients satisfaits</p>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: '2.5rem', color: '#10b981', marginBottom: '0.5rem', fontWeight: '700' }}>AAA</h3>
+                  <h3 style={{ fontSize: '2.5rem', color: '#D4AF37', marginBottom: '0.5rem', fontWeight: '700' }}>AAA</h3>
                   <p style={{ color: '#6b7280' }}>Certification qualité</p>
                 </div>
               </div>
@@ -311,7 +309,7 @@ function RealEstateApp() {
               textAlign: window.innerWidth > 768 ? 'left' : 'center'
             }}>
               <span style={{ 
-                color: '#6366f1', 
+                color: '#0a0f1c', 
                 fontWeight: '600', 
                 fontSize: '0.875rem', 
                 textTransform: 'uppercase', 
@@ -322,7 +320,7 @@ function RealEstateApp() {
               <h2 style={{ 
                 fontSize: '2.5rem', 
                 marginBottom: '1.5rem',
-                background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+                background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
               }}>
@@ -456,7 +454,7 @@ function RealEstateApp() {
                   <span style={{
                     width: '50px',
                     height: '50px',
-                    background: 'linear-gradient(135deg, #F59E0B, #D97706)',
+                    background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
                     borderRadius: '50%',
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -475,36 +473,36 @@ function RealEstateApp() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', marginBottom: '2rem' }}>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#F59E0B', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#D4AF37', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Croissance démographique</strong> : +2,5% par an, la plus forte de l'île</span>
                     </li>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#F59E0B', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#D4AF37', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Pôle économique</strong> : Zone d'activités, commerces, université</span>
                     </li>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#F59E0B', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#D4AF37', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Prix attractifs</strong> : Meilleur rapport surface/prix de l'île</span>
                     </li>
                   </ul>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#F59E0B', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#D4AF37', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Potentiel de plus-value</strong> : Zone en pleine transformation</span>
                     </li>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#F59E0B', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#D4AF37', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Projets structurants</strong> : Nouvelle route du littoral, éco-quartiers</span>
                     </li>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#F59E0B', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#D4AF37', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Vie culturelle</strong> : Marchés, festivals, animations toute l'année</span>
                     </li>
                   </ul>
                 </div>
                 <Link to="/nos-projets" style={{ 
                   display: 'inline-block',
-                  background: 'linear-gradient(135deg, #F59E0B, #D97706)',
+                  background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
                   color: 'white',
                   padding: '1rem 2.5rem',
                   borderRadius: '0.5rem',
@@ -524,7 +522,7 @@ function RealEstateApp() {
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link to="/zones-implantation" style={{ 
               display: 'inline-block',
-              background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+              background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
               color: '#1e1b4b',
               padding: '1rem 2.5rem',
               borderRadius: '0.5rem',
@@ -540,8 +538,32 @@ function RealEstateApp() {
         </div>
       </section>
 
-      {/* Section Défiscalisation */}
-      <DefiscalisationSection />
+      {/* Annonce Défiscalisation CIOP */}
+      <section className="section" style={{ padding: '3rem 0', background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)' }}>
+        <div className="container mx-auto px-8">
+          <div className="text-center text-white">
+            <div className="inline-block px-6 py-2 bg-gold-500/20 backdrop-blur-sm rounded-full text-sm font-semibold tracking-wider uppercase mb-4">
+              <span className="text-gold-500">Nouveau : CIOP 2025-2029</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Optimisation Fiscale Exceptionnelle
+            </h2>
+            <p className="text-lg md:text-xl mb-6 opacity-90 max-w-3xl mx-auto">
+              Profitez de <strong className="text-gold-500">35% de crédit d'impôt</strong> avec le nouveau dispositif CIOP.
+              <br/>Plus que <strong className="text-gold-500">4 ans pour en bénéficier</strong> (jusqu'en 2029).
+            </p>
+            <Link to="/investissement-defiscalisation" className="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-darkblue-900 px-8 py-3 rounded-full text-lg font-semibold hover:from-gold-600 hover:to-gold-700 transition-all transform hover:scale-105 shadow-lg">
+              Calculer mes économies d'impôts →
+            </Link>
+            <p className="text-sm mt-4 opacity-70">
+              Étude personnalisée gratuite • Nos experts vous rappellent sous 24h
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Défiscalisation - Désactivée (section descriptive et calculateur supprimés)
+      <DefiscalisationSection /> */}
 
       {/* Section Témoignages */}
       {isMobile ? <TestimonialsSectionMobile /> : <TestimonialsSection />}
@@ -550,7 +572,7 @@ function RealEstateApp() {
       <section id="contact" className="section" style={{ padding: '5rem 0', background: 'white' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <span style={{ color: '#6366f1', fontWeight: '600', fontSize: '0.875rem' }}>CONTACT</span>
+            <span style={{ color: '#D4AF37', fontWeight: '600', fontSize: '0.875rem' }}>CONTACT</span>
             <h2 style={{ fontSize: '2.5rem', marginTop: '1rem' }}>
               Concrétisez Votre Projet Immobilier
             </h2>
@@ -620,7 +642,7 @@ function RealEstateApp() {
                   }}
                 ></textarea>
                 <button type="submit" style={{ 
-                  background: 'linear-gradient(135deg, #6366f1, #10b981)',
+                  background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
                   color: 'white',
                   padding: '1rem',
                   border: 'none',
@@ -638,53 +660,28 @@ function RealEstateApp() {
               <h3 style={{ marginBottom: '1.5rem' }}>Bureau de Vente</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div>
-                  <strong style={{ color: '#6366f1', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Adresse</strong><br />
+                  <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Adresse</strong><br />
                   2 rue Jean Paul Sartre<br />
                   97419 La Possession<br />
                   La Réunion
                 </div>
                 <div>
-                  <strong style={{ color: '#6366f1', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Téléphone</strong><br />
+                  <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Téléphone</strong><br />
                   <a href="tel:+262262667988" style={{ color: '#374151', fontSize: '1.25rem', fontWeight: '600' }}>
                     0262 66 79 88
                   </a>
                 </div>
                 <div>
-                  <strong style={{ color: '#6366f1', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Email</strong><br />
+                  <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Email</strong><br />
                   <a href="mailto:Info@lodgesparadise.com" style={{ color: '#374151' }}>
                     Info@lodgesparadise.com
                   </a>
                 </div>
                 <div>
-                  <strong style={{ color: '#6366f1', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Horaires Bureau de Vente</strong><br />
+                  <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Horaires Bureau de Vente</strong><br />
                   Lundi - Vendredi : 9h - 18h<br />
                   Samedi : 9h - 13h<br />
-                  <span style={{ color: '#10b981', fontWeight: '600' }}>Sur rendez-vous</span>
-                </div>
-                
-                <div style={{ 
-                  background: '#f9fafb', 
-                  padding: '1.5rem', 
-                  borderRadius: '0.5rem',
-                  marginTop: '1rem'
-                }}>
-                  <strong style={{ color: '#6366f1', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Prochaine Visite Guidée</strong>
-                  <p style={{ marginTop: '0.5rem', marginBottom: '1rem' }}>
-                    Samedi prochain à 10h<br />
-                    Places limitées - Inscription obligatoire
-                  </p>
-                  <button style={{ 
-                    width: '100%',
-                    background: '#10b981',
-                    color: 'white',
-                    padding: '0.75rem',
-                    border: 'none',
-                    borderRadius: '0.375rem',
-                    fontWeight: '600',
-                    cursor: 'pointer'
-                  }}>
-                    Réserver ma place
-                  </button>
+                  <span style={{ color: '#D4AF37', fontWeight: '600' }}>Sur rendez-vous</span>
                 </div>
               </div>
             </div>
@@ -702,13 +699,13 @@ function RealEstateApp() {
         <div className="container">
           <h3 style={{ 
             marginBottom: '1rem',
-            background: 'linear-gradient(135deg, #6366f1, #10b981)', 
+            background: 'linear-gradient(135deg, #D4AF37, #BF9830)', 
             WebkitBackgroundClip: 'text', 
             WebkitTextFillColor: 'transparent'
           }}>
             Lodge Paradise
           </h3>
-          <p style={{ marginBottom: '2rem', opacity: 0.8 }}>
+          <p style={{ marginBottom: '2rem', color: '#D4AF37', fontSize: '1.1rem' }}>
             Programme immobilier neuf à La Réunion<br />
             Un projet développé avec passion et expertise
           </p>
