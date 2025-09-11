@@ -77,8 +77,7 @@ function RealEstateApp() {
             </div>
             {!isMobile && (
               <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                <Link to="/nos-projets" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Le Projet</Link>
-                <Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Nos Lodges</Link>
+                <Link to="/nos-projets" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Nos Lodges</Link>
                 <Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Prestations</Link>
                 <Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Fiscalité</Link>
                 <a href="#contact" style={{ 

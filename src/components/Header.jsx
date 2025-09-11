@@ -70,7 +70,7 @@ const Header = () => {
                   fontWeight: isActive('/nos-projets') ? '600' : '500'
                 }}
               >
-                Nos Projets
+                Nos Lodges
               </Link>
               <Link 
                 to="/materiaux-nobles" 
