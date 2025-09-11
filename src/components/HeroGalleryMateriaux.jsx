@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ContainerScroll, BentoGrid, BentoCell, ContainerScale } from './hero-gallery-scroll-animation';
 
-const HeroGallery = ({ title, subtitle, images }) => {
+const HeroGalleryMateriaux = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -12,6 +12,17 @@ const HeroGallery = ({ title, subtitle, images }) => {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  const title = "Matériaux Nobles";
+  const subtitle = "Excellence et durabilité pour vos projets d'exception";
+  
+  const images = [
+    { src: '/structure-metallique.jpg', alt: 'Structure métallique premium' },
+    { src: '/bois-exotiques.jpg', alt: 'Bois exotiques nobles' },
+    { src: '/pierre-lave.jpg', alt: 'Pierre de lave volcanique' },
+    { src: '/garde-corps-verre.jpg', alt: 'Garde-corps en verre trempé' },
+    { src: '/panneaux-solaires.jpg', alt: 'Panneaux solaires intégrés' }
+  ];
 
   // On mobile, show a simple hero without animations
   if (isMobile) {
@@ -42,6 +53,7 @@ const HeroGallery = ({ title, subtitle, images }) => {
 
   // Desktop version with animations
   return (
+    <>
     <ContainerScroll>
       <ContainerScale>
         <div className="max-w-7xl mx-auto px-4 text-center">
@@ -56,21 +68,36 @@ const HeroGallery = ({ title, subtitle, images }) => {
 
       <div className="h-[200vh] relative">
         <div className="sticky top-0 h-screen flex items-center justify-center px-4">
-          <BentoGrid className="max-w-7xl mx-auto w-full h-[600px] md:h-[700px]">
-            {images.map((image, index) => (
-              <BentoCell key={index}>
-                <img 
-                  src={image.src} 
-                  alt={image.alt || `Image ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </BentoCell>
-            ))}
+          <BentoGrid className="max-w-7xl mx-auto">
+            {images.map((image, index) => {
+              // Distribute images around the text
+              const positions = [
+                { initialX: "-150%", initialY: "-100%" }, // Top-left
+                { initialX: "150%", initialY: "-100%" },  // Top-right
+                { initialX: "200%", initialY: "0%" },     // Right
+                { initialX: "150%", initialY: "100%" },    // Bottom-right
+                { initialX: "-150%", initialY: "100%" }    // Bottom-left
+              ];
+              const pos = positions[index] || { initialX: "0%", initialY: "0%" };
+              
+              return (
+                <BentoCell key={index} initialX={pos.initialX} initialY={pos.initialY}>
+                  <img 
+                    src={image.src} 
+                    alt={image.alt || `Image ${index + 1}`}
+                    className="w-full h-full object-cover rounded-lg shadow-xl"
+                  />
+                </BentoCell>
+              );
+            })}
           </BentoGrid>
         </div>
       </div>
     </ContainerScroll>
+    {/* Spacer to prevent overlap with next section on desktop */}
+    {!isMobile && <div className="h-64" />}
+    </>
   );
 };
 
-export default HeroGallery;
+export default HeroGalleryMateriaux;

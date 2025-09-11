@@ -2,14 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import HeroGallery from '../components/HeroGallery';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const ZonesImplantation = () => {
   const zoneImages = [
-    { src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070', alt: 'Zone 1' },
-    { src: 'https://images.unsplash.com/photo-1540202404-a2f29a6b4524?q=80&w=2069', alt: 'Zone 2' },
-    { src: 'https://images.unsplash.com/photo-1584536286788-9c3604e09857?q=80&w=2070', alt: 'Zone 3' },
-    { src: 'https://images.unsplash.com/photo-1596178060810-72f53ce9a65c?q=80&w=2070', alt: 'Zone 4' },
-    { src: 'https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=2074', alt: 'Zone 5' }
+    { src: '/zones-implantation.jpg', alt: 'Vue aérienne des zones' },
+    { src: '/villa1.jpg', alt: 'Zone Ouest' },
+    { src: '/villa2.jpg', alt: 'Zone Sud' },
+    { src: '/villa3.jpg', alt: 'Littoral' },
+    { src: '/villa4.jpg', alt: 'Mi-hauteur' }
   ];
 
   const zones = [
@@ -54,30 +56,7 @@ const ZonesImplantation = () => {
         canonical="https://lodgesparadise.com/zones-implantation"
       />
       
-      <header style={{ 
-        position: 'fixed', 
-        top: 0, 
-        width: '100%', 
-        background: 'white', 
-        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-        zIndex: 1000,
-        padding: '1rem 0'
-      }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
-          <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <Link to="/" style={{ textDecoration: 'none', color: '#1f2937', fontSize: '1.5rem', fontWeight: 'bold' }}>
-              LODGES PARADISE
-            </Link>
-            <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none', margin: 0 }}>
-              <li><Link to="/nos-projets" style={{ textDecoration: 'none', color: '#1f2937' }}>Nos Projets</Link></li>
-              <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#1f2937' }}>Catalogue</Link></li>
-              <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#1f2937' }}>Matériaux</Link></li>
-              <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#D4AF37', fontWeight: 'bold' }}>Zones</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <div className="pt-20">
         <HeroGallery 
@@ -131,14 +110,7 @@ const ZonesImplantation = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>© 2025 Lodges Paradise - Promoteur Immobilier Premium à La Réunion</p>
-          <p className="mt-2 opacity-80">
-            2 rue Jean Paul Sartre, 97419 La Possession | Tél: 0262 66 79 88
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };

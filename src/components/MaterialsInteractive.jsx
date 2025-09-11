@@ -9,49 +9,49 @@ const MaterialsInteractive = () => {
     {
       title: "Structure Métallique",
       description: "Charpentes galvanisées résistantes aux cyclones",
-      image: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=80",
+      image: "/structure-metallique.jpg",
       icon: <FaTools size={24} className="text-white" />
     },
     {
       title: "Bois Exotiques",
       description: "Teck, ipé et padouk premium pour durabilité",
-      image: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=80",
+      image: "/bois-exotiques.jpg",
       icon: <FaTree size={24} className="text-white" />
     },
     {
       title: "Pierre de Lave",
       description: "Pierre volcanique locale authentique de La Réunion",
-      image: "https://images.unsplash.com/photo-1632164951241-5e135f2d16ce?auto=format&fit=crop&w=800&q=80",
+      image: "/pierre-lave.jpg",
       icon: <FaMountain size={24} className="text-white" />
     },
     {
       title: "Grandes Baies Vitrées",
       description: "Ouvertures jusqu'à 6m avec double vitrage solaire",
-      image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=800&q=80",
+      image: "/baies-vitrees.jpg",
       icon: <FaHome size={24} className="text-white" />
     },
     {
       title: "Garde-Corps en Verre",
       description: "Verre trempé 12mm avec fixations inox marine",
-      image: "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=800&q=80",
+      image: "/garde-corps-verre.jpg",
       icon: <FaSnowflake size={24} className="text-white" />
     },
     {
       title: "Construction Écologique",
       description: "Approche durable certifiée HQE tropicale",
-      image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80",
+      image: "/construction-ecologique.jpg",
       icon: <FaLeaf size={24} className="text-white" />
     },
     {
-      title: "Toiture Tropicale",
-      description: "Conception anti-cyclonique avec isolation renforcée",
-      image: "https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=800&q=80",
+      title: "Panneaux et Chauffe-eau Solaire",
+      description: "Pour une parfaite autonomie énergétique",
+      image: "/panneaux-solaires.jpg",
       icon: <FaUmbrella size={24} className="text-white" />
     },
     {
-      title: "Terrasses en Bois",
-      description: "Decking en bois exotique classe 4 imputrescible",
-      image: "https://images.unsplash.com/photo-1599619351208-3e6c839d6828?auto=format&fit=crop&w=800&q=80",
+      title: "Aménagement Extérieur",
+      description: "Terrasses, spa, cuisine d'été et kiosques",
+      image: "/amenagement-exterieur.jpg",
       icon: <FaPaintRoller size={24} className="text-white" />
     }
   ];
@@ -78,7 +78,7 @@ const MaterialsInteractive = () => {
   }, []);
 
   return (
-    <section id="prestations" className="section" style={{ padding: '5rem 0', background: 'linear-gradient(to bottom, #1a1a1a, #2d2d2d)' }}>
+    <section id="prestations" className="section" style={{ padding: '5rem 0', background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)' }}>
       <div className="container mx-auto px-8">
         {/* Header Section */}
         <div className="w-full max-w-4xl mx-auto px-6 mb-8 text-center">
@@ -206,6 +206,30 @@ const MaterialsInteractive = () => {
             e.target.style.boxShadow = '0 10px 30px rgba(245, 158, 11, 0.3)';
           }}>
             Découvrir tous nos matériaux d'exception →
+          </a>
+          <a href="#contact" style={{ 
+            display: 'inline-block',
+            background: '#111827',
+            color: 'white',
+            padding: '0.875rem 1.5rem',
+            borderRadius: '0.5rem',
+            textDecoration: 'none',
+            fontWeight: '600',
+            fontSize: '1rem',
+            boxShadow: '0 10px 30px rgba(17, 24, 39, 0.3)',
+            transition: 'transform 0.3s, box-shadow 0.3s',
+            cursor: 'pointer',
+            marginLeft: '1rem'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.transform = 'translateY(-2px)';
+            e.target.style.boxShadow = '0 15px 40px rgba(17, 24, 39, 0.4)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = 'translateY(0)';
+            e.target.style.boxShadow = '0 10px 30px rgba(17, 24, 39, 0.3)';
+          }}>
+            Demander un devis personnalisé →
           </a>
         </div>
       </div>

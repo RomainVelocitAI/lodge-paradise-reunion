@@ -133,16 +133,16 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Card CTA en dessous avec padding */}
-        <div className="mt-16 bg-gradient-to-r from-gold-500 to-gold-600 rounded-2xl p-10 lg:p-12 text-center text-white shadow-2xl">
-          <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+        <div className="mt-16 rounded-2xl p-10 lg:p-12 text-center text-white shadow-2xl" style={{ background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)' }}>
+          <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-white">
             Rejoignez nos Investisseurs Satisfaits
           </h3>
-          <p className="text-lg lg:text-xl mb-8 opacity-95 max-w-2xl mx-auto">
+          <p className="text-lg lg:text-xl mb-8 text-white opacity-95 max-w-2xl mx-auto">
             Concrétisez votre projet immobilier à La Réunion avec notre expertise.
           </p>
           <a 
-            href="/contact" 
-            className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full font-semibold text-lg hover:bg-darkblue-900 hover:text-white hover:shadow-lg transition-all transform hover:scale-105"
+            href="#contact" 
+            className="inline-block bg-gold-500 text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-gold-600 hover:shadow-lg transition-all transform hover:scale-105"
           >
             Démarrer Mon Projet →
           </a>

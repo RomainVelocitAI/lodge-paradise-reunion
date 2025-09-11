@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
-import HeroGallery from '../components/HeroGallery';
+import HeroGalleryInvestissement from '../components/HeroGalleryInvestissement';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const InvestissementDefiscalisation = () => {
   const investImages = [
-    { src: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073', alt: 'Investissement 1' },
-    { src: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070', alt: 'Investissement 2' },
-    { src: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2087', alt: 'Investissement 3' },
-    { src: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?q=80&w=2070', alt: 'Investissement 4' },
-    { src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070', alt: 'Investissement 5' }
+    { src: '/investissement.jpg', alt: 'Conseil en investissement' },
+    { src: '/villa1.jpg', alt: 'Projet défiscalisation' },
+    { src: '/villa2.jpg', alt: 'Programme CIOP' },
+    { src: '/villa3.jpg', alt: 'Investissement locatif' },
+    { src: '/villa4.jpg', alt: 'Patrimoine immobilier' }
   ];
 
   return (
@@ -21,39 +23,10 @@ const InvestissementDefiscalisation = () => {
         canonical="https://lodgesparadise.com/investissement-defiscalisation"
       />
       
-      <header style={{ 
-        position: 'fixed', 
-        top: 0, 
-        width: '100%', 
-        background: 'white', 
-        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-        zIndex: 1000,
-        padding: '1rem 0'
-      }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
-          <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <Link to="/" style={{ textDecoration: 'none', color: '#1f2937', fontSize: '1.5rem', fontWeight: 'bold' }}>
-              LODGES PARADISE
-            </Link>
-            <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none', margin: 0 }}>
-              <li><Link to="/nos-projets" style={{ textDecoration: 'none', color: '#1f2937' }}>Nos Projets</Link></li>
-              <li><Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#1f2937' }}>Catalogue</Link></li>
-              <li><Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#1f2937' }}>Matériaux</Link></li>
-              <li><Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#1f2937' }}>Zones</Link></li>
-              <li><Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#D4AF37', fontWeight: 'bold' }}>Investir</Link></li>
-              <li><Link to="/contact" style={{ textDecoration: 'none', background: '#D4AF37', padding: '0.5rem 1.5rem', borderRadius: '0.5rem', color: 'white' }}>Contact</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
-      <div className="pt-20">
-        <HeroGallery 
-          title="Investissement & Défiscalisation"
-          subtitle="Optimisez votre investissement immobilier à La Réunion grâce aux dispositifs de défiscalisation avantageux et à notre expertise en gestion locative."
-          images={investImages}
-        />
-      </div>
+      {/* Hero avec animation de scroll */}
+      <HeroGalleryInvestissement />
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -131,14 +104,7 @@ const InvestissementDefiscalisation = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>© 2025 Lodges Paradise - Promoteur Immobilier Premium à La Réunion</p>
-          <p className="mt-2 opacity-80">
-            2 rue Jean Paul Sartre, 97419 La Possession | Tél: 0262 66 79 88
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };

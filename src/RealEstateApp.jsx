@@ -11,6 +11,7 @@ import MaterialsInteractiveMobile from './components/MaterialsInteractiveMobile'
 import DefiscalisationSection from './components/DefiscalisationSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import TestimonialsSectionMobile from './components/TestimonialsSectionMobile';
+import Footer from './components/Footer';
 
 function RealEstateApp() {
   const [selectedImage, setSelectedImage] = useState(0);
@@ -341,8 +342,8 @@ function RealEstateApp() {
                 color: '#6b7280',
                 lineHeight: '1.6'
               }}>
-                Cliquez sur les zones de la carte pour découvrir nos projets à Saint-Gilles et Saint-Pierre,
-                les deux pôles majeurs du développement immobilier réunionnais.
+                Cliquez sur les zones de la carte pour découvrir nos projets en Zone Ouest et Zone Sud,
+                les deux territoires stratégiques du développement immobilier réunionnais.
               </p>
             </div>
             
@@ -356,7 +357,7 @@ function RealEstateApp() {
           </div>
           
           {/* Contenu dynamique selon la zone sélectionnée */}
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div id="zone-content-card" style={{ maxWidth: '900px', margin: '0 auto' }}>
             {selectedZone === 'ouest' ? (
               <div style={{ 
                 background: 'white', 
@@ -375,7 +376,7 @@ function RealEstateApp() {
                   <span style={{
                     width: '50px',
                     height: '50px',
-                    background: 'linear-gradient(135deg, #EF4444, #DC2626)',
+                    background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)',
                     borderRadius: '50%',
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -387,54 +388,70 @@ function RealEstateApp() {
                   Zone Ouest - Côte sous le vent
                 </h3>
                 <p style={{ color: '#4b5563', fontSize: '1.125rem', marginBottom: '2rem', lineHeight: '1.8' }}>
-                  <strong>Saint-Gilles-les-Bains, Saint-Paul, La Saline</strong> - Le littoral ouest représente 
-                  le cœur touristique et résidentiel premium de La Réunion. Cette zone bénéficie d'un 
-                  ensoleillement exceptionnel et abrite les plus belles plages de l'île.
+                  Le littoral ouest représente le cœur touristique et résidentiel premium de La Réunion. 
+                  Cette zone bénéficie d'un ensoleillement exceptionnel et abrite les plus belles plages de l'île.
+                  <strong>Du Port à l'Étang-Salé</strong>, un territoire d'exception pour votre investissement.
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', marginBottom: '2rem' }}>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#EF4444', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#1a1f2c', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Plages et lagons</strong> : Accès direct aux spots de baignade protégés</span>
                     </li>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#EF4444', marginRight: '0.5rem' }}>✓</span>
-                      <span><strong>Infrastructures premium</strong> : Centres commerciaux, restaurants, écoles internationales</span>
+                      <span style={{ color: '#1a1f2c', marginRight: '0.5rem' }}>✓</span>
+                      <span><strong>Infrastructures premium</strong> : Centres commerciaux, restaurants</span>
                     </li>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#EF4444', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#1a1f2c', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Fort potentiel locatif</strong> : Demande touristique et résidentielle élevée</span>
                     </li>
                   </ul>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#EF4444', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#1a1f2c', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Zone la plus prisée</strong> : Valorisation constante de l'immobilier</span>
                     </li>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#EF4444', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#1a1f2c', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Climat idéal</strong> : Faible pluviométrie, températures agréables</span>
                     </li>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
-                      <span style={{ color: '#EF4444', marginRight: '0.5rem' }}>✓</span>
+                      <span style={{ color: '#1a1f2c', marginRight: '0.5rem' }}>✓</span>
                       <span><strong>Proximité aéroport</strong> : 15 minutes de l'aéroport Roland Garros</span>
                     </li>
                   </ul>
                 </div>
-                <Link to="/nos-projets" style={{ 
-                  display: 'inline-block',
-                  background: 'linear-gradient(135deg, #EF4444, #DC2626)',
-                  color: 'white',
-                  padding: '1rem 2.5rem',
-                  borderRadius: '0.5rem',
-                  textDecoration: 'none',
-                  fontWeight: '600',
-                  fontSize: '1.125rem',
-                  boxShadow: '0 10px 30px rgba(239, 68, 68, 0.3)',
-                  transition: 'transform 0.3s'
-                }}>
-                  Découvrir nos projets dans l'Ouest →
-                </Link>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <Link to="/nos-projets" style={{ 
+                    display: 'inline-block',
+                    background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)',
+                    color: 'white',
+                    padding: '1rem 2.5rem',
+                    borderRadius: '0.5rem',
+                    textDecoration: 'none',
+                    fontWeight: '600',
+                    fontSize: '1.125rem',
+                    boxShadow: '0 10px 30px rgba(239, 68, 68, 0.3)',
+                    transition: 'transform 0.3s'
+                  }}>
+                    Découvrir nos projets dans l'Ouest →
+                  </Link>
+                  <a href="#contact" style={{ 
+                    display: 'inline-block',
+                    background: '#D4AF37',
+                    color: 'white',
+                    padding: '1rem 2.5rem',
+                    borderRadius: '0.5rem',
+                    textDecoration: 'none',
+                    fontWeight: '600',
+                    fontSize: '1.125rem',
+                    boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)',
+                    transition: 'transform 0.3s'
+                  }}>
+                    Prendre RDV →
+                  </a>
+                </div>
               </div>
             ) : (
               <div style={{ 
@@ -466,9 +483,9 @@ function RealEstateApp() {
                   Zone Sud - Dynamisme et expansion
                 </h3>
                 <p style={{ color: '#4b5563', fontSize: '1.125rem', marginBottom: '2rem', lineHeight: '1.8' }}>
-                  <strong>Saint-Pierre, Le Tampon, Saint-Louis</strong> - Le sud de l'île connaît une croissance 
-                  exceptionnelle portée par le développement économique et l'expansion urbaine. Cette zone offre 
-                  un excellent rapport qualité-prix pour les investisseurs.
+                  Le sud de l'île connaît une croissance exceptionnelle portée par le développement économique 
+                  et l'expansion urbaine. Cette zone offre un excellent rapport qualité-prix pour les investisseurs.
+                  <strong>De Saint-Louis à Saint-Philippe</strong>, un territoire en pleine expansion.
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', marginBottom: '2rem' }}>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -500,40 +517,38 @@ function RealEstateApp() {
                     </li>
                   </ul>
                 </div>
-                <Link to="/nos-projets" style={{ 
-                  display: 'inline-block',
-                  background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
-                  color: 'white',
-                  padding: '1rem 2.5rem',
-                  borderRadius: '0.5rem',
-                  textDecoration: 'none',
-                  fontWeight: '600',
-                  fontSize: '1.125rem',
-                  boxShadow: '0 10px 30px rgba(245, 158, 11, 0.3)',
-                  transition: 'transform 0.3s'
-                }}>
-                  Découvrir nos projets dans le Sud →
-                </Link>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <Link to="/nos-projets" style={{ 
+                    display: 'inline-block',
+                    background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
+                    color: 'white',
+                    padding: '1rem 2.5rem',
+                    borderRadius: '0.5rem',
+                    textDecoration: 'none',
+                    fontWeight: '600',
+                    fontSize: '1.125rem',
+                    boxShadow: '0 10px 30px rgba(245, 158, 11, 0.3)',
+                    transition: 'transform 0.3s'
+                  }}>
+                    Découvrir nos projets dans le Sud →
+                  </Link>
+                  <a href="#contact" style={{ 
+                    display: 'inline-block',
+                    background: '#1a1f2c',
+                    color: 'white',
+                    padding: '1rem 2.5rem',
+                    borderRadius: '0.5rem',
+                    textDecoration: 'none',
+                    fontWeight: '600',
+                    fontSize: '1.125rem',
+                    boxShadow: '0 10px 30px rgba(239, 68, 68, 0.3)',
+                    transition: 'transform 0.3s'
+                  }}>
+                    Prendre RDV →
+                  </a>
+                </div>
               </div>
             )}
-          </div>
-          
-          {/* Bouton vers plus de détails */}
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link to="/zones-implantation" style={{ 
-              display: 'inline-block',
-              background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
-              color: '#1e1b4b',
-              padding: '1rem 2.5rem',
-              borderRadius: '0.5rem',
-              textDecoration: 'none',
-              fontWeight: '600',
-              fontSize: '1.125rem',
-              boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)',
-              transition: 'transform 0.3s'
-            }}>
-              Voir plus de détails →
-            </Link>
           </div>
         </div>
       </section>
@@ -545,7 +560,7 @@ function RealEstateApp() {
             <div className="inline-block px-6 py-2 bg-gold-500/20 backdrop-blur-sm rounded-full text-sm font-semibold tracking-wider uppercase mb-4">
               <span className="text-gold-500">Nouveau : CIOP 2025-2029</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gold-500">
               Optimisation Fiscale Exceptionnelle
             </h2>
             <p className="text-lg md:text-xl mb-6 opacity-90 max-w-3xl mx-auto">
@@ -679,8 +694,7 @@ function RealEstateApp() {
                 </div>
                 <div>
                   <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Horaires Bureau de Vente</strong><br />
-                  Lundi - Vendredi : 9h - 18h<br />
-                  Samedi : 9h - 13h<br />
+                  Lundi - Samedi : 9h - 18h<br />
                   <span style={{ color: '#D4AF37', fontWeight: '600' }}>Sur rendez-vous</span>
                 </div>
               </div>
@@ -690,36 +704,7 @@ function RealEstateApp() {
       </section>
 
       {/* Footer */}
-      <footer style={{ 
-        background: '#111827', 
-        color: 'white', 
-        padding: '3rem 0', 
-        textAlign: 'center' 
-      }}>
-        <div className="container">
-          <h3 style={{ 
-            marginBottom: '1rem',
-            background: 'linear-gradient(135deg, #D4AF37, #BF9830)', 
-            WebkitBackgroundClip: 'text', 
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Lodge Paradise
-          </h3>
-          <p style={{ marginBottom: '2rem', color: '#D4AF37', fontSize: '1.1rem' }}>
-            Programme immobilier neuf à La Réunion<br />
-            Un projet développé avec passion et expertise
-          </p>
-          <div style={{ marginBottom: '2rem', opacity: 0.6, fontSize: '0.875rem' }}>
-            <a href="#" style={{ color: 'white', margin: '0 1rem' }}>Mentions légales</a>
-            <a href="#" style={{ color: 'white', margin: '0 1rem' }}>CGV</a>
-            <a href="#" style={{ color: 'white', margin: '0 1rem' }}>Plan du site</a>
-          </div>
-          <p style={{ opacity: 0.5, fontSize: '0.875rem' }}>
-            © 2025 Lodge Paradise - Promotion Immobilière. Tous droits réservés.<br />
-            Les visuels sont non contractuels. Prix sous réserve de disponibilité.
-          </p>
-        </div>
-      </footer>
+      <Footer />
 
       <style>{`
         @keyframes bounce {

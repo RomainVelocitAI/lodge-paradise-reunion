@@ -76,16 +76,17 @@ const BentoGrid = React.forwardRef(({ variant, className, ...props }, ref) => {
 })
 BentoGrid.displayName = "BentoGrid"
 
-const BentoCell = React.forwardRef(({ className, style, ...props }, ref) => {
+const BentoCell = React.forwardRef(({ className, style, initialX = "0%", initialY = "0%", ...props }, ref) => {
   const { scrollYProgress } = useContainerScrollContext()
-  const translate = useTransform(scrollYProgress, [0.1, 0.9], ["-35%", "0%"])
-  const scale = useTransform(scrollYProgress, [0, 0.9], [0.5, 1])
+  const translateX = useTransform(scrollYProgress, [0, 0.9], [initialX, "0%"])
+  const translateY = useTransform(scrollYProgress, [0, 0.9], [initialY, "0%"])
+  const scale = useTransform(scrollYProgress, [0, 0.9], [0.8, 1])
 
   return (
     <motion.div
       ref={ref}
       className={className}
-      style={{ translate, scale, ...style }}
+      style={{ x: translateX, y: translateY, scale, ...style }}
       {...props}></motion.div>
   );
 })

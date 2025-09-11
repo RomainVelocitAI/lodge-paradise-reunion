@@ -8,35 +8,35 @@ const ProjectCatalog = () => {
       designation: "Investissement locatif haut de gamme",
       quote: "Villas d'exception avec piscine privée, matériaux nobles et finitions luxueuses. Idéales pour la location saisonnière avec des rendements optimisés.",
       src: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop",
-      link: "/projets/villas-premium"
+      link: "/nos-projets"
     },
     {
       name: "Immeubles de Rapport",
       designation: "Rentabilité optimale en Pinel Outre-Mer",
       quote: "Programmes collectifs de 6 à 12 logements, parfaitement dimensionnés pour maximiser votre défiscalisation tout en garantissant une gestion simplifiée.",
       src: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-      link: "/projets/immeubles-rapport"
+      link: "/nos-projets"
     },
     {
       name: "Résidences de Tourisme",
       designation: "LMNP avec services de conciergerie",
       quote: "Résidences services avec gestion locative déléguée, services hôteliers et conciergerie premium Île en Rêve pour un investissement sans contrainte.",
       src: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=600&fit=crop",
-      link: "/projets/residences-tourisme"
+      link: "/nos-projets"
     },
     {
       name: "Projets Sur-Mesure",
       designation: "Conception personnalisée selon vos besoins",
       quote: "Développement de projets uniques adaptés à vos objectifs patrimoniaux spécifiques. De la villa d'architecte au complexe résidentiel exclusif.",
       src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
-      link: "/projets/sur-mesure"
+      link: "/nos-projets"
     },
     {
       name: "Lotissements Privés",
       designation: "Programmes d'ensemble harmonieux",
       quote: "Ensembles résidentiels fermés et sécurisés avec espaces communs aménagés, parfaits pour créer des communautés exclusives dans les meilleurs quartiers.",
       src: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&h=600&fit=crop",
-      link: "/projets/lotissements"
+      link: "/nos-projets"
     }
   ];
 
@@ -72,6 +72,15 @@ const ProjectCatalog = () => {
               quote: "1.125rem"
             }}
           />
+        </div>
+        
+        <div className="text-center mt-12">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Discutez de votre projet avec nos experts
+          </a>
         </div>
       </div>
     </section>

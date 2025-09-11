@@ -8,49 +8,49 @@ const MaterialsInteractiveMobile = () => {
     {
       title: "Structure Métallique",
       description: "Charpentes galvanisées résistantes aux cyclones",
-      image: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=80",
+      image: "/structure-metallique.jpg",
       icon: <FaTools size={24} className="text-gold-500" />
     },
     {
       title: "Bois Exotiques",
       description: "Teck, ipé et padouk premium pour durabilité",
-      image: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&q=80",
+      image: "/bois-exotiques.jpg",
       icon: <FaTree size={24} className="text-gold-500" />
     },
     {
       title: "Pierre de Lave",
       description: "Pierre volcanique locale authentique de La Réunion",
-      image: "https://images.unsplash.com/photo-1632164951241-5e135f2d16ce?auto=format&fit=crop&w=800&q=80",
+      image: "/pierre-lave.jpg",
       icon: <FaMountain size={24} className="text-gold-500" />
     },
     {
       title: "Grandes Baies Vitrées",
       description: "Ouvertures jusqu'à 6m avec double vitrage solaire",
-      image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=800&q=80",
+      image: "/baies-vitrees.jpg",
       icon: <FaHome size={24} className="text-gold-500" />
     },
     {
       title: "Garde-Corps en Verre",
       description: "Verre trempé 12mm avec fixations inox marine",
-      image: "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=800&q=80",
+      image: "/garde-corps-verre.jpg",
       icon: <FaSnowflake size={24} className="text-gold-500" />
     },
     {
       title: "Construction Écologique",
       description: "Approche durable certifiée HQE tropicale",
-      image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80",
+      image: "/construction-ecologique.jpg",
       icon: <FaLeaf size={24} className="text-gold-500" />
     },
     {
-      title: "Toiture Tropicale",
-      description: "Conception anti-cyclonique avec isolation renforcée",
-      image: "https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=800&q=80",
+      title: "Panneaux et Chauffe-eau Solaire",
+      description: "Pour une parfaite autonomie énergétique",
+      image: "/panneaux-solaires.jpg",
       icon: <FaUmbrella size={24} className="text-gold-500" />
     },
     {
-      title: "Terrasses en Bois",
-      description: "Decking en bois exotique classe 4 imputrescible",
-      image: "https://images.unsplash.com/photo-1599619351208-3e6c839d6828?auto=format&fit=crop&w=800&q=80",
+      title: "Aménagement Extérieur",
+      description: "Terrasses, spa, cuisine d'été et kiosques",
+      image: "/amenagement-exterieur.jpg",
       icon: <FaPaintRoller size={24} className="text-gold-500" />
     }
   ];
@@ -60,7 +60,7 @@ const MaterialsInteractiveMobile = () => {
   };
 
   return (
-    <section className="section py-12 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section className="section py-12" style={{ background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)' }}>
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-8">
@@ -137,6 +137,12 @@ const MaterialsInteractiveMobile = () => {
             className="inline-block bg-gradient-to-r from-gold-500 to-gold-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105"
           >
             Découvrir tous nos matériaux d'exception →
+          </a>
+          <a 
+            href="#contact" 
+            className="inline-block bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105 ml-3 mt-3"
+          >
+            Demander un devis →
           </a>
         </div>
       </div>

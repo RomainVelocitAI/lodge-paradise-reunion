@@ -262,6 +262,15 @@ const TestimonialsSectionMobile = () => {
             <p className="text-xs text-gray-600">Clients Satisfaits</p>
           </div>
         </div>
+        
+        <div className="text-center mt-8">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-6 py-3 bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Rejoignez nos investisseurs satisfaits
+          </a>
+        </div>
       </div>
     </section>
   );

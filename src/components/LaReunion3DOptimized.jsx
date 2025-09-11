@@ -39,7 +39,16 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
       }}>
         {/* Zone Ouest - Saint-Gilles */}
         <div 
-          onClick={() => onZoneClick('ouest')}
+          onClick={() => {
+            onZoneClick('ouest');
+            // Auto-scroll vers la card
+            setTimeout(() => {
+              const zoneCard = document.querySelector('#zone-content-card');
+              if (zoneCard) {
+                zoneCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }, 100);
+          }}
           style={{
             position: 'absolute',
             left: '20%',
@@ -49,23 +58,24 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
           }}
         >
           <div style={{
-            background: selectedZone === 'ouest' ? '#DC2626' : '#EF4444',
+            background: selectedZone === 'ouest' ? '#0a0f1c' : '#1a1f2c',
             color: 'white',
             padding: '12px 20px',
             borderRadius: '8px',
             boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            fontFamily: "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
             fontWeight: 'bold',
             fontSize: '14px',
             transform: selectedZone === 'ouest' ? 'scale(1.1)' : 'scale(1)',
             transition: 'all 0.3s ease'
           }}>
-            <div>Saint-Gilles</div>
-            <div style={{ fontSize: '11px', opacity: 0.9 }}>Zone Ouest</div>
+            <div>Zone Ouest</div>
+            <div style={{ fontSize: '11px', opacity: 0.9 }}>Secteur Littoral</div>
           </div>
           <div style={{
             width: '12px',
             height: '12px',
-            background: selectedZone === 'ouest' ? '#DC2626' : '#EF4444',
+            background: selectedZone === 'ouest' ? '#0a0f1c' : '#1a1f2c',
             borderRadius: '50%',
             position: 'absolute',
             bottom: '-6px',
@@ -77,7 +87,16 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
 
         {/* Zone Sud - Saint-Pierre */}
         <div 
-          onClick={() => onZoneClick('sud')}
+          onClick={() => {
+            onZoneClick('sud');
+            // Auto-scroll vers la card
+            setTimeout(() => {
+              const zoneCard = document.querySelector('#zone-content-card');
+              if (zoneCard) {
+                zoneCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }, 100);
+          }}
           style={{
             position: 'absolute',
             right: '25%',
@@ -92,13 +111,14 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
             padding: '12px 20px',
             borderRadius: '8px',
             boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            fontFamily: "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
             fontWeight: 'bold',
             fontSize: '14px',
             transform: selectedZone === 'sud' ? 'scale(1.1)' : 'scale(1)',
             transition: 'all 0.3s ease'
           }}>
-            <div>Saint-Pierre</div>
-            <div style={{ fontSize: '11px', opacity: 0.9 }}>Zone Sud</div>
+            <div>Zone Sud</div>
+            <div style={{ fontSize: '11px', opacity: 0.9 }}>Secteur Dynamique</div>
           </div>
           <div style={{
             width: '12px',
@@ -200,13 +220,34 @@ function ReunionModel({ onZoneClick, selectedZone }) {
     while (currentObj) {
       if (currentObj.userData && currentObj.userData.clickable) {
         onZoneClick(currentObj.userData.zoneName);
+        // Auto-scroll vers la card
+        setTimeout(() => {
+          const zoneCard = document.querySelector('#zone-content-card');
+          if (zoneCard) {
+            zoneCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
         return;
       }
       if (currentObj.name === 'Zone_Ouest') {
         onZoneClick('ouest');
+        // Auto-scroll vers la card
+        setTimeout(() => {
+          const zoneCard = document.querySelector('#zone-content-card');
+          if (zoneCard) {
+            zoneCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
         return;
       } else if (currentObj.name === 'Zone_Sud') {
         onZoneClick('sud');
+        // Auto-scroll vers la card
+        setTimeout(() => {
+          const zoneCard = document.querySelector('#zone-content-card');
+          if (zoneCard) {
+            zoneCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
         return;
       }
       currentObj = currentObj.parent;
@@ -275,7 +316,7 @@ function ReunionModel({ onZoneClick, selectedZone }) {
           whiteSpace: 'nowrap',
           boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
         }}>
-          Saint-Gilles
+          Zone Ouest
         </div>
       </Html>
       
@@ -290,7 +331,7 @@ function ReunionModel({ onZoneClick, selectedZone }) {
           whiteSpace: 'nowrap',
           boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
         }}>
-          Saint-Pierre
+          Zone Sud
         </div>
       </Html>
     </group>
@@ -318,7 +359,7 @@ export default function LaReunion3DOptimized({ onZoneSelect }) {
         setLoadError(true);
         setIsLoading(false);
       }
-    }, 5000); // 5 secondes max
+    }, 15000); // 15 secondes max pour charger le modèle 3D
 
     return () => {
       window.removeEventListener('resize', checkMobile);
@@ -421,7 +462,7 @@ export default function LaReunion3DOptimized({ onZoneSelect }) {
             <div style={{ 
               width: '12px', 
               height: '12px', 
-              background: selectedZone === 'ouest' ? '#DC2626' : '#EF4444', 
+              background: selectedZone === 'ouest' ? '#0a0f1c' : '#1a1f2c', 
               borderRadius: '2px',
               transition: 'all 0.3s ease'
             }}></div>

@@ -11,27 +11,27 @@ const MaterialsSlideshow = () => {
     {
       title: "Gestion Administrative Complète",
       description: "Prise en charge intégrale des démarches : permis de construire, autorisations, suivi administratif et juridique",
-      image: "/materials-4-maitrise-oeuvre.webp"
+      image: "/materials-4-gestion-administrative.webp"
     },
     {
       title: "Construction Premium",
       description: "Réalisation de villas haut de gamme avec matériaux nobles : structure métallique, bois exotiques, pierre de lave, grandes baies vitrées et garde-corps en verre",
-      image: "/materials-1-bois-exotiques.webp"
+      image: "/materials-1-construction-premium.webp"
     },
     {
       title: "Optimisation Fiscale",
-      description: "Accompagnement complet pour la défiscalisation : Pinel Outre-Mer, LMNP, montage des dossiers",
-      image: "/materials-6-excellence-qualite.webp"
+      description: "Accompagnement complet pour la défiscalisation : bénéficiez d'une fiscalité avantageuse dans les Dom Tom, (CIOP et montage de dossier jusqu'en 2029)",
+      image: "/materials-6-optimisation-fiscale.webp"
     },
     {
       title: "Service Après-Vente",
       description: "Maintenance, entretien et préservation de votre patrimoine avec garantie de qualité sur le long terme",
-      image: "/materials-3-construction-ecologique.webp"
+      image: "/materials-3-service-apres-vente.webp"
     },
     {
       title: "Conciergerie Premium Île en Rêve",
       description: "Service de conciergerie haut de gamme pour la gestion locative et l'accueil de vos locataires",
-      image: "/materials-2-pierre-lave.webp"
+      image: "/materials-2-conciergerie-premium.webp"
     }
   ];
 
@@ -86,6 +86,15 @@ const MaterialsSlideshow = () => {
             </div>
           </div>
         </HoverSlider>
+        
+        <div className="text-center mt-12">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Commencez votre projet d'investissement
+          </a>
+        </div>
       </div>
     </section>
   );

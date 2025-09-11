@@ -6,8 +6,6 @@ import CatalogueLodges from './pages/CatalogueLodges';
 import MateriauxNobles from './pages/MateriauxNobles';
 import ZonesImplantation from './pages/ZonesImplantation';
 import InvestissementDefiscalisation from './pages/InvestissementDefiscalisation';
-import Galerie from './pages/Galerie';
-import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -24,8 +22,6 @@ function App() {
         <Route path="/materiaux-nobles" element={<MateriauxNobles />} />
         <Route path="/zones-implantation" element={<ZonesImplantation />} />
         <Route path="/investissement-defiscalisation" element={<InvestissementDefiscalisation />} />
-        <Route path="/galerie" element={<Galerie />} />
-        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

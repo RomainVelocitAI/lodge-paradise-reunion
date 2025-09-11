@@ -1,86 +1,151 @@
 import React, { useState, useEffect } from 'react';
-import { HiMenu, HiX } from 'react-icons/hi';
-import { FiPhone, FiMail } from 'react-icons/fi';
-import './Header.css';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
+  const location = useLocation();
+  
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const menuItems = [
-    { label: 'Accueil', href: '#hero' },
-    { label: 'Services', href: '#services' },
-    { label: 'Propriétés', href: '#properties' },
-    { label: 'À propos', href: '#about' },
-    { label: 'Contact', href: '#contact' },
-  ];
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
-    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
-      <div className="container">
-        <div className="header-content">
-          <div className="logo">
-            <h2 className="logo-text">Lodge Paradise</h2>
-            <span className="logo-subtitle">La Réunion</span>
-          </div>
-
-          <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="nav-link"
-                onClick={() => setIsMenuOpen(false)}
+    <header style={{ 
+      position: 'fixed', 
+      top: 0, 
+      left: 0, 
+      right: 0, 
+      background: 'white', 
+      boxShadow: '0 2px 20px rgba(0,0,0,0.08)', 
+      zIndex: 1000,
+      padding: isMobile ? '0.75rem 0' : '1rem 0'
+    }}>
+      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: isMobile ? '0 1rem' : '0 2rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '1rem' }}>
+              <img 
+                src="/logo.jpg" 
+                alt="Lodge Paradise" 
+                style={{ 
+                  height: isMobile ? '40px' : '50px', 
+                  width: isMobile ? '40px' : '50px', 
+                  objectFit: 'cover',
+                  borderRadius: '8px'
+                }} 
+              />
+              <div>
+                <h2 style={{ 
+                  margin: 0, 
+                  color: '#0a0f1c',
+                  fontSize: isMobile ? '1.25rem' : '1.75rem',
+                  fontWeight: '700',
+                  letterSpacing: '0.05em'
+                }}>
+                  LODGES PARADISE
+                </h2>
+                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Ouest et Sud de La Réunion</span>}
+              </div>
+            </div>
+          </Link>
+          
+          {!isMobile && (
+            <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+              <Link 
+                to="/nos-projets" 
+                style={{ 
+                  textDecoration: 'none', 
+                  color: isActive('/nos-projets') ? '#D4AF37' : '#374151', 
+                  fontWeight: isActive('/nos-projets') ? '600' : '500'
+                }}
               >
-                {item.label}
+                Nos Projets
+              </Link>
+              <Link 
+                to="/catalogue-lodges" 
+                style={{ 
+                  textDecoration: 'none', 
+                  color: isActive('/catalogue-lodges') ? '#D4AF37' : '#374151', 
+                  fontWeight: isActive('/catalogue-lodges') ? '600' : '500'
+                }}
+              >
+                Catalogue
+              </Link>
+              <Link 
+                to="/materiaux-nobles" 
+                style={{ 
+                  textDecoration: 'none', 
+                  color: isActive('/materiaux-nobles') ? '#D4AF37' : '#374151', 
+                  fontWeight: isActive('/materiaux-nobles') ? '600' : '500'
+                }}
+              >
+                Matériaux
+              </Link>
+              <Link 
+                to="/zones-implantation" 
+                style={{ 
+                  textDecoration: 'none', 
+                  color: isActive('/zones-implantation') ? '#D4AF37' : '#374151', 
+                  fontWeight: isActive('/zones-implantation') ? '600' : '500'
+                }}
+              >
+                Zones
+              </Link>
+              <Link 
+                to="/investissement-defiscalisation" 
+                style={{ 
+                  textDecoration: 'none', 
+                  color: isActive('/investissement-defiscalisation') ? '#D4AF37' : '#374151', 
+                  fontWeight: isActive('/investissement-defiscalisation') ? '600' : '500'
+                }}
+              >
+                Investir
+              </Link>
+              <a 
+                href="#contact" 
+                style={{ 
+                  background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
+                  color: '#1e1b4b',
+                  padding: '0.625rem 1.5rem',
+                  borderRadius: '0.5rem',
+                  textDecoration: 'none',
+                  fontWeight: '600'
+                }}
+              >
+                Contact
               </a>
-            ))}
-          </nav>
-
-          <div className="header-cta">
-            <a href="tel:+262692470141" className="header-phone">
-              <FiPhone size={18} />
-              <span>06 92 47 01 41</span>
-            </a>
-            <button
-              className="menu-toggle"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
+            </nav>
+          )}
+          
+          {isMobile && (
+            <a 
+              href="#contact" 
+              style={{ 
+                background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
+                color: '#1e1b4b',
+                padding: '0.5rem 1rem',
+                borderRadius: '0.5rem',
+                textDecoration: 'none',
+                fontWeight: '600',
+                fontSize: '0.875rem'
+              }}
             >
-              {isMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-            </button>
-          </div>
+              Contact
+            </a>
+          )}
         </div>
       </div>
-
-      {isMenuOpen && (
-        <div className="mobile-menu">
-          <nav className="mobile-nav">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="mobile-nav-link"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
-            <a href="tel:+262692470141" className="mobile-nav-link mobile-phone">
-              <FiPhone size={18} />
-              <span>06 92 47 01 41</span>
-            </a>
-          </nav>
-        </div>
-      )}
     </header>
   );
 };

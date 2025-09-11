@@ -44,7 +44,7 @@ const HeroSection = ({ scrollYProgress }) => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: 'center' }}
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/LODGES PARADISE - DIGIQO - Chat.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-darkblue-500/60 via-gold-500/10 to-darkblue-500/60" />
         <div className="absolute inset-0 bg-black/20" />
@@ -93,7 +93,7 @@ const HeroSection = ({ scrollYProgress }) => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-xl md:text-2xl mb-8 opacity-90 font-light max-w-3xl mx-auto"
         >
-          Jusqu'à 7% de rendement locatif • Défiscalisation optimisée<br />
+          Défiscalisation optimisée<br />
           Votre patrimoine clés en main avec gestion 5 étoiles
         </motion.p>
 
@@ -101,12 +101,9 @@ const HeroSection = ({ scrollYProgress }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="flex gap-6 justify-center mb-12"
+          className="flex justify-center mb-12"
         >
-          <a href="#lodges" className="px-8 py-4 bg-white text-darkblue-500 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105">
-            Découvrir les Lodges
-          </a>
-          <a href="#contact" className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-all">
+          <a href="#contact" className="px-8 py-4 bg-white text-darkblue-500 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105">
             Prendre RDV
           </a>
         </motion.div>
@@ -135,6 +132,9 @@ const HeroSection = ({ scrollYProgress }) => {
 
 const EnterpriseSection = ({ scrollYProgress }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [reductionValue, setReductionValue] = useState(0);
+  const [experienceValue, setExperienceValue] = useState(0);
   
   useEffect(() => {
     const checkMobile = () => {
@@ -149,11 +149,56 @@ const EnterpriseSection = ({ scrollYProgress }) => {
   const scale = useTransform(scrollYProgress, [0, 1], isMobile ? [1, 1] : [0.85, 1]);
   const rotate = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [2, 0]);
   
+  // Animation des compteurs
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            
+            // Animation pour -35%
+            let reductionCounter = 0;
+            const reductionInterval = setInterval(() => {
+              reductionCounter += 1;
+              setReductionValue(reductionCounter);
+              if (reductionCounter >= 35) {
+                clearInterval(reductionInterval);
+              }
+            }, 40);
+            
+            // Animation pour 40 ans
+            let experienceCounter = 0;
+            const experienceInterval = setInterval(() => {
+              experienceCounter += 1;
+              setExperienceValue(experienceCounter);
+              if (experienceCounter >= 40) {
+                clearInterval(experienceInterval);
+              }
+            }, 35);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    
+    const metricsSection = document.getElementById('metrics-section');
+    if (metricsSection) {
+      observer.observe(metricsSection);
+    }
+    
+    return () => {
+      if (metricsSection) {
+        observer.unobserve(metricsSection);
+      }
+    };
+  }, [hasAnimated]);
+  
   const images = [
-    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop"
+    "/client-image-1.jpg",
+    "/client-image-2.jpg",
+    "/client-image-3.jpg",
+    "/client-image-4.jpg"
   ];
 
   return (
@@ -182,30 +227,52 @@ const EnterpriseSection = ({ scrollYProgress }) => {
               N°1 de l'Immobilier Locatif Premium à La Réunion
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              <strong>10 ans d'expertise.</strong> Nous transformons votre capital 
-              en patrimoine rentable avec des rendements garantis jusqu'à 7% et une défiscalisation 
-              optimisée (CIOP, LMNP).
+              <strong>40 ans d'expertise.</strong> Nous transformons votre capital 
+              en patrimoine rentable avec une défiscalisation 
+              optimisée (CIOP).
             </p>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               De l'acquisition du terrain à la gestion locative avec notre partenaire <strong>Île en Rêve</strong>, 
-              nous maîtrisons chaque étape. Zones Ouest et Sud exclusivement : Saint-Gilles, Saint-Pierre, 
+              nous maîtrisons chaque étape. Zones Ouest et Sud exclusivement, 
               les marchés les plus dynamiques de l'île.
             </p>
             
-            <div className="grid grid-cols-3 gap-8 mt-12">
-              <div>
-                <h3 className="text-4xl font-bold text-emerald-500">-35%</h3>
+            <div id="metrics-section" className="grid grid-cols-2 gap-8 mt-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <h3 className="text-4xl font-bold text-darkblue-500 tabular-nums">
+                  -{reductionValue || 0}%
+                </h3>
                 <p className="text-gray-600 mt-2">Réduction d'impôts CIOP</p>
-              </div>
-              <div>
-                <h3 className="text-4xl font-bold text-gold-500">98%</h3>
-                <p className="text-gray-600 mt-2">Taux satisfaction</p>
-              </div>
-              <div>
-                <h3 className="text-4xl font-bold text-emerald-500">10 ans</h3>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <h3 className="text-4xl font-bold text-darkblue-500 tabular-nums">
+                  {experienceValue || 0} ans
+                </h3>
                 <p className="text-gray-600 mt-2">D'expertise</p>
-              </div>
+              </motion.div>
             </div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mt-8"
+            >
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Découvrez votre potentiel d'investissement
+              </a>
+            </motion.div>
           </motion.div>
 
           {!isMobile && (
@@ -248,25 +315,25 @@ const EnterpriseSection = ({ scrollYProgress }) => {
               className="mt-8 mb-8 grid grid-cols-2 gap-4"
             >
               <img 
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=300&h=300&fit=crop" 
+                src="/client-image-1.jpg" 
                 alt="Lodge Paradise 1" 
                 className="w-full h-32 object-cover shadow-lg"
                 style={{ borderRadius: '50%', aspectRatio: '1/1' }}
               />
               <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=300&fit=crop" 
+                src="/client-image-2.jpg" 
                 alt="Lodge Paradise 2" 
                 className="w-full h-32 object-cover shadow-lg"
                 style={{ borderRadius: '50%', aspectRatio: '1/1' }}
               />
               <img 
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=300&fit=crop" 
+                src="/client-image-3.jpg" 
                 alt="Lodge Paradise 3" 
                 className="w-full h-32 object-cover shadow-lg"
                 style={{ borderRadius: '50%', aspectRatio: '1/1' }}
               />
               <img 
-                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=300&h=300&fit=crop" 
+                src="/client-image-4.jpg" 
                 alt="Lodge Paradise 4" 
                 className="w-full h-32 object-cover shadow-lg"
                 style={{ borderRadius: '50%', aspectRatio: '1/1' }}
