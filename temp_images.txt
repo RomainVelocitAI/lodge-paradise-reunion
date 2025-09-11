@@ -1,0 +1,7 @@
+const images = [
+    { src: '/structure-metallique.jpg', alt: 'Structure métallique premium' },
+    { src: '/bois-exotiques.jpg', alt: 'Bois exotiques nobles' },
+    { src: '/pierre-lave.jpg', alt: 'Pierre de lave volcanique' },
+    { src: '/garde-corps-verre.jpg', alt: 'Garde-corps en verre trempé' },
+    { src: '/panneaux-solaires.jpg', alt: 'Panneaux solaires intégrés' }
+  ];
