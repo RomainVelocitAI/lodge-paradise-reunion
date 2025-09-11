@@ -152,7 +152,7 @@ function RealEstateApp() {
                 display: 'inline-block'
               }}>
                 Découvrir les Lodges
-              </a>
+              </Link>
               <a href="#contact" style={{ 
                 background: 'transparent', 
                 color: 'white', 
