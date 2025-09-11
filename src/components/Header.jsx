@@ -73,16 +73,6 @@ const Header = () => {
                 Nos Projets
               </Link>
               <Link 
-                to="/catalogue-lodges" 
-                style={{ 
-                  textDecoration: 'none', 
-                  color: isActive('/catalogue-lodges') ? '#D4AF37' : '#374151', 
-                  fontWeight: isActive('/catalogue-lodges') ? '600' : '500'
-                }}
-              >
-                Catalogue
-              </Link>
-              <Link 
                 to="/materiaux-nobles" 
                 style={{ 
                   textDecoration: 'none', 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
-import HeroGallery from '../components/HeroGallery';
+import HeroGalleryZones from '../components/HeroGalleryZones';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -58,13 +58,7 @@ const ZonesImplantation = () => {
       
       <Header />
 
-      <div className="pt-20">
-        <HeroGallery 
-          title="Zones d'Implantation Privilégiées"
-          subtitle="Lodges Paradise sélectionne avec soin les meilleurs emplacements de La Réunion pour vos projets immobiliers. Des sites d'exception alliant beauté naturelle, dynamisme économique et qualité de vie."
-          images={zoneImages}
-        />
-      </div>
+      <HeroGalleryZones />
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">

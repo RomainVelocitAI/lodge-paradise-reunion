@@ -77,10 +77,10 @@ function RealEstateApp() {
             </div>
             {!isMobile && (
               <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                <a href="#projet" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Le Projet</a>
-                <a href="#lodges" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Nos Lodges</a>
-                <a href="#prestations" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Prestations</a>
-                <a href="#galerie" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Galerie</a>
+                <Link to="/nos-projets" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Le Projet</Link>
+                <Link to="/catalogue-lodges" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Nos Lodges</Link>
+                <Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Prestations</Link>
+                <Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Fiscalité</Link>
                 <a href="#contact" style={{ 
                   background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
                   color: '#1e1b4b',
@@ -142,7 +142,7 @@ function RealEstateApp() {
               Investissement idéal pour résidence principale ou rentabilité locative.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem', flexWrap: 'wrap' }}>
-              <a href="#lodges" style={{ 
+              <Link to="/catalogue-lodges" style={{ 
                 background: 'white', 
                 color: '#0a0f1c', 
                 padding: '1rem 2rem',
