@@ -244,7 +244,7 @@ const EnterpriseSection = ({ scrollYProgress }) => {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <h3 className="text-4xl font-bold text-darkblue-500 tabular-nums">
-                  -{reductionValue || 0}%
+                  {reductionValue || 0}%
                 </h3>
                 <p className="text-gray-600 mt-2">Réduction d'impôts CIOP</p>
               </motion.div>

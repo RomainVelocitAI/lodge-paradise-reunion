@@ -1,0 +1,401 @@
+/* ==============================================
+   RESPONSIVE FIXES FOR MOBILE - LODGE PARADISE
+   ============================================== */
+
+/* Base mobile styles */
+@media screen and (max-width: 768px) {
+  /* Global container fixes */
+  .container {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Fix text overflow and centering */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    text-align: center !important;
+    padding: 0 0.5rem !important;
+    max-width: 100% !important;
+  }
+
+  p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    padding: 0 0.5rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  /* Fix percentage display issue */
+  span:contains("-35%"),
+  .percentage-display {
+    text-indent: 0 !important;
+    display: inline-block !important;
+  }
+
+  /* Section padding adjustments */
+  .section {
+    padding: 2rem 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  section {
+    padding: 2rem 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Grid responsive fixes */
+  .grid,
+  [style*="grid"] {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .grid > *,
+  [style*="grid"] > * {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Flexbox responsive fixes */
+  [style*="display: flex"],
+  [style*="display:flex"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Image responsive fixes */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* Card responsive fixes */
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 1rem !important;
+    padding: 1rem !important;
+  }
+
+  /* Button responsive fixes */
+  .btn,
+  button,
+  a[style*="padding"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    padding: 0.75rem 1rem !important;
+    margin: 0.5rem 0 !important;
+    display: block !important;
+  }
+
+  /* Navigation responsive fixes */
+  nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  nav a {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0.75rem !important;
+  }
+
+  /* Hero section fixes */
+  .hero,
+  [class*="hero"] {
+    min-height: 60vh !important;
+    padding: 2rem 1rem !important;
+  }
+
+  /* Interactive map responsive fixes */
+  #zones svg,
+  .map-container svg {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  /* La Réunion 3D map container */
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 50vh !important;
+  }
+
+  /* Zone content card fixes */
+  #zone-content-card {
+    padding: 1rem !important;
+    margin: 1rem !important;
+    width: calc(100% - 2rem) !important;
+  }
+
+  /* Stats grid fixes */
+  [style*="gridTemplateColumns: 'repeat(2, 1fr)'"],
+  [style*="grid-template-columns: repeat(2"],
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+
+  /* Form fixes */
+  form {
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100% !important;
+    padding: 0.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Modal/Dialog fixes */
+  .modal,
+  .dialog,
+  [role="dialog"] {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 1rem auto !important;
+    padding: 1rem !important;
+  }
+
+  /* Slideshow fixes */
+  .slideshow,
+  [class*="slideshow"],
+  .carousel {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* Text size adjustments */
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
+  }
+
+  h3 {
+    font-size: clamp(1.125rem, 4vw, 1.5rem) !important;
+  }
+
+  p {
+    font-size: clamp(0.875rem, 3vw, 1rem) !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Remove horizontal scroll */
+  body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  /* Fix absolute positioned elements */
+  [style*="position: absolute"],
+  [style*="position:absolute"] {
+    position: relative !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  /* Footer fixes */
+  footer {
+    padding: 2rem 1rem !important;
+  }
+
+  footer div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  /* Contact section fixes */
+  #contact {
+    padding: 2rem 1rem !important;
+  }
+
+  /* Project catalog fixes */
+  .project-card {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Testimonials fixes */
+  .testimonial-card {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    padding: 1rem !important;
+  }
+
+  /* Materials section fixes */
+  .materials-grid {
+    display: block !important;
+  }
+
+  .material-item {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Defiscalisation section fixes */
+  .defiscalisation-content {
+    padding: 1rem !important;
+  }
+
+  /* Fix overlapping elements */
+  * {
+    position: relative !important;
+    z-index: auto !important;
+  }
+
+  header {
+    z-index: 1000 !important;
+  }
+
+  /* Ensure minimum touch target size */
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  /* Fix percentage symbols */
+  *:before {
+    content: "" !important;
+  }
+
+  /* Specific fix for -35% display issue */
+  span:contains("35") {
+    display: inline-block !important;
+    text-indent: 0 !important;
+  }
+
+  /* Ensure text is never cut off */
+  * {
+    text-overflow: ellipsis !important;
+    white-space: normal !important;
+  }
+
+  /* Fix zone selection buttons */
+  .zone-button,
+  [onclick*="Zone"] {
+    width: 100% !important;
+    padding: 1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Tablet specific fixes */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 2rem !important;
+  }
+
+  .grid,
+  [style*="grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Small mobile specific (iPhone SE, etc.) */
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.25rem !important;
+  }
+
+  h2 {
+    font-size: 1.125rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+
+  p {
+    font-size: 0.875rem !important;
+  }
+
+  .container {
+    padding: 0 0.75rem !important;
+  }
+}
+
+/* Landscape mobile fixes */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero,
+  [class*="hero"] {
+    min-height: 100vh !important;
+  }
+
+  header {
+    position: relative !important;
+  }
+}
+
+/* High DPI screens (Retina) */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+  }
+
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #1a1f2c;
+    --color-secondary: #D4AF37;
+    --color-dark: #f9fafb;
+    --color-light: #111827;
+  }
+}

@@ -1,0 +1,53 @@
+/* Mobile fixes minimalistes - corrections ciblées uniquement */
+
+/* Fix mobile général pour éviter les débordements */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Container principal */
+  .container,
+  .mx-auto {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Fix pour les sections de la Zone */
+  #zone-content-card {
+    padding: 1.5rem !important;
+    margin: 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+  }
+
+  /* Fix pour les listes dans zones */
+  #zone-content-card ul {
+    padding-left: 0;
+  }
+
+  #zone-content-card li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  /* Fix pour le texte dans zones */
+  #zone-content-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  #zone-content-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  /* Fix pour les statistiques */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+  }
+}

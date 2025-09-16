@@ -358,19 +358,20 @@ function RealEstateApp() {
           {/* Contenu dynamique selon la zone sélectionnée */}
           <div id="zone-content-card" style={{ maxWidth: '900px', margin: '0 auto' }}>
             {selectedZone === 'ouest' ? (
-              <div style={{ 
-                background: 'white', 
-                padding: '3rem', 
+              <div style={{
+                background: 'white',
+                padding: isMobile ? '1.5rem' : '3rem',
                 borderRadius: '1rem',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.08)'
               }}>
-                <h3 style={{ 
-                  fontSize: '2rem', 
+                <h3 style={{
+                  fontSize: isMobile ? '1.5rem' : '2rem',
                   marginBottom: '1.5rem',
                   color: '#111827',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '1rem'
+                  gap: isMobile ? '0.5rem' : '1rem',
+                  flexWrap: isMobile ? 'wrap' : 'nowrap'
                 }}>
                   <span style={{
                     width: '50px',
@@ -391,7 +392,7 @@ function RealEstateApp() {
                   Cette zone bénéficie d'un ensoleillement exceptionnel et abrite les plus belles plages de l'île.
                   <strong>Du Port à l'Étang-Salé</strong>, un territoire d'exception pour votre investissement.
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', marginBottom: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', gap: isMobile ? '1rem' : '2rem', marginBottom: '2rem' }}>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
                       <span style={{ color: '#1a1f2c', marginRight: '0.5rem' }}>✓</span>
@@ -453,19 +454,20 @@ function RealEstateApp() {
                 </div>
               </div>
             ) : (
-              <div style={{ 
-                background: 'white', 
-                padding: '3rem', 
+              <div style={{
+                background: 'white',
+                padding: isMobile ? '1.5rem' : '3rem',
                 borderRadius: '1rem',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.08)'
               }}>
-                <h3 style={{ 
-                  fontSize: '2rem', 
+                <h3 style={{
+                  fontSize: isMobile ? '1.5rem' : '2rem',
                   marginBottom: '1.5rem',
                   color: '#111827',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '1rem'
+                  gap: isMobile ? '0.5rem' : '1rem',
+                  flexWrap: isMobile ? 'wrap' : 'nowrap'
                 }}>
                   <span style={{
                     width: '50px',
@@ -486,7 +488,7 @@ function RealEstateApp() {
                   et l'expansion urbaine. Cette zone offre un excellent rapport qualité-prix pour les investisseurs.
                   <strong>De Saint-Louis à Saint-Philippe</strong>, un territoire en pleine expansion.
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', marginBottom: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', gap: isMobile ? '1rem' : '2rem', marginBottom: '2rem' }}>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     <li style={{ marginBottom: '1rem', color: '#374151', display: 'flex', alignItems: 'start' }}>
                       <span style={{ color: '#D4AF37', marginRight: '0.5rem' }}>✓</span>

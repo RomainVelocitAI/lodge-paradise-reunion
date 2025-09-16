@@ -38,7 +38,7 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
         justifyContent: 'center'
       }}>
         {/* Zone Ouest - Saint-Gilles */}
-        <div 
+        <div
           onClick={() => {
             onZoneClick('ouest');
             // Auto-scroll vers la card
@@ -51,10 +51,11 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
           }}
           style={{
             position: 'absolute',
-            left: '20%',
-            top: '40%',
+            left: window.innerWidth < 768 ? '15%' : '20%',
+            top: window.innerWidth < 768 ? '35%' : '40%',
             cursor: 'pointer',
-            transition: 'all 0.3s ease'
+            transition: 'all 0.3s ease',
+            transform: window.innerWidth < 768 ? 'scale(0.9)' : 'scale(1)'
           }}
         >
           <div style={{
@@ -86,7 +87,7 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
         </div>
 
         {/* Zone Sud - Saint-Pierre */}
-        <div 
+        <div
           onClick={() => {
             onZoneClick('sud');
             // Auto-scroll vers la card
@@ -99,10 +100,11 @@ const MapFallback = ({ onZoneClick, selectedZone }) => {
           }}
           style={{
             position: 'absolute',
-            right: '25%',
-            bottom: '30%',
+            right: window.innerWidth < 768 ? '20%' : '25%',
+            bottom: window.innerWidth < 768 ? '25%' : '30%',
             cursor: 'pointer',
-            transition: 'all 0.3s ease'
+            transition: 'all 0.3s ease',
+            transform: window.innerWidth < 768 ? 'scale(0.9)' : 'scale(1)'
           }}
         >
           <div style={{

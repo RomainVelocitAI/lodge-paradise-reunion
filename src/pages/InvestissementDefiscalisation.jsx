@@ -120,19 +120,15 @@ const InvestissementDefiscalisation = () => {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Entreprise domiciliée à La Réunion</p>
+                  <p className="text-gray-700">5 ans de location non meublée</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Secteurs éligibles (BTP, industrie...)</p>
+                  <p className="text-gray-700">Location longue durée</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Conservation 5 ans minimum</p>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Exploitation à La Réunion</p>
+                  <p className="text-gray-700">Pas d'autres conditions</p>
                 </div>
               </div>
             </div>
@@ -205,15 +201,15 @@ const InvestissementDefiscalisation = () => {
                   <div className="space-y-2">
                     <div className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-600">Équipements productifs neufs</p>
+                      <p className="text-sm text-gray-600">5 ans de location non meublée</p>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-600">Conservation 5 ans minimum</p>
+                      <p className="text-sm text-gray-600">Location longue durée</p>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-600">Exploitation à La Réunion</p>
+                      <p className="text-sm text-gray-600">Pas d'autres conditions spécifiques</p>
                     </div>
                   </div>
                 </div>
