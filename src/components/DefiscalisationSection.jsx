@@ -6,7 +6,6 @@ const DefiscalisationSection = () => {
     investissement: 300000,
     dispositif: 'ciop',
     dureeEngagement: 5,
-    regimeFiscal: 'reel',
     trancheImposition: 30,
     loyerMensuel: 2500
   });
@@ -29,49 +28,22 @@ const DefiscalisationSection = () => {
     let rendementNet = 0;
     let cashFlowMensuel = 0;
 
-    const { investissement, dispositif, dureeEngagement, regimeFiscal, trancheImposition, loyerMensuel } = calculatorData;
+    const { investissement, dispositif, dureeEngagement, trancheImposition, loyerMensuel } = calculatorData;
     const loyerAnnuel = loyerMensuel * 12;
 
-    if (dispositif === 'ciop') {
-      // CIOP : 35% de crédit d'impôt
-      const creditImpot = investissement * 0.35;
-      economieAnnuelle = creditImpot / 5; // Étalé sur 5 ans
-      economieTotale = creditImpot;
-      
-      // Calcul du rendement avec loyers plafonnés mais optimisés
-      const loyerOptimise = loyerMensuel * 0.9; // Loyer plafonné mais optimisé
-      const loyerAnnuelOptimise = loyerOptimise * 12;
-      const chargesEstimees = loyerAnnuelOptimise * 0.2; // 20% de charges
-      const impotLoyer = (loyerAnnuelOptimise - chargesEstimees) * (trancheImposition / 100);
-      
-      cashFlowMensuel = loyerOptimise - (chargesEstimees / 12) - (impotLoyer / 12) + (economieAnnuelle / 12);
-      rendementNet = ((loyerAnnuelOptimise - chargesEstimees - impotLoyer + economieAnnuelle) / investissement) * 100;
-      
-    } else if (dispositif === 'lmnp') {
-      if (regimeFiscal === 'micro') {
-        // Micro-BIC : 50% d'abattement
-        const revenuImposable = loyerAnnuel * 0.5;
-        economieAnnuelle = revenuImposable * (trancheImposition / 100);
-        cashFlowMensuel = loyerMensuel - (economieAnnuelle / 12);
-      } else {
-        // Régime réel : amortissement
-        const amortissementAnnuel = investissement * 0.85 / 30; // 85% du bien sur 30 ans
-        const chargesEstimees = loyerAnnuel * 0.25; // 25% de charges estimées
-        const resultatFiscal = loyerAnnuel - chargesEstimees - amortissementAnnuel;
-        
-        if (resultatFiscal < 0) {
-          // Pas d'impôt si déficit
-          economieAnnuelle = loyerAnnuel * (trancheImposition / 100);
-        } else {
-          economieAnnuelle = (loyerAnnuel - resultatFiscal) * (trancheImposition / 100);
-        }
-        cashFlowMensuel = loyerMensuel - (chargesEstimees / 12);
-      }
-      
-      economieTotale = economieAnnuelle * Math.min(dureeEngagement, 20);
-      rendementNet = ((loyerAnnuel - (loyerAnnuel * 0.25)) / investissement) * 100;
-      
-    }
+    // CIOP : 35% de crédit d'impôt
+    const creditImpot = investissement * 0.35;
+    economieAnnuelle = creditImpot / 5; // Étalé sur 5 ans
+    economieTotale = creditImpot;
+
+    // Calcul du rendement avec loyers plafonnés mais optimisés
+    const loyerOptimise = loyerMensuel * 0.9; // Loyer plafonné mais optimisé
+    const loyerAnnuelOptimise = loyerOptimise * 12;
+    const chargesEstimees = loyerAnnuelOptimise * 0.2; // 20% de charges
+    const impotLoyer = (loyerAnnuelOptimise - chargesEstimees) * (trancheImposition / 100);
+
+    cashFlowMensuel = loyerOptimise - (chargesEstimees / 12) - (impotLoyer / 12) + (economieAnnuelle / 12);
+    rendementNet = ((loyerAnnuelOptimise - chargesEstimees - impotLoyer + economieAnnuelle) / investissement) * 100;
 
     setResults({
       economieAnnuelle: Math.round(economieAnnuelle),
@@ -118,29 +90,16 @@ const DefiscalisationSection = () => {
               exceptionnelles jusqu'en 2029 :
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white p-6 rounded-lg shadow-md border-2 border-gold-500">
-                <h4 className="font-bold text-lg mb-2 text-gold-500">CIOP - Crédit d'Impôt Outre-Mer (Nouveau)</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ <strong>35% de défiscalisation</strong> sur votre investissement</li>
-                  <li>✓ Engagement de <strong>5 ans en location non meublée</strong></li>
-                  <li>✓ Location longue durée avec loyers plafonnés</li>
-                  <li>✓ Optimisation des revenus locatifs garantie</li>
-                  <li>✓ <strong className="text-red-600">Disponible jusqu'en 2029 seulement</strong></li>
-                  <li>✓ <strong className="text-gold-500">Plus que 4 ans pour en profiter !</strong></li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h4 className="font-bold text-lg mb-2 text-gold-500">LMNP - Location Meublée Non Professionnelle</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>✓ Régime micro-BIC : 50% d'abattement forfaitaire</li>
-                  <li>✓ Régime réel : amortissement du bien et des meubles</li>
-                  <li>✓ Récupération de la TVA sur l'investissement</li>
-                  <li>✓ Revenus locatifs peu ou pas imposés</li>
-                  <li>✓ Idéal pour la location saisonnière à La Réunion</li>
-                </ul>
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border-2 border-gold-500 mb-8 max-w-2xl mx-auto">
+              <h4 className="font-bold text-xl mb-3 text-gold-500 text-center">CIOP - Crédit d'Impôt Outre-Mer (Nouveau)</h4>
+              <ul className="space-y-3 text-base">
+                <li className="flex items-start"><span className="text-green-500 font-bold mr-2">✓</span> <strong>35% de défiscalisation</strong> sur votre investissement</li>
+                <li className="flex items-start"><span className="text-green-500 font-bold mr-2">✓</span> Engagement de <strong>5 ans en location non meublée</strong></li>
+                <li className="flex items-start"><span className="text-green-500 font-bold mr-2">✓</span> Location longue durée avec loyers plafonnés</li>
+                <li className="flex items-start"><span className="text-green-500 font-bold mr-2">✓</span> Optimisation des revenus locatifs garantie</li>
+                <li className="flex items-start"><span className="text-red-500 font-bold mr-2">⚠</span> <strong className="text-red-600">Disponible jusqu'en 2029 seulement</strong></li>
+                <li className="flex items-start"><span className="text-gold-500 font-bold mr-2">⏳</span> <strong className="text-gold-500">Plus que 4 ans pour en profiter !</strong></li>
+              </ul>
             </div>
 
             <h3 className="text-xl font-semibold mb-3 text-gray-800">
@@ -211,61 +170,24 @@ const DefiscalisationSection = () => {
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Dispositif fiscal
                 </label>
-                <select 
-                  value={calculatorData.dispositif}
-                  onChange={(e) => setCalculatorData({...calculatorData, dispositif: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
-                >
-                  <option value="ciop">CIOP - Crédit d'Impôt Outre-Mer (35%)</option>
-                  <option value="lmnp">LMNP - Location Meublée</option>
-                </select>
+                <div className="bg-gold-50 p-4 rounded-lg border-2 border-gold-500">
+                  <div className="text-lg font-bold text-gold-600">CIOP - Crédit d'Impôt Outre-Mer</div>
+                  <div className="text-sm text-gray-600 mt-1">35% de défiscalisation garantie</div>
+                </div>
               </div>
 
-              {calculatorData.dispositif === 'lmnp' && (
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Régime fiscal LMNP
-                  </label>
-                  <select 
-                    value={calculatorData.regimeFiscal}
-                    onChange={(e) => setCalculatorData({...calculatorData, regimeFiscal: e.target.value})}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
-                  >
-                    <option value="micro">Micro-BIC (50% abattement)</option>
-                    <option value="reel">Réel (avec amortissement)</option>
-                  </select>
-                </div>
-              )}
-
-              {calculatorData.dispositif === 'ciop' ? (
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Durée d'engagement CIOP
-                  </label>
-                  <select 
-                    value={calculatorData.dureeEngagement}
-                    onChange={(e) => setCalculatorData({...calculatorData, dureeEngagement: parseInt(e.target.value)})}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
-                  >
-                    <option value="5">5 ans (engagement CIOP)</option>
-                  </select>
-                </div>
-              ) : (
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Durée d'engagement (années)
-                  </label>
-                  <select 
-                    value={calculatorData.dureeEngagement}
-                    onChange={(e) => setCalculatorData({...calculatorData, dureeEngagement: parseInt(e.target.value)})}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
-                  >
-                    <option value="6">6 ans</option>
-                    <option value="9">9 ans</option>
-                    <option value="12">12 ans</option>
-                  </select>
-                </div>
-              )}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Durée d'engagement CIOP
+                </label>
+                <select
+                  value={calculatorData.dureeEngagement}
+                  onChange={(e) => setCalculatorData({...calculatorData, dureeEngagement: parseInt(e.target.value)})}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500"
+                >
+                  <option value="5">5 ans (engagement CIOP)</option>
+                </select>
+              </div>
 
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">

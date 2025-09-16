@@ -59,7 +59,7 @@ const HeroSection = ({ scrollYProgress }) => {
           className="mb-6"
         >
           <span className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold tracking-wider uppercase">
-            Pinel • Girardin • LMNP
+            Pinel • Girardin • CIOP
           </span>
         </motion.div>
         

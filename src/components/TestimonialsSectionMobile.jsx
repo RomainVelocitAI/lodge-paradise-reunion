@@ -19,7 +19,7 @@ const TestimonialsSectionMobile = () => {
     {
       name: "Sophie Martin",
       role: "Propriétaire - Immeuble de rapport à Saint-Pierre",
-      content: "L'expertise fiscale de Lodge Paradise m'a permis d'optimiser mon investissement avec le LMNP. Service irréprochable du début à la fin du projet.",
+      content: "L'expertise fiscale de Lodge Paradise m'a permis d'optimiser mon investissement avec la défiscalisation CIOP. Service irréprochable du début à la fin du projet.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
       investment: "680 000€"
@@ -229,12 +229,9 @@ const TestimonialsSectionMobile = () => {
 
         {/* CTA Section */}
         <div className="mt-10 bg-gradient-to-r from-gold-500 to-gold-600 rounded-2xl p-6 text-center text-white">
-          <h3 className="text-xl font-bold mb-2">
+          <h3 className="text-xl font-bold mb-4">
             Rejoignez nos Investisseurs
           </h3>
-          <p className="text-sm mb-4 opacity-95">
-            Plus de 200 projets réalisés depuis 2014
-          </p>
           <a 
             href="/contact" 
             className="inline-block bg-white text-gray-900 px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-darkblue-900 hover:text-white hover:shadow-lg transition-all transform hover:scale-105"

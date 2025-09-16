@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
     {
       name: "Sophie Martin",
       username: "@sophie_m",
-      body: "L'expertise fiscale m'a permis d'optimiser avec le LMNP. Service irréprochable !",
+      body: "L'expertise fiscale m'a permis d'optimiser avec la défiscalisation CIOP. Service irréprochable !",
       img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
       investment: "🏢 680 000€"
     },

@@ -4,39 +4,39 @@ import { CircularProjects } from './CircularProjects';
 const ProjectCatalog = () => {
   const projectTypes = [
     {
-      name: "Villas Individuelles Premium",
-      designation: "Investissement locatif haut de gamme",
-      quote: "Villas d'exception avec piscine privée, matériaux nobles et finitions luxueuses. Idéales pour la location saisonnière avec des rendements optimisés.",
-      src: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop",
-      link: "/nos-projets"
+      name: "Villas Premium 4 Façades",
+      designation: "Construction haut de gamme avec piscine",
+      quote: "Villas d'exception de 110 à 180m² avec piscine privée, domotique et finitions luxueuses. 3 modèles disponibles : Moderne, Prestige et Grand Prestige.",
+      src: "/images/projets/villas/essentielle-real.jpg",
+      link: "/villas-premium"
     },
     {
-      name: "Immeubles de Rapport",
-      designation: "Rentabilité optimale en Pinel Outre-Mer",
-      quote: "Programmes collectifs de 6 à 12 logements, parfaitement dimensionnés pour maximiser votre défiscalisation tout en garantissant une gestion simplifiée.",
-      src: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-      link: "/nos-projets"
+      name: "Maisons 3 Façades",
+      designation: "Solutions adaptées à tous les budgets",
+      quote: "Maisons de 45 à 95m² parfaitement conçues. 3 types disponibles : T2 Compact idéal investissement, T3 Famille avec garage, T4+ Confort avec grand jardin.",
+      src: "/images/projets/maisons/t3-real.jpg",
+      link: "/maisons-3-facades"
     },
     {
-      name: "Résidences de Tourisme",
-      designation: "LMNP avec services de conciergerie",
-      quote: "Résidences services avec gestion locative déléguée, services hôteliers et conciergerie premium Île en Rêve pour un investissement sans contrainte.",
-      src: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=600&fit=crop",
-      link: "/nos-projets"
+      name: "Bâtiments Multiples",
+      designation: "Appartements du T2 au T5 en résidence",
+      quote: "Appartements de 35 à 105m² en résidence standing. Du studio optimisé au T5 avec vue mer. Parkings, terrasses et prestations premium.",
+      src: "/images/projets/batiments/t4-appartement-real.jpg",
+      link: "/batiments-multiples"
     },
     {
       name: "Projets Sur-Mesure",
       designation: "Conception personnalisée selon vos besoins",
-      quote: "Développement de projets uniques adaptés à vos objectifs patrimoniaux spécifiques. De la villa d'architecte au complexe résidentiel exclusif.",
-      src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
-      link: "/nos-projets"
+      quote: "Développement de projets uniques adaptés à vos objectifs patrimoniaux. De la villa d'architecte au complexe résidentiel exclusif.",
+      src: "/images/projets/villas/exception-real.jpg",
+      link: "/contact"
     },
     {
-      name: "Lotissements Privés",
-      designation: "Programmes d'ensemble harmonieux",
-      quote: "Ensembles résidentiels fermés et sécurisés avec espaces communs aménagés, parfaits pour créer des communautés exclusives dans les meilleurs quartiers.",
-      src: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&h=600&fit=crop",
-      link: "/nos-projets"
+      name: "Programme Défiscalisation CIOP",
+      designation: "Jusqu'à 35% de crédit d'impôt",
+      quote: "Optimisez votre fiscalité avec nos programmes éligibles CIOP. Gestion locative clé en main avec notre partenaire Île en Rêve.",
+      src: "/images/projets/batiments/t5-grand-real.jpg",
+      link: "/investissement-defiscalisation"
     }
   ];
 

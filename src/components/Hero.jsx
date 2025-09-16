@@ -60,7 +60,7 @@ const Hero = () => {
 
           <div className="hero-location">
             <MapPin size={16} />
-            <span>Saint-Gilles-les-Bains, La Réunion</span>
+            <span>La Possession, La Réunion</span>
           </div>
         </div>
       </div>

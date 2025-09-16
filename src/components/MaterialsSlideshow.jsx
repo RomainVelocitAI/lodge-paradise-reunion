@@ -15,7 +15,7 @@ const MaterialsSlideshow = () => {
     },
     {
       title: "Construction Premium",
-      description: "Réalisation de villas haut de gamme avec matériaux nobles : structure métallique, bois exotiques, pierre de lave, grandes baies vitrées et garde-corps en verre",
+      description: "Construction de villas d'architecte intégrant les meilleurs matériaux disponibles sur l'île, avec une expertise technique reconnue et des finitions soignées dans les moindres détails",
       image: "/materials-1-construction-premium.webp"
     },
     {

@@ -87,7 +87,7 @@ const Footer = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 marginBottom: '5px'
-              }}>Lodge Paradise</h3>
+              }}>Lodges Paradise</h3>
               <span style={{ 
                 color: '#D4AF37', 
                 fontSize: '0.9rem',
@@ -207,9 +207,9 @@ const Footer = () => {
             }}>
               <MapPin size={18} style={{ color: '#D4AF37', flexShrink: 0, marginTop: '2px' }} />
               <span style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                77B Rue Adrien Lagourgue<br />
-                Saint-Gilles-les-Bains<br />
-                97434 La Réunion
+                2 rue Jean Paul Sartre<br />
+                97419 La Possession<br />
+                La Réunion
               </span>
             </div>
             
@@ -220,7 +220,7 @@ const Footer = () => {
               marginBottom: '15px'
             }}>
               <Phone size={18} style={{ color: '#D4AF37', flexShrink: 0 }} />
-              <a href="tel:+262692470141" style={{ 
+              <a href="tel:+262262667988" style={{ 
                 color: '#94a3b8', 
                 textDecoration: 'none',
                 fontSize: '0.95rem',
@@ -229,7 +229,7 @@ const Footer = () => {
               onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
               >
-                +262 6 92 47 01 41
+                0262 66 79 88
               </a>
             </div>
             
@@ -284,7 +284,7 @@ const Footer = () => {
             gap: '20px'
           }}>
             <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
-              © {currentYear} Lodge Paradise. Tous droits réservés.
+              © {currentYear} Lodges Paradise. Tous droits réservés.
             </p>
             
             <div style={{

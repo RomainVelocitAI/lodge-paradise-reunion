@@ -43,13 +43,13 @@ const Contact = () => {
     {
       icon: <MapPin size={20} />,
       title: "Adresse",
-      content: "77B Rue Adrien Lagourgue",
-      subtitle: "Saint-Gilles-les-Bains, La Réunion"
+      content: "2 rue Jean Paul Sartre",
+      subtitle: "97419 La Possession, La Réunion"
     },
     {
       icon: <Phone size={20} />,
       title: "Téléphone",
-      content: "+262 6 92 47 01 41",
+      content: "0262 66 79 88",
       subtitle: "Disponible 7j/7"
     },
     {
@@ -194,7 +194,7 @@ const Contact = () => {
             <div className="contact-cta">
               <h4>Réservation urgente ?</h4>
               <p>Appelez-nous directement pour une assistance immédiate</p>
-              <a href="tel:+262692470141" className="btn btn-primary">
+              <a href="tel:+262262667988" className="btn btn-primary">
                 <Phone size={20} />
                 Appeler maintenant
               </a>

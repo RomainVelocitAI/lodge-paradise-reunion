@@ -16,7 +16,7 @@ const MaterialsSlideshowMobile = () => {
     },
     {
       title: "Construction Premium",
-      description: "Réalisation de villas haut de gamme avec matériaux nobles : bois exotiques, pierre de lave, finitions premium",
+      description: "Savoir-faire local et qualité irréprochable pour des réalisations haut de gamme pensées pour durer",
       image: "/materials-1-construction-premium.webp"
     },
     {

@@ -7,49 +7,49 @@ const MaterialsInteractiveMobile = () => {
   const options = [
     {
       title: "Structure Métallique",
-      description: "Charpentes galvanisées résistantes aux cyclones",
+      description: "Acier galvanisé et traité longue durée",
       image: "/structure-metallique.jpg",
       icon: <FaTools size={24} className="text-gold-500" />
     },
     {
       title: "Bois Exotiques",
-      description: "Teck, ipé et padouk premium pour durabilité",
+      description: "Bois tropicaux nobles et durables",
       image: "/bois-exotiques.jpg",
       icon: <FaTree size={24} className="text-gold-500" />
     },
     {
       title: "Pierre de Lave",
-      description: "Pierre volcanique locale authentique de La Réunion",
+      description: "Matériau volcanique local d'exception",
       image: "/pierre-lave.jpg",
       icon: <FaMountain size={24} className="text-gold-500" />
     },
     {
       title: "Grandes Baies Vitrées",
-      description: "Ouvertures jusqu'à 6m avec double vitrage solaire",
+      description: "Luminosité maximale et confort thermique",
       image: "/baies-vitrees.jpg",
       icon: <FaHome size={24} className="text-gold-500" />
     },
     {
       title: "Garde-Corps en Verre",
-      description: "Verre trempé 12mm avec fixations inox marine",
+      description: "Protection et vue dégagée garanties",
       image: "/garde-corps-verre.jpg",
       icon: <FaSnowflake size={24} className="text-gold-500" />
     },
     {
       title: "Construction Écologique",
-      description: "Approche durable certifiée HQE tropicale",
+      description: "Démarche éco-responsable intégrale",
       image: "/construction-ecologique.jpg",
       icon: <FaLeaf size={24} className="text-gold-500" />
     },
     {
       title: "Panneaux et Chauffe-eau Solaire",
-      description: "Pour une parfaite autonomie énergétique",
+      description: "Indépendance énergétique totale",
       image: "/panneaux-solaires.jpg",
       icon: <FaUmbrella size={24} className="text-gold-500" />
     },
     {
       title: "Aménagement Extérieur",
-      description: "Terrasses, spa, cuisine d'été et kiosques",
+      description: "Terrasses et détente extérieure",
       image: "/amenagement-exterieur.jpg",
       icon: <FaPaintRoller size={24} className="text-gold-500" />
     }

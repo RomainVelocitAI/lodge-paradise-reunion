@@ -8,49 +8,49 @@ const MaterialsInteractive = () => {
   const options = [
     {
       title: "Structure Métallique",
-      description: "Charpentes galvanisées résistantes aux cyclones",
+      description: "Robustesse face aux vents de 250 km/h",
       image: "/structure-metallique.jpg",
       icon: <FaTools size={24} className="text-white" />
     },
     {
       title: "Bois Exotiques",
-      description: "Teck, ipé et padouk premium pour durabilité",
+      description: "Bois précieux imputrescibles 50 ans minimum",
       image: "/bois-exotiques.jpg",
       icon: <FaTree size={24} className="text-white" />
     },
     {
       title: "Pierre de Lave",
-      description: "Pierre volcanique locale authentique de La Réunion",
+      description: "Roche du Piton de la Fournaise authentique",
       image: "/pierre-lave.jpg",
       icon: <FaMountain size={24} className="text-white" />
     },
     {
       title: "Grandes Baies Vitrées",
-      description: "Ouvertures jusqu'à 6m avec double vitrage solaire",
+      description: "Vue grand angle avec protection solaire intégrée",
       image: "/baies-vitrees.jpg",
       icon: <FaHome size={24} className="text-white" />
     },
     {
       title: "Garde-Corps en Verre",
-      description: "Verre trempé 12mm avec fixations inox marine",
+      description: "Sécurité invisible et design épuré minimaliste",
       image: "/garde-corps-verre.jpg",
       icon: <FaSnowflake size={24} className="text-white" />
     },
     {
       title: "Construction Écologique",
-      description: "Approche durable certifiée HQE tropicale",
+      description: "Habitat responsable avec empreinte écologique minimale",
       image: "/construction-ecologique.jpg",
       icon: <FaLeaf size={24} className="text-white" />
     },
     {
       title: "Panneaux et Chauffe-eau Solaire",
-      description: "Pour une parfaite autonomie énergétique",
+      description: "Production électrique solaire et eau chaude gratuite",
       image: "/panneaux-solaires.jpg",
       icon: <FaUmbrella size={24} className="text-white" />
     },
     {
       title: "Aménagement Extérieur",
-      description: "Terrasses, spa, cuisine d'été et kiosques",
+      description: "Jardins luxuriants avec piscine et spa privatifs",
       image: "/amenagement-exterieur.jpg",
       icon: <FaPaintRoller size={24} className="text-white" />
     }

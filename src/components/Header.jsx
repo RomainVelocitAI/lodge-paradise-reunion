@@ -62,15 +62,15 @@ const Header = () => {
           
           {!isMobile && (
             <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              <Link 
-                to="/nos-projets" 
-                style={{ 
-                  textDecoration: 'none', 
-                  color: isActive('/nos-projets') ? '#D4AF37' : '#374151', 
-                  fontWeight: isActive('/nos-projets') ? '600' : '500'
+              <Link
+                to="/nos-projets"
+                style={{
+                  textDecoration: 'none',
+                  color: isActive('/nos-projets') || isActive('/villas-premium') || isActive('/maisons-3-facades') || isActive('/batiments-multiples') ? '#D4AF37' : '#374151',
+                  fontWeight: isActive('/nos-projets') || isActive('/villas-premium') || isActive('/maisons-3-facades') || isActive('/batiments-multiples') ? '600' : '500'
                 }}
               >
-                Nos Lodges
+                Nos Projets
               </Link>
               <Link 
                 to="/materiaux-nobles" 
