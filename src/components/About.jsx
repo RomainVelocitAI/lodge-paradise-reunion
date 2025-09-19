@@ -37,7 +37,7 @@ const About = () => {
               L'excellence au service de vos <span className="text-gradient">rêves tropicaux</span>
             </h2>
             <p className="about-text">
-              Depuis 2015, Lodge Paradise redéfinit l'art de l'hospitalité à La Réunion. 
+              Depuis 2015, Lodges Paradise redéfinit l'art de l'hospitalité à La Réunion. 
               Notre mission est simple : transformer chaque séjour en une expérience 
               inoubliable en alliant luxe, confort et authenticité.
             </p>

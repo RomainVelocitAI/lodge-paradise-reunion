@@ -18,7 +18,7 @@ function SimpleApp() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h2 style={{ margin: 0, background: 'linear-gradient(135deg, #6366f1, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Lodge Paradise
+              Lodges Paradise
             </h2>
             <nav style={{ display: 'flex', gap: '2rem' }}>
               <a href="#hero" style={{ textDecoration: 'none', color: '#374151' }}>Accueil</a>
@@ -203,12 +203,12 @@ function SimpleApp() {
       {/* Footer */}
       <footer style={{ background: '#111827', color: 'white', padding: '3rem 0', textAlign: 'center' }}>
         <div className="container">
-          <h3 style={{ marginBottom: '1rem' }}>Lodge Paradise</h3>
+          <h3 style={{ marginBottom: '1rem' }}>Lodges Paradise</h3>
           <p style={{ marginBottom: '2rem', opacity: 0.7 }}>
             Votre partenaire de confiance pour des séjours d'exception à La Réunion
           </p>
           <p style={{ opacity: 0.5 }}>
-            © 2025 Lodge Paradise. Tous droits réservés.
+            © 2025 Lodges Paradise. Tous droits réservés.
           </p>
         </div>
       </footer>

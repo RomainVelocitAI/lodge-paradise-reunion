@@ -54,7 +54,7 @@ function RealEstateApp() {
             <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '1rem' }}>
               <img 
                 src="/logo.jpg" 
-                alt="Lodge Paradise" 
+                alt="Lodges Paradise" 
                 style={{ 
                   height: isMobile ? '40px' : '50px', 
                   width: isMobile ? '40px' : '50px', 
@@ -72,7 +72,7 @@ function RealEstateApp() {
                 }}>
                   LODGES PARADISE
                 </h2>
-                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Ouest et Sud de La Réunion</span>}
+                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Votre Paradis Tropical à La Réunion</span>}
               </div>
             </div>
             {!isMobile && (
@@ -208,13 +208,13 @@ function RealEstateApp() {
                 L'ENTREPRISE
               </span>
               <h2 style={{ fontSize: '3rem', marginTop: '1rem', marginBottom: '2rem', lineHeight: '1.2' }}>
-                Lodge Paradise<br/>
+                Lodges Paradise<br/>
                 <span style={{ fontSize: '1.5rem', fontWeight: '400', color: '#6b7280' }}>
                   Constructeur d'Exception à La Réunion
                 </span>
               </h2>
               <p style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '2rem', color: '#374151' }}>
-                Depuis sa création, <strong>Lodge Paradise</strong> s'est imposé comme le référent de la construction 
+                Depuis sa création, <strong>Lodges Paradise</strong> s'est imposé comme le référent de la construction 
                 de lodges premium à La Réunion. Notre expertise unique allie savoir-faire local et standards 
                 internationaux pour créer des espaces de vie exceptionnels.
               </p>
@@ -245,7 +245,7 @@ function RealEstateApp() {
             <div style={{ position: 'relative' }}>
               <img 
                 src={images[3].url} 
-                alt="Lodge Paradise Construction" 
+                alt="Lodges Paradise Construction" 
                 style={{ 
                   width: '100%', 
                   borderRadius: '1rem',
@@ -274,8 +274,8 @@ function RealEstateApp() {
       )}
 
       {/* Section avec Slideshow animé des Matériaux - Notre Approche */}
-      <div style={{ 
-        position: 'relative', 
+      <div style={{
+        position: 'relative',
         zIndex: 20,
         marginTop: isMobile ? '3rem' : '0'
       }}>

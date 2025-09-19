@@ -78,7 +78,7 @@ const MaterialsInteractive = () => {
   }, []);
 
   return (
-    <section id="prestations" className="section" style={{ padding: '5rem 0', background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)' }}>
+    <section id="prestations" className="section" style={{ padding: '5rem 0', marginTop: '8rem', background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)' }}>
       <div className="container mx-auto px-8">
         {/* Header Section */}
         <div className="w-full max-w-4xl mx-auto px-6 mb-8 text-center">
@@ -86,10 +86,10 @@ const MaterialsInteractive = () => {
             NOS MATÉRIAUX D'EXCEPTION
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight drop-shadow-lg animate-fadeInTop delay-300">
-            L'Excellence des Matériaux Nobles
+            L'excellence des matériaux Nobles
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 font-medium max-w-2xl mx-auto animate-fadeInTop delay-600">
-            Une sélection rigoureuse de matériaux premium pour des constructions qui traversent le temps avec élégance.
+          <p className="text-lg md:text-xl text-gray-300 font-medium max-w-3xl mx-auto animate-fadeInTop delay-600 mb-4">
+            Tous nos projets sont <strong className="text-white">validés par des bureaux d'études spécialisés</strong> à La Réunion, <strong className="text-white">assurant une parfaite adaptation</strong> aux contraintes climatiques tropicales.
           </p>
         </div>
         
@@ -181,7 +181,17 @@ const MaterialsInteractive = () => {
             ))}
           </div>
         </div>
-        
+
+        {/* Texte sous les images */}
+        <div className="w-full max-w-4xl mx-auto px-6 mt-8 text-center">
+          <p className="text-lg md:text-xl text-gray-300 font-medium max-w-3xl mx-auto mb-4">
+            Toutes nos constructions sont protégées par une <strong className="text-white">garantie décennale</strong> (matériaux et mise en œuvre), gage de <strong className="text-white">sécurité et de fiabilité</strong>.
+          </p>
+          <p className="text-lg md:text-xl text-gray-300 font-medium max-w-3xl mx-auto">
+            Nous réalisons systématiquement une <strong className="text-white">étude complète</strong>, couvrant l'architecture, la résistance, la durabilité et le confort, afin de garantir des projets haut de gamme conçus pour durer.
+          </p>
+        </div>
+
         {/* Bouton vers la page dédiée */}
         <div style={{ textAlign: 'center', marginTop: '3rem', padding: '0 1rem' }}>
           <a href="/materiaux-nobles" style={{ 

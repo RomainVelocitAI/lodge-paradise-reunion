@@ -18,11 +18,11 @@ const HeroGalleryProjets = () => {
   const subtitle = "Découvrez nos réalisations exceptionnelles à La Réunion";
   
   const images = [
-    { src: '/client-image-1.jpg', alt: 'Projet Lodge Paradise 1' },
-    { src: '/client-image-2.jpg', alt: 'Projet Lodge Paradise 2' },
-    { src: '/client-image-3.jpg', alt: 'Projet Lodge Paradise 3' },
-    { src: '/client-image-4.jpg', alt: 'Projet Lodge Paradise 4' },
-    { src: '/villa1.jpg', alt: 'Projet Lodge Paradise 5' }
+    { src: '/client-image-1.jpg', alt: 'Projet Lodges Paradise 1' },
+    { src: '/client-image-2.jpg', alt: 'Projet Lodges Paradise 2' },
+    { src: '/client-image-3.jpg', alt: 'Projet Lodges Paradise 3' },
+    { src: '/client-image-4.jpg', alt: 'Projet Lodges Paradise 4' },
+    { src: '/villa1.jpg', alt: 'Projet Lodges Paradise 5' }
   ];
 
   // On mobile, show a simple hero without animations

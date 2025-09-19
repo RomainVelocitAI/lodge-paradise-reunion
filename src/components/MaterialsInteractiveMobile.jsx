@@ -7,49 +7,49 @@ const MaterialsInteractiveMobile = () => {
   const options = [
     {
       title: "Structure Métallique",
-      description: "Acier galvanisé et traité longue durée",
+      description: "Robustesse face aux vents de 250 km/h",
       image: "/structure-metallique.jpg",
       icon: <FaTools size={24} className="text-gold-500" />
     },
     {
       title: "Bois Exotiques",
-      description: "Bois tropicaux nobles et durables",
+      description: "Bois précieux imputrescibles 50 ans minimum",
       image: "/bois-exotiques.jpg",
       icon: <FaTree size={24} className="text-gold-500" />
     },
     {
       title: "Pierre de Lave",
-      description: "Matériau volcanique local d'exception",
+      description: "Roche du Piton de la Fournaise authentique",
       image: "/pierre-lave.jpg",
       icon: <FaMountain size={24} className="text-gold-500" />
     },
     {
       title: "Grandes Baies Vitrées",
-      description: "Luminosité maximale et confort thermique",
+      description: "Vue grand angle avec protection solaire intégrée",
       image: "/baies-vitrees.jpg",
       icon: <FaHome size={24} className="text-gold-500" />
     },
     {
       title: "Garde-Corps en Verre",
-      description: "Protection et vue dégagée garanties",
+      description: "Sécurité invisible et design épuré minimaliste",
       image: "/garde-corps-verre.jpg",
       icon: <FaSnowflake size={24} className="text-gold-500" />
     },
     {
       title: "Construction Écologique",
-      description: "Démarche éco-responsable intégrale",
+      description: "Habitat responsable avec empreinte écologique minimale",
       image: "/construction-ecologique.jpg",
       icon: <FaLeaf size={24} className="text-gold-500" />
     },
     {
       title: "Panneaux et Chauffe-eau Solaire",
-      description: "Indépendance énergétique totale",
+      description: "Production électrique solaire et eau chaude gratuite",
       image: "/panneaux-solaires.jpg",
       icon: <FaUmbrella size={24} className="text-gold-500" />
     },
     {
       title: "Aménagement Extérieur",
-      description: "Terrasses et détente extérieure",
+      description: "Jardins luxuriants avec piscine et spa privatifs",
       image: "/amenagement-exterieur.jpg",
       icon: <FaPaintRoller size={24} className="text-gold-500" />
     }
@@ -60,7 +60,7 @@ const MaterialsInteractiveMobile = () => {
   };
 
   return (
-    <section className="section py-12" style={{ background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)' }}>
+    <section className="section py-12" style={{ marginTop: '6rem', background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)' }}>
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-8">
@@ -68,10 +68,10 @@ const MaterialsInteractiveMobile = () => {
             NOS MATÉRIAUX D'EXCEPTION
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
-            L'Excellence des Matériaux Nobles
+            L'excellence des matériaux Nobles
           </h2>
-          <p className="text-base md:text-xl text-gray-300 max-w-2xl mx-auto">
-            Une sélection rigoureuse de matériaux premium pour des constructions qui traversent le temps avec élégance.
+          <p className="text-base md:text-xl text-gray-300 font-medium max-w-2xl mx-auto mb-4">
+            Tous nos projets sont <strong className="text-white">validés par des bureaux d'études spécialisés</strong> à La Réunion, <strong className="text-white">assurant une parfaite adaptation</strong> aux contraintes climatiques tropicales.
           </p>
         </div>
         
@@ -120,16 +120,24 @@ const MaterialsInteractiveMobile = () => {
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
                   <p className="text-gray-300 leading-relaxed">
-                    {option.description}. Notre expertise dans l'utilisation de ce matériau 
-                    garantit une qualité exceptionnelle et une durabilité optimale pour votre 
-                    projet immobilier à La Réunion.
+                    {option.description}
                   </p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
+
+        {/* Texte sous les images */}
+        <div className="text-center mt-6 px-4">
+          <p className="text-base md:text-xl text-gray-300 font-medium max-w-2xl mx-auto mb-4">
+            Toutes nos constructions sont protégées par une <strong className="text-white">garantie décennale</strong> (matériaux et mise en œuvre), gage de <strong className="text-white">sécurité et de fiabilité</strong>.
+          </p>
+          <p className="text-base md:text-xl text-gray-300 font-medium max-w-2xl mx-auto">
+            Nous réalisons systématiquement une <strong className="text-white">étude complète</strong>, couvrant l'architecture, la résistance, la durabilité et le confort, afin de garantir des projets haut de gamme conçus pour durer.
+          </p>
+        </div>
+
         {/* Bouton vers la page dédiée */}
         <div className="text-center mt-8">
           <a 

@@ -52,50 +52,40 @@ const HeroSection = ({ scrollYProgress }) => {
 
       {/* Content */}
       <motion.div style={{ y: isMobile ? 0 : y, opacity: isMobile ? 1 : opacity }} className="relative z-10 text-white text-center px-8 max-w-6xl mx-auto">
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="mb-6"
-        >
-          <span className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold tracking-wider uppercase">
-            Investissement Premium • Rendement Garanti
-          </span>
-        </motion.div>
-        
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className={`font-bold mb-6 leading-[0.9] tracking-tighter ${
-            isMobile ? 'text-4xl' : 'text-7xl md:text-8xl lg:text-9xl'
-          }`}
+          className="mb-8"
         >
-          <span style={{
-            background: 'linear-gradient(135deg, #D4AF37, #F4E4BC)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            display: 'inline'
-          }}>
-            Votre Paradis
-          </span>
-          <br />
-          <span className={`font-light text-white opacity-90 ${
-            isMobile ? 'text-3xl' : 'text-5xl md:text-6xl lg:text-7xl'
+          <h1 className={`font-bold mb-4 ${
+            isMobile ? 'text-4xl' : 'text-6xl md:text-7xl lg:text-8xl'
           }`}>
-            Tropical à La Réunion
-          </span>
-        </motion.h1>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-          className="text-xl md:text-2xl mb-8 opacity-90 font-light max-w-3xl mx-auto"
-        >
-          Défiscalisation optimisée<br />
-          Votre patrimoine clés en main avec gestion 5 étoiles
-        </motion.p>
+            <span style={{
+              background: 'linear-gradient(135deg, #D4AF37, #F4E4BC)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              display: 'block'
+            }}>
+              Créateurs
+            </span>
+            <span style={{
+              background: 'linear-gradient(135deg, #D4AF37, #F4E4BC)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              display: 'block',
+              whiteSpace: 'nowrap'
+            }}>
+              d'habitats uniques
+            </span>
+          </h1>
+          <p className={`text-white opacity-90 font-light ${
+            isMobile ? 'text-xl' : 'text-2xl md:text-3xl'
+          }`}>
+            au cœur des paysages Réunionnais
+          </p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -209,7 +199,8 @@ const EnterpriseSection = ({ scrollYProgress }) => {
         position: 'relative',
         zIndex: 10
       }}
-      className={`relative bg-gradient-to-b from-gray-50 to-white ${isMobile ? 'py-16 pb-24' : 'py-20 min-h-screen'}`}
+      className={`relative bg-gradient-to-b from-gray-50 to-white ${isMobile ? 'py-16' : 'py-20 min-h-screen'}`}
+      style={{ paddingBottom: '10rem' }}
     >
       <div className="container mx-auto px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -219,22 +210,24 @@ const EnterpriseSection = ({ scrollYProgress }) => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider">Votre Partenaire Investissement</span>
+            <span className="text-gold-500 font-bold text-lg uppercase tracking-wider">Votre Partenaire</span>
             <h2 className="text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gray-900">
-              Lodge Paradise
+              Lodges Paradise
             </h2>
             <p className="text-2xl text-gray-600 mb-6">
-              N°1 de l'Immobilier Locatif Premium à La Réunion
+              N°1 de l'<strong>Immobilier Premium</strong> à La Réunion
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              <strong>40 ans d'expertise.</strong> Nous transformons votre capital 
-              en patrimoine rentable avec une défiscalisation 
-              optimisée (CIOP).
+              <strong>Lodges Paradise</strong> maîtrise l'ensemble du processus immobilier, <strong>de l'acquisition foncière à la gestion locative</strong>,
+              nous avons développé une solution <strong>clé en main</strong> pour construire, investir et rentabiliser votre patrimoine immobilier à La Réunion.
+            </p>
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              La majeure partie de nos activités sont concentrées dans les <strong>zones Ouest et Sud de L'Ile</strong>,
+              réputées pour leur attractivité et leur fort potentiel de développement.
             </p>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              De l'acquisition du terrain à la gestion locative avec notre partenaire <strong>Île en Rêve</strong>, 
-              nous maîtrisons chaque étape. Zones Ouest et Sud exclusivement, 
-              les marchés les plus dynamiques de l'île.
+              Chaque projet de <strong>Lodges Paradise</strong> devient une réalisation exclusive, conçue pour offrir <strong>sécurité,
+              performance et élégance architecturale</strong> tout en assurant une rentabilité durable de votre patrimoine immobilier à La Réunion.
             </p>
             
             <div id="metrics-section" className="grid grid-cols-2 gap-8 mt-12">
@@ -297,7 +290,7 @@ const EnterpriseSection = ({ scrollYProgress }) => {
                 >
                   <img
                     src={img}
-                    alt={`Lodge Paradise ${i + 1}`}
+                    alt={`Lodges Paradise ${i + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </motion.figure>
@@ -312,32 +305,40 @@ const EnterpriseSection = ({ scrollYProgress }) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="mt-8 mb-8 grid grid-cols-2 gap-4"
+              className="mt-8 mb-8 grid grid-cols-2 gap-6 px-4"
             >
-              <img 
-                src="/client-image-1.jpg" 
-                alt="Lodge Paradise 1" 
-                className="w-full h-32 object-cover shadow-lg"
-                style={{ borderRadius: '50%', aspectRatio: '1/1' }}
-              />
-              <img 
-                src="/client-image-2.jpg" 
-                alt="Lodge Paradise 2" 
-                className="w-full h-32 object-cover shadow-lg"
-                style={{ borderRadius: '50%', aspectRatio: '1/1' }}
-              />
-              <img 
-                src="/client-image-3.jpg" 
-                alt="Lodge Paradise 3" 
-                className="w-full h-32 object-cover shadow-lg"
-                style={{ borderRadius: '50%', aspectRatio: '1/1' }}
-              />
-              <img 
-                src="/client-image-4.jpg" 
-                alt="Lodge Paradise 4" 
-                className="w-full h-32 object-cover shadow-lg"
-                style={{ borderRadius: '50%', aspectRatio: '1/1' }}
-              />
+              <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+                <img
+                  src="/client-image-1.jpg"
+                  alt="Lodges Paradise 1"
+                  className="absolute inset-0 w-full h-full object-cover shadow-xl"
+                  style={{ borderRadius: '20px' }}
+                />
+              </div>
+              <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+                <img
+                  src="/client-image-2.jpg"
+                  alt="Lodges Paradise 2"
+                  className="absolute inset-0 w-full h-full object-cover shadow-xl"
+                  style={{ borderRadius: '20px' }}
+                />
+              </div>
+              <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+                <img
+                  src="/client-image-3.jpg"
+                  alt="Lodges Paradise 3"
+                  className="absolute inset-0 w-full h-full object-cover shadow-xl"
+                  style={{ borderRadius: '20px' }}
+                />
+              </div>
+              <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+                <img
+                  src="/client-image-4.jpg"
+                  alt="Lodges Paradise 4"
+                  className="absolute inset-0 w-full h-full object-cover shadow-xl"
+                  style={{ borderRadius: '20px' }}
+                />
+              </div>
             </motion.div>
           )}
         </div>
@@ -378,8 +379,8 @@ const HeroScroll = () => {
 
   // Sur desktop, on garde les animations
   return (
-    <main ref={container} className='relative' style={{ 
-      height: '200vh',
+    <main ref={container} className='relative' style={{
+      height: '220vh',
       overflow: 'hidden'
     }}>
       <HeroSection scrollYProgress={scrollYProgress} />

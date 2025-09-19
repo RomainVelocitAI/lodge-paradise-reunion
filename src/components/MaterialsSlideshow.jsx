@@ -44,8 +44,8 @@ const MaterialsSlideshow = () => {
             Votre Investissement Clé en Main
           </h2>
           <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
-            <strong>Lodge Paradise</strong> accompagne les investisseurs de A à Z : identification de terrains 
-            dans des secteurs dynamiques à fort potentiel, gestion complète des démarches administratives et de construction, 
+            <strong>Lodges Paradise</strong> accompagne les investisseurs de A à Z : identification de terrains
+            dans des secteurs dynamiques à fort potentiel, gestion complète des démarches administratives et de construction,
             optimisation fiscale et service de conciergerie premium avec notre partenaire <strong>Île en Rêve</strong>.
           </p>
         </div>

@@ -41,9 +41,8 @@ const MaterialsSlideshowMobile = () => {
   };
 
   return (
-    <section className="relative py-16 bg-gradient-to-b from-gray-50 to-white" style={{ 
+    <section className="relative py-16 bg-gradient-to-b from-gray-50 to-white" style={{
       minHeight: '500px',
-      marginTop: '2rem',
       zIndex: 10,
       position: 'relative'
     }}>
@@ -54,7 +53,7 @@ const MaterialsSlideshowMobile = () => {
             Votre Investissement<br/>Clé en Main
           </h2>
           <p className="text-base text-gray-600 px-4">
-            <strong>Lodge Paradise</strong> accompagne les investisseurs de A à Z avec notre partenaire <strong>Île en Rêve</strong>.
+            <strong>Lodges Paradise</strong> accompagne les investisseurs de A à Z avec notre partenaire <strong>Île en Rêve</strong>.
           </p>
         </div>
 

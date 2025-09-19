@@ -66,16 +66,16 @@ const DefiscalisationSection = () => {
               Optimisation Fiscale & Défiscalisation à La Réunion
             </h1>
             <p className="text-xl text-gray-600 mt-4">
-              Lodge Paradise, votre partenaire expert en investissement défiscalisé dans les DOM-TOM
+              Lodges Paradise, votre partenaire expert en investissement défiscalisé dans les DOM-TOM
             </p>
           </div>
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-              L'expertise Lodge Paradise en défiscalisation immobilière
+              L'expertise Lodges Paradise en défiscalisation immobilière
             </h2>
             <p className="mb-6 leading-relaxed">
-              Depuis plus de 10 ans, <strong>Lodge Paradise</strong> accompagne les investisseurs dans leurs projets 
+              Depuis plus de 10 ans, <strong>Lodges Paradise</strong> accompagne les investisseurs dans leurs projets 
               de défiscalisation immobilière à La Réunion. Notre expertise approfondie des dispositifs fiscaux 
               spécifiques aux DOM-TOM nous permet de maximiser vos avantages fiscaux tout en sécurisant 
               votre investissement patrimonial.
@@ -85,7 +85,7 @@ const DefiscalisationSection = () => {
               Les dispositifs de défiscalisation actifs en 2025
             </h3>
             <p className="mb-4">
-              Lodge Paradise vous oriente vers les dispositifs de défiscalisation les plus avantageux,
+              Lodges Paradise vous oriente vers les dispositifs de défiscalisation les plus avantageux,
               notamment le nouveau <strong>CIOP (Crédit d'Impôt Outre-Mer)</strong> qui offre des opportunités
               exceptionnelles jusqu'en 2029 :
             </p>
@@ -103,7 +103,7 @@ const DefiscalisationSection = () => {
             </div>
 
             <h3 className="text-xl font-semibold mb-3 text-gray-800">
-              Pourquoi choisir Lodge Paradise pour votre défiscalisation ?
+              Pourquoi choisir Lodges Paradise pour votre défiscalisation ?
             </h3>
             
             <div className="bg-gradient-to-r from-gold-50 to-gold-100 p-6 rounded-lg mb-8">
@@ -132,7 +132,7 @@ const DefiscalisationSection = () => {
             </div>
 
             <p className="mb-6 text-gray-600 italic">
-              Lodge Paradise transforme votre investissement immobilier à La Réunion en véritable levier 
+              Lodges Paradise transforme votre investissement immobilier à La Réunion en véritable levier 
               d'optimisation patrimoniale, combinant défiscalisation attractive, revenus locatifs pérennes 
               et valorisation du capital sur le long terme.
             </p>
@@ -261,7 +261,7 @@ const DefiscalisationSection = () => {
                 <div className="bg-gold-100 border-l-4 border-gold-500 p-4 mt-6">
                   <p className="text-sm text-gray-700">
                     <strong>Note :</strong> Ces calculs sont des estimations basées sur les dispositifs fiscaux 
-                    en vigueur en 2025. Pour une étude personnalisée, contactez nos experts Lodge Paradise.
+                    en vigueur en 2025. Pour une étude personnalisée, contactez nos experts Lodges Paradise.
                   </p>
                 </div>
               </div>

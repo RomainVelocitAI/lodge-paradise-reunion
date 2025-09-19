@@ -11,7 +11,7 @@ const TestimonialsSectionMobile = () => {
     {
       name: "Jean-Marc Dubois",
       role: "Investisseur - Villa Premium à Saint-Gilles",
-      content: "Lodge Paradise a transformé mon projet d'investissement en réalité. La gestion clé en main avec Île en Rêve est exceptionnelle. Rendement de 6,5% la première année !",
+      content: "Lodges Paradise a transformé mon projet d'investissement en réalité. La gestion clé en main avec Île en Rêve est exceptionnelle. Rendement de 6,5% la première année !",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
       investment: "450 000€"
@@ -19,7 +19,7 @@ const TestimonialsSectionMobile = () => {
     {
       name: "Sophie Martin",
       role: "Propriétaire - Immeuble de rapport à Saint-Pierre",
-      content: "L'expertise fiscale de Lodge Paradise m'a permis d'optimiser mon investissement avec la défiscalisation CIOP. Service irréprochable du début à la fin du projet.",
+      content: "L'expertise fiscale de Lodges Paradise m'a permis d'optimiser mon investissement avec la défiscalisation CIOP. Service irréprochable du début à la fin du projet.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
       investment: "680 000€"
@@ -27,7 +27,7 @@ const TestimonialsSectionMobile = () => {
     {
       name: "Philippe Leroy",
       role: "Entrepreneur - Résidence de tourisme à l'Hermitage",
-      content: "Un accompagnement personnalisé exceptionnel. Lodge Paradise a géré toutes les démarches administratives. Mon bien génère déjà 7% de rendement annuel.",
+      content: "Un accompagnement personnalisé exceptionnel. Lodges Paradise a géré toutes les démarches administratives. Mon bien génère déjà 7% de rendement annuel.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop",
       investment: "520 000€"
@@ -35,7 +35,7 @@ const TestimonialsSectionMobile = () => {
     {
       name: "Marie Durand",
       role: "Médecin - Villa sur-mesure à Saint-Leu",
-      content: "La qualité des matériaux et le savoir-faire de Lodge Paradise sont remarquables. Ma villa est un véritable bijou architectural avec vue sur l'océan.",
+      content: "La qualité des matériaux et le savoir-faire de Lodges Paradise sont remarquables. Ma villa est un véritable bijou architectural avec vue sur l'océan.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
       investment: "750 000€"
@@ -43,7 +43,7 @@ const TestimonialsSectionMobile = () => {
     {
       name: "Laurent Moreau",
       role: "Cadre dirigeant - Lotissement privé à La Saline",
-      content: "Investissement sécurisé et rentable. L'équipe Lodge Paradise maîtrise parfaitement le marché réunionnais. Très satisfait de mon acquisition.",
+      content: "Investissement sécurisé et rentable. L'équipe Lodges Paradise maîtrise parfaitement le marché réunionnais. Très satisfait de mon acquisition.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
       investment: "380 000€"
@@ -51,7 +51,7 @@ const TestimonialsSectionMobile = () => {
     {
       name: "Isabelle Petit",
       role: "Retraitée - Appartements à Saint-Denis",
-      content: "Grâce à Lodge Paradise, j'ai pu diversifier mon patrimoine à La Réunion. La défiscalisation Denormandie a considérablement réduit mes impôts.",
+      content: "Grâce à Lodges Paradise, j'ai pu diversifier mon patrimoine à La Réunion. La défiscalisation Denormandie a considérablement réduit mes impôts.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop",
       investment: "290 000€"
@@ -136,7 +136,7 @@ const TestimonialsSectionMobile = () => {
             TÉMOIGNAGES CLIENTS
           </span>
           <h2 className="text-3xl font-bold mt-2 text-gray-900">
-            Ils Ont Investi avec<br/>Lodge Paradise
+            Ils Ont Investi avec<br/>Lodges Paradise
           </h2>
           <p className="text-base text-gray-600 mt-3 px-4">
             Découvrez les témoignages de nos clients satisfaits

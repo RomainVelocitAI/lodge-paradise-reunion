@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
     {
       name: "Jean-Marc Dubois",
       username: "@jmdubois",
-      body: "Lodge Paradise a transformé mon projet d'investissement en réalité. Rendement de 6,5% la première année !",
+      body: "Lodges Paradise a transformé mon projet d'investissement en réalité. Rendement de 6,5% la première année !",
       img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
       investment: "🏡 450 000€"
     },
@@ -79,7 +79,7 @@ const TestimonialsSection = () => {
               TÉMOIGNAGES CLIENTS
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold mt-4 text-gray-900">
-              Ils Ont Investi avec Lodge Paradise
+              Ils Ont Investi avec Lodges Paradise
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 mt-6">
               Découvrez les témoignages de nos clients satisfaits qui ont réalisé 

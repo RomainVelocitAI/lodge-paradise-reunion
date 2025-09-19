@@ -37,7 +37,7 @@ const Header = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '1rem' }}>
               <img 
                 src="/logo.jpg" 
-                alt="Lodge Paradise" 
+                alt="Lodges Paradise" 
                 style={{ 
                   height: isMobile ? '40px' : '50px', 
                   width: isMobile ? '40px' : '50px', 
@@ -55,7 +55,7 @@ const Header = () => {
                 }}>
                   LODGES PARADISE
                 </h2>
-                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Ouest et Sud de La Réunion</span>}
+                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Votre Paradis Tropical à La Réunion</span>}
               </div>
             </div>
           </Link>
