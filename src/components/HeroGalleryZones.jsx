@@ -17,11 +17,11 @@ const HeroGalleryZones = () => {
   const subtitle = "Découvrez les meilleurs emplacements de l'Ouest et du Sud de La Réunion";
   
   const images = [
-    { src: '/zones-implantation.jpg', alt: 'Vue aérienne des zones de La Réunion' },
-    { src: '/villa1.jpg', alt: 'Villa zone Ouest - Saint-Gilles' },
-    { src: '/villa2.jpg', alt: 'Villa zone Sud - Étang-Salé' },
-    { src: '/villa3.jpg', alt: 'Villa vue mer - Littoral' },
-    { src: '/villa4.jpg', alt: 'Villa mi-hauteur - Vue panoramique' }
+    { src: '/saint-leu.jpg', alt: 'Saint-Leu - Paradis des sports de glisse' },
+    { src: '/saint-paul.webp', alt: 'Saint-Paul - Capitale historique de l\'ouest' },
+    { src: '/saint-pierre.jpg', alt: 'Saint-Pierre - Capitale du sud' },
+    { src: '/saint-gilles.jpg', alt: 'Saint-Gilles - Station balnéaire prisée' },
+    { src: '/etang-sale.jpeg', alt: 'Étang-Salé - Plage de sable noir' }
   ];
 
   // On mobile, show a simple hero without animations

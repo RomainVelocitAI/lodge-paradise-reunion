@@ -7,7 +7,7 @@ const MaterialsInteractiveMobile = () => {
   const options = [
     {
       title: "Structure Métallique",
-      description: "Robustesse face aux vents de 250 km/h",
+      description: "Robustesse face aux vents de 300 km/h",
       image: "/structure-metallique.jpg",
       icon: <FaTools size={24} className="text-gold-500" />
     },
@@ -19,7 +19,7 @@ const MaterialsInteractiveMobile = () => {
     },
     {
       title: "Pierre de Lave",
-      description: "Roche du Piton de la Fournaise authentique",
+      description: "Pierre volcanique locale de La Réunion",
       image: "/pierre-lave.jpg",
       icon: <FaMountain size={24} className="text-gold-500" />
     },

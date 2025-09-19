@@ -29,19 +29,9 @@ const Footer = () => {
       links: [
         { label: "Accueil", href: "#hero" },
         { label: "Nos Projets", href: "/nos-projets" },
-        { label: "Catalogue Lodges", href: "/catalogue-lodges" },
-        { label: "Investissement", href: "/investissement-defiscalisation" },
-        { label: "Galerie", href: "/galerie" }
-      ]
-    },
-    {
-      title: "Services Premium",
-      links: [
-        { label: "Construction sur-mesure", href: "#" },
-        { label: "Gestion locative complète", href: "#" },
-        { label: "Conciergerie de luxe", href: "#" },
-        { label: "Optimisation fiscale", href: "#" },
-        { label: "Accompagnement VIP", href: "#" }
+        { label: "Zones d'Implantation", href: "/zones-implantation" },
+        { label: "Matériaux Nobles", href: "/materiaux-nobles" },
+        { label: "Investissement", href: "/investissement-defiscalisation" }
       ]
     },
     {
@@ -112,14 +102,13 @@ const Footer = () => {
                 textTransform: 'uppercase'
               }}>Île de La Réunion</span>
             </div>
-            <p className="footer-description" style={{ 
+            <p className="footer-description" style={{
               color: '#94a3b8',
               lineHeight: '1.8',
               marginBottom: '25px',
               fontSize: '0.95rem'
             }}>
-              Constructeur de lodges d'exception et expert en investissement immobilier défiscalisé.
-              40 ans d'expertise au service de votre patrimoine.
+              Créateurs d'habitats uniques, au cœur des paysages Réunionnais
             </p>
             <div className="footer-social" style={{ display: 'flex', gap: '15px' }}>
               {socialLinks.map((social, index) => (

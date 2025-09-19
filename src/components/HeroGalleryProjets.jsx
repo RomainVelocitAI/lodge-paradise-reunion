@@ -18,11 +18,11 @@ const HeroGalleryProjets = () => {
   const subtitle = "Découvrez nos réalisations exceptionnelles à La Réunion";
   
   const images = [
-    { src: '/client-image-1.jpg', alt: 'Projet Lodges Paradise 1' },
-    { src: '/client-image-2.jpg', alt: 'Projet Lodges Paradise 2' },
-    { src: '/client-image-3.jpg', alt: 'Projet Lodges Paradise 3' },
-    { src: '/client-image-4.jpg', alt: 'Projet Lodges Paradise 4' },
-    { src: '/villa1.jpg', alt: 'Projet Lodges Paradise 5' }
+    { src: '/villa1.jpg', alt: 'Villa vue mer - Architecture moderne' },
+    { src: '/villa2.jpg', alt: 'Lodge tropical - Intégration nature' },
+    { src: '/villa3.jpg', alt: 'Villa avec piscine - Espace détente' },
+    { src: '/villa4.jpg', alt: 'Lodge avec jardin - Cadre verdoyant' },
+    { src: '/projet-construction.jpg', alt: 'Projet en construction' }
   ];
 
   // On mobile, show a simple hero without animations

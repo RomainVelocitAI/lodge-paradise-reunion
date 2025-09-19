@@ -16,34 +16,40 @@ const ZonesImplantation = () => {
 
   const zones = [
     {
-      name: "Saint-Gilles les Bains",
-      description: "Station balnéaire prisée de l'ouest, offrant plages, lagons et activités nautiques",
-      attractions: ["Plage de l'Hermitage", "Port de plaisance", "Aquarium", "Restaurants et commerces"]
-    },
-    {
-      name: "La Possession",
-      description: "Ville dynamique en plein développement, idéalement située entre mer et montagne",
-      attractions: ["Proximité Saint-Denis", "Accès rapide littoral", "Zones commerciales", "Nouveaux quartiers"]
+      name: "Saint-Leu",
+      description: "Paradis des sports de glisse avec un cadre de vie exceptionnel",
+      attractions: ["Spot de surf mondial", "Parapente", "Centre-ville historique", "Kélonia"],
+      image: "/saint-leu.jpg"
     },
     {
       name: "Saint-Paul",
       description: "Capitale historique de l'ouest, combinant patrimoine et modernité",
-      attractions: ["Marché forain", "Front de mer", "Centre culturel", "Zones d'activités"]
+      attractions: ["Marché forain", "Front de mer", "Centre culturel", "Zones d'activités"],
+      image: "/saint-paul.webp"
     },
     {
-      name: "L'Étang-Salé",
+      name: "Saint-Pierre",
+      description: "Capitale du sud, ville dynamique alliant commerces et plages magnifiques",
+      attractions: ["Front de mer animé", "Port de plaisance", "Centre-ville commerçant", "Plages familiales"],
+      image: "/saint-pierre.jpg"
+    },
+    {
+      name: "Saint-Gilles",
+      description: "Station balnéaire prisée de l'ouest, offrant plages, lagons et activités nautiques",
+      attractions: ["Plage de l'Hermitage", "Port de plaisance", "Aquarium", "Restaurants et commerces"],
+      image: "/saint-gilles.jpg"
+    },
+    {
+      name: "Étang-Salé",
       description: "Commune du sud-ouest reconnue pour sa plage de sable noir et sa forêt littorale",
-      attractions: ["Plage de sable noir", "Forêt de l'Étang-Salé", "Golf 18 trous", "Bassin pirogue"]
+      attractions: ["Plage de sable noir", "Forêt de l'Étang-Salé", "Golf 18 trous", "Bassin pirogue"],
+      image: "/etang-sale.jpeg"
     },
     {
-      name: "Saint-Leu",
-      description: "Paradis des sports de glisse avec un cadre de vie exceptionnel",
-      attractions: ["Spot de surf mondial", "Parapente", "Centre-ville historique", "Kélonia"]
-    },
-    {
-      name: "La Saline",
-      description: "Secteur résidentiel recherché, proche des plus belles plages de l'île",
-      attractions: ["Plage de la Saline", "Trou d'Eau", "Zone commerciale", "Proximité aéroport"]
+      name: "Manapany",
+      description: "Petit village côtier authentique du sud sauvage, préservé et pittoresque",
+      attractions: ["Bassin naturel", "Pêche traditionnelle", "Côte sauvage", "Tranquillité absolue"],
+      image: "/manapany.jpg"
     }
   ];
 
@@ -67,7 +73,14 @@ const ZonesImplantation = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {zones.map((zone, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                <div className="h-48 relative">
+                  <img
+                    src={zone.image}
+                    alt={zone.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-3">{zone.name}</h3>
                   <p className="text-gray-600 mb-4">{zone.description}</p>

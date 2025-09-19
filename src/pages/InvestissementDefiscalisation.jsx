@@ -7,26 +7,36 @@ import Footer from '../components/Footer';
 import { Calculator, CheckCircle, AlertCircle, TrendingUp, Shield, Clock, Euro, Home, FileText, Users, ArrowRight, ChevronDown, Factory, Cog } from 'lucide-react';
 
 const InvestissementDefiscalisation = () => {
-  const [investmentAmount, setInvestmentAmount] = useState(100000);
-  const [taxRate, setTaxRate] = useState(30); // Taux d'imposition de l'entreprise
+  const [investmentAmount, setInvestmentAmount] = useState(200000);
+  const [surface, setSurface] = useState(60); // Surface en m²
+  const [taxRate, setTaxRate] = useState(30); // Taux d'imposition
   const [showCalculator, setShowCalculator] = useState(false);
 
   // Calcul du crédit d'impôt CIOP
   const calculateCIOP = () => {
-    // Taux CIOP selon le montant d'investissement
-    let ciopRate = 0.35; // 35% pour les investissements productifs
+    // Plafond éligible : 3575€ TTC/m²
+    const plafondParM2 = 3575;
+    const montantPlafonne = Math.min(investmentAmount, surface * plafondParM2);
 
-    const creditImpot = investmentAmount * ciopRate;
-    const economieReelle = creditImpot; // Le crédit d'impôt est directement déduit
+    // Taux CIOP pour l'immobilier locatif
+    let ciopRate = 0.35; // 35% pour l'immobilier locatif
+
+    const creditImpot = montantPlafonne * ciopRate;
+    const economieReelle = creditImpot;
     const investissementNet = investmentAmount - creditImpot;
     const reportPossible = creditImpot > (investmentAmount * taxRate / 100) ? creditImpot - (investmentAmount * taxRate / 100) : 0;
+
+    // Calcul du loyer plafonné
+    const loyerPlafonne = surface * 17.25; // 17.25€/m² par mois
 
     return {
       creditImpot: Math.round(creditImpot),
       economieReelle: Math.round(economieReelle),
       investissementNet: Math.round(investissementNet),
       tauxEffectif: ((creditImpot / investmentAmount) * 100).toFixed(2),
-      reportPossible: Math.round(reportPossible)
+      reportPossible: Math.round(reportPossible),
+      montantPlafonne: Math.round(montantPlafonne),
+      loyerPlafonne: Math.round(loyerPlafonne)
     };
   };
 
@@ -54,7 +64,7 @@ const InvestissementDefiscalisation = () => {
               <span className="text-gold-500">CIOP</span> - Crédit d'Impôt Outre-Mer Production
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Bénéficiez jusqu'à 35% de crédit d'impôt pour vos investissements productifs neufs à La Réunion
+              Bénéficiez jusqu'à 35% de crédit d'impôt pour vos investissements immobiliers locatifs à La Réunion
             </p>
           </div>
 
@@ -72,15 +82,15 @@ const InvestissementDefiscalisation = () => {
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Applicable sur l'IS ou l'IR</p>
+                  <p className="text-gray-700">Plafond éligible : 3 575€ TTC/m²</p>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">Structure recommandée : SCI</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
                   <p className="text-gray-700">Report possible sur 5 ans</p>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Cumulable avec d'autres aides</p>
                 </div>
               </div>
             </div>
@@ -90,23 +100,23 @@ const InvestissementDefiscalisation = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-6">
                 <Cog className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Équipements Éligibles</h3>
+              <h3 className="text-2xl font-bold mb-4">Calendrier de Versement</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Matériel de construction BTP</p>
+                  <p className="text-gray-700">70% à l'achèvement des fondations</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Équipements industriels neufs</p>
+                  <p className="text-gray-700">20% à la mise hors d'eau</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Véhicules utilitaires</p>
+                  <p className="text-gray-700">10% à la livraison du logement</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Outils de production</p>
+                  <p className="text-gray-700">Versement progressif sécurisé</p>
                 </div>
               </div>
             </div>
@@ -120,15 +130,19 @@ const InvestissementDefiscalisation = () => {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">Mise en location dans les 12 mois</p>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">Loyer plafonné : 17,25€/m² par mois</p>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">Surface éligible : habitable + varangue (max 14m²)</p>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
                   <p className="text-gray-700">5 ans de location non meublée</p>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Location longue durée</p>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Pas d'autres conditions</p>
                 </div>
               </div>
             </div>
@@ -145,7 +159,7 @@ const InvestissementDefiscalisation = () => {
               Calculateur CIOP
             </h2>
             <p className="text-xl text-gray-600">
-              Simulez votre crédit d'impôt pour vos investissements productifs
+              Simulez votre crédit d'impôt pour votre investissement immobilier locatif
             </p>
           </div>
 
@@ -155,12 +169,12 @@ const InvestissementDefiscalisation = () => {
               <div className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Montant de l'investissement en équipements
+                    Montant de l'investissement immobilier
                   </label>
                   <div className="relative">
                     <input
                       type="range"
-                      min="50000"
+                      min="100000"
                       max="500000"
                       step="10000"
                       value={investmentAmount}
@@ -168,7 +182,7 @@ const InvestissementDefiscalisation = () => {
                       className="w-full h-2 bg-purple-200 rounded-lg appearance-none cursor-pointer"
                     />
                     <div className="flex justify-between text-sm text-gray-600 mt-2">
-                      <span>50 000€</span>
+                      <span>100 000€</span>
                       <span className="font-bold text-purple-600">{investmentAmount.toLocaleString('fr-FR')}€</span>
                       <span>500 000€</span>
                     </div>
@@ -177,7 +191,29 @@ const InvestissementDefiscalisation = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Taux d'imposition de votre entreprise (%)
+                    Surface habitable (m²)
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="range"
+                      min="30"
+                      max="150"
+                      step="5"
+                      value={surface}
+                      onChange={(e) => setSurface(Number(e.target.value))}
+                      className="w-full h-2 bg-purple-200 rounded-lg appearance-none cursor-pointer"
+                    />
+                    <div className="flex justify-between text-sm text-gray-600 mt-2">
+                      <span>30 m²</span>
+                      <span className="font-bold text-purple-600">{surface} m²</span>
+                      <span>150 m²</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Taux d'imposition (%)
                   </label>
                   <div className="grid grid-cols-3 gap-3">
                     {[15, 25, 30].map((rate) => (
@@ -197,19 +233,19 @@ const InvestissementDefiscalisation = () => {
                 </div>
 
                 <div className="bg-white rounded-xl p-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Conditions du CIOP</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Informations clés</h4>
                   <div className="space-y-2">
                     <div className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-600">5 ans de location non meublée</p>
+                      <p className="text-sm text-gray-600">Plafond : {gains.montantPlafonne ? gains.montantPlafonne.toLocaleString('fr-FR') : (surface * 3575).toLocaleString('fr-FR')}€</p>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-600">Location longue durée</p>
+                      <p className="text-sm text-gray-600">Loyer max : {gains.loyerPlafonne ? gains.loyerPlafonne.toLocaleString('fr-FR') : Math.round(surface * 17.25)}€/mois</p>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-600">Pas d'autres conditions spécifiques</p>
+                      <p className="text-sm text-gray-600">Structure recommandée : SCI</p>
                     </div>
                   </div>
                 </div>
@@ -315,11 +351,11 @@ const InvestissementDefiscalisation = () => {
                   <ul className="space-y-2">
                     <li className="flex items-start">
                       <AlertCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700">Zone A : 13,04€/m² maximum</span>
+                      <span className="text-sm text-gray-700">La Réunion : 17,25€/m² maximum</span>
                     </li>
                     <li className="flex items-start">
                       <AlertCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700">Zone B : 10,70€/m² maximum</span>
+                      <span className="text-sm text-gray-700">Loyer adapté selon zone/secteur</span>
                     </li>
                   </ul>
                 </div>
