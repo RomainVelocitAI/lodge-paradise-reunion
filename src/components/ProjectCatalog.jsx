@@ -14,7 +14,7 @@ const ProjectCatalog = () => {
       name: "Maisons 3 Façades",
       designation: "Solutions adaptées à tous les budgets",
       quote: "Maisons de 45 à 95m² parfaitement conçues. 3 types disponibles : T2 Compact idéal investissement, T3 Famille avec garage, T4+ Confort avec grand jardin.",
-      src: "https://replicate.delivery/xezq/Ay20tFC0SdawNF3CVKzL8Pe9p12dPzmDsMaFfSz85KIoQ0VVA/tmpbaplqkrj.jpeg",
+      src: "/villa3.jpg",
       link: "/maisons-3-facades"
     },
     {
