@@ -11,7 +11,7 @@ const VillasPremium = () => {
     <>
       <SEO
         title="Villas Premium 4 Façades | Construction Haut de Gamme La Réunion"
-        description="Découvrez nos villas premium 4 façades à La Réunion. Constructions haut de gamme de 90 à 200m², matériaux nobles, vue panoramique. Investissement CIOP jusqu'à 38,25% de crédit d'impôt."
+        description="Découvrez nos villas premium 4 façades à La Réunion. Constructions haut de gamme de 90 à 200m², matériaux nobles, vue panoramique. Investissement CIOP jusqu'à 35% de crédit d'impôt."
         keywords="villas premium réunion, construction 4 façades, villa haut de gamme, investissement CIOP, lodge paradise, villa luxe réunion"
         canonical="https://lodgesparadise.com/villas-premium"
       />
@@ -285,11 +285,11 @@ const VillasPremium = () => {
           <h2 className="text-3xl font-bold mb-8">Investissement Défiscalisé CIOP</h2>
           <p className="text-xl mb-8 text-white font-medium">
             Toutes nos villas premium sont éligibles au Crédit d'Impôt Outre-Mer Production (CIOP),
-            vous permettant de bénéficier d'un crédit d'impôt jusqu'à 38,25% de votre investissement.
+            vous permettant de bénéficier d'un crédit d'impôt jusqu'à 35% de votre investissement.
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <p className="text-4xl font-bold text-gold-500 mb-2">38,25%</p>
+              <p className="text-4xl font-bold text-gold-500 mb-2">35%</p>
               <p className="text-white">Crédit d'impôt maximum</p>
             </div>
             <div>

@@ -11,7 +11,7 @@ const BatimentsMultiples = () => {
     <>
       <SEO
         title="Bâtiments à Appartements Multiples | Investissement Locatif La Réunion"
-        description="Investissez dans nos programmes d'appartements T2 à T5 à La Réunion. Rentabilité locative optimisée, gestion simplifiée. Défiscalisation CIOP jusqu'à 38,25%."
+        description="Investissez dans nos programmes d'appartements T2 à T5 à La Réunion. Rentabilité locative optimisée, gestion simplifiée. Défiscalisation CIOP jusqu'à 35%."
         keywords="appartements multiples réunion, investissement locatif, T2 T3 T4 T5, programme immobilier, CIOP réunion, rentabilité locative"
         canonical="https://lodgesparadise.com/batiments-multiples"
       />
@@ -458,7 +458,7 @@ const BatimentsMultiples = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <p className="text-4xl font-bold text-gold-500 mb-2">38,25%</p>
+              <p className="text-4xl font-bold text-gold-500 mb-2">35%</p>
               <p className="text-white">Crédit d'impôt sur l'investissement</p>
             </div>
             <div>

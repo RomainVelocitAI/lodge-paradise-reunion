@@ -14,7 +14,7 @@ const InvestissementDefiscalisation = () => {
   // Calcul du crédit d'impôt CIOP
   const calculateCIOP = () => {
     // Taux CIOP selon le montant d'investissement
-    let ciopRate = 0.3825; // 38,25% pour les investissements productifs
+    let ciopRate = 0.35; // 35% pour les investissements productifs
 
     const creditImpot = investmentAmount * ciopRate;
     const economieReelle = creditImpot; // Le crédit d'impôt est directement déduit
@@ -36,7 +36,7 @@ const InvestissementDefiscalisation = () => {
     <>
       <SEO
         title="CIOP - Crédit d'Impôt Outre-Mer Production | Lodges Paradise"
-        description="Bénéficiez du CIOP jusqu'à 38,25% de crédit d'impôt pour vos investissements productifs à La Réunion. Lodges Paradise vous accompagne dans vos projets."
+        description="Bénéficiez du CIOP jusqu'à 35% de crédit d'impôt pour vos investissements productifs à La Réunion. Lodges Paradise vous accompagne dans vos projets."
         keywords="CIOP réunion, crédit impôt outre-mer, investissement productif, défiscalisation entreprise, équipements neufs"
         canonical="https://lodgesparadise.com/investissement-defiscalisation"
       />
@@ -54,7 +54,7 @@ const InvestissementDefiscalisation = () => {
               <span className="text-gold-500">CIOP</span> - Crédit d'Impôt Outre-Mer Production
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Bénéficiez jusqu'à 38,25% de crédit d'impôt pour vos investissements productifs neufs à La Réunion
+              Bénéficiez jusqu'à 35% de crédit d'impôt pour vos investissements productifs neufs à La Réunion
             </p>
           </div>
 
@@ -68,7 +68,7 @@ const InvestissementDefiscalisation = () => {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Crédit d'impôt jusqu'à 38,25%</p>
+                  <p className="text-gray-700">Crédit d'impôt jusqu'à 35%</p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
@@ -288,7 +288,7 @@ const InvestissementDefiscalisation = () => {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Engagement de Location</h3>
                   <p className="text-gray-600 mb-4">
-                    Location du bien pendant toute la durée choisie (6, 9 ou 12 ans)
+                    Location du bien pendant 5 ans
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start">
@@ -395,7 +395,6 @@ const InvestissementDefiscalisation = () => {
                 {
                   step: 1,
                   title: "Premier Contact",
-                  duration: "Jour 1",
                   description: "Échange téléphonique pour comprendre votre projet et vérifier votre éligibilité",
                   icon: <Users className="w-6 h-6" />,
                   side: "left"
@@ -403,7 +402,6 @@ const InvestissementDefiscalisation = () => {
                 {
                   step: 2,
                   title: "Étude Personnalisée",
-                  duration: "Semaine 1",
                   description: "Simulation financière détaillée et sélection du programme adapté",
                   icon: <Calculator className="w-6 h-6" />,
                   side: "right"
@@ -411,7 +409,6 @@ const InvestissementDefiscalisation = () => {
                 {
                   step: 3,
                   title: "Réservation",
-                  duration: "Semaine 2-3",
                   description: "Signature du contrat de réservation et versement de l'acompte (5%)",
                   icon: <FileText className="w-6 h-6" />,
                   side: "left"
@@ -419,7 +416,6 @@ const InvestissementDefiscalisation = () => {
                 {
                   step: 4,
                   title: "Financement",
-                  duration: "Mois 1-3",
                   description: "Montage du dossier bancaire avec notre partenaire courtier",
                   icon: <Euro className="w-6 h-6" />,
                   side: "right"
@@ -427,7 +423,6 @@ const InvestissementDefiscalisation = () => {
                 {
                   step: 5,
                   title: "Signature Notaire",
-                  duration: "Mois 3-4",
                   description: "Acte authentique chez le notaire et déblocage des fonds",
                   icon: <Shield className="w-6 h-6" />,
                   side: "left"
@@ -435,7 +430,6 @@ const InvestissementDefiscalisation = () => {
                 {
                   step: 6,
                   title: "Construction",
-                  duration: "12-18 mois",
                   description: "Suivi régulier avec photos et visites de chantier",
                   icon: <Home className="w-6 h-6" />,
                   side: "right"
@@ -443,7 +437,6 @@ const InvestissementDefiscalisation = () => {
                 {
                   step: 7,
                   title: "Livraison",
-                  duration: "Mois 18",
                   description: "Remise des clés et début de la gestion locative",
                   icon: <CheckCircle className="w-6 h-6" />,
                   side: "left"
@@ -463,8 +456,7 @@ const InvestissementDefiscalisation = () => {
                   >
                     <div className={`flex items-start ${item.side === 'right' ? '' : 'md:flex-row-reverse'}`}>
                       <div className="flex-1">
-                        <span className="text-gold-500 font-semibold text-sm">{item.duration}</span>
-                        <h3 className="text-xl font-bold mt-1 mb-2">{item.title}</h3>
+                        <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                         <p className="text-gray-600">{item.description}</p>
                       </div>
                       <div className={`w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white flex-shrink-0 ${

@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as Icons from 'lucide-react';
 const { Facebook, Instagram, Mail, Phone, MapPin, Clock, ChevronRight, ExternalLink } = Icons;
 import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [isEurope, setIsEurope] = useState(false);
+
+  useEffect(() => {
+    // Détection de la géolocalisation basée sur l'IP
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        // Si le continent est Europe OU si le pays n'est pas La Réunion
+        if (data.continent_code === 'EU' || (data.country_code !== 'RE' && data.country !== 'Réunion')) {
+          setIsEurope(true);
+        }
+      })
+      .catch(error => {
+        console.log('Erreur géolocalisation:', error);
+        // En cas d'erreur, on reste sur le footer Réunion par défaut
+      });
+  }, []);
 
   const footerLinks = [
     {
@@ -189,7 +206,7 @@ const Footer = () => {
 
           {/* Contact Section */}
           <div className="footer-contact">
-            <h4 style={{ 
+            <h4 style={{
               color: '#D4AF37',
               fontSize: '1.1rem',
               fontWeight: '600',
@@ -197,51 +214,76 @@ const Footer = () => {
               textTransform: 'uppercase',
               letterSpacing: '1px'
             }}>Contact & Horaires</h4>
-            
-            <div className="contact-item" style={{ 
-              display: 'flex', 
-              alignItems: 'flex-start', 
+
+            <div className="contact-item" style={{
+              display: 'flex',
+              alignItems: 'flex-start',
               gap: '12px',
               marginBottom: '15px',
               color: '#94a3b8'
             }}>
               <MapPin size={18} style={{ color: '#D4AF37', flexShrink: 0, marginTop: '2px' }} />
               <span style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                2 rue Jean Paul Sartre<br />
-                97419 La Possession<br />
-                La Réunion
+                {isEurope ? (
+                  <>
+                    Avenue Gouverneur Bovesse 112<br />
+                    Boîte 17<br />
+                    5100 Jambes-Namur<br />
+                    Belgique
+                  </>
+                ) : (
+                  <>
+                    2 rue Jean Paul Sartre<br />
+                    97419 La Possession<br />
+                    La Réunion
+                  </>
+                )}
               </span>
             </div>
-            
-            <div className="contact-item" style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
+
+            <div className="contact-item" style={{
+              display: 'flex',
+              alignItems: 'center',
               gap: '12px',
               marginBottom: '15px'
             }}>
               <Phone size={18} style={{ color: '#D4AF37', flexShrink: 0 }} />
-              <a href="tel:+262262667988" style={{ 
-                color: '#94a3b8', 
-                textDecoration: 'none',
-                fontSize: '0.95rem',
-                transition: 'color 0.3s ease'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
-              onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
-              >
-                0262 66 79 88
-              </a>
+              {isEurope ? (
+                <a href="tel:+3281680441" style={{
+                  color: '#94a3b8',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
+                >
+                  +32 81 68 04 41
+                </a>
+              ) : (
+                <a href="tel:+262262667988" style={{
+                  color: '#94a3b8',
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  transition: 'color 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
+                >
+                  0262 66 79 88
+                </a>
+              )}
             </div>
             
-            <div className="contact-item" style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
+            <div className="contact-item" style={{
+              display: 'flex',
+              alignItems: 'center',
               gap: '12px',
               marginBottom: '20px'
             }}>
               <Mail size={18} style={{ color: '#D4AF37', flexShrink: 0 }} />
-              <a href="mailto:contact@lodgeparadise.re" style={{ 
-                color: '#94a3b8', 
+              <a href="mailto:contact@lodgesparadise.com" style={{
+                color: '#94a3b8',
                 textDecoration: 'none',
                 fontSize: '0.95rem',
                 transition: 'color 0.3s ease'
@@ -249,7 +291,7 @@ const Footer = () => {
               onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
               >
-                contact@lodgeparadise.re
+                contact@lodgesparadise.com
               </a>
             </div>
             

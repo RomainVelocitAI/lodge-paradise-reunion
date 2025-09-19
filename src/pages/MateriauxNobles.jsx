@@ -89,10 +89,14 @@ const MateriauxNobles = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Une Philosophie de Construction Unique</h2>
-          <p className="text-lg text-center max-w-4xl mx-auto mb-16 text-gray-700">
+          <p className="text-lg text-center max-w-4xl mx-auto mb-8 text-gray-700">
             Chez Lodges Paradise, nous croyons que la qualité d'un projet immobilier commence par le choix des matériaux.
             Notre approche combine tradition et innovation : nous puisons dans le savoir-faire ancestral de la construction
-            tropicale tout en intégrant les dernières innovations technologiques.
+            tropicale tout en intégrant les dernières innovations technologiques. <strong>Tous nos projets sont validés par des bureaux d'études spécialisés</strong> à La Réunion,
+            garantissant une parfaite adaptation aux conditions climatiques tropicales.
+          </p>
+          <p className="text-lg text-center max-w-4xl mx-auto mb-16 text-gray-700">
+            Chaque construction est couverte par une <strong>garantie décennale</strong> sur les matériaux et la mise en œuvre.
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

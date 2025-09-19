@@ -11,7 +11,7 @@ const Maisons3Facades = () => {
     <>
       <SEO
         title="Maisons d'Habitation 3 Façades | Lodges Paradise La Réunion"
-        description="Maisons 3 façades T2 à T4+ à La Réunion. Construction optimisée, confort moderne, jardins privatifs. Éligible CIOP avec crédit d'impôt de 38,25%."
+        description="Maisons 3 façades T2 à T4+ à La Réunion. Construction optimisée, confort moderne, jardins privatifs. Éligible CIOP avec crédit d'impôt de 35%."
         keywords="maisons 3 façades réunion, T2 T3 T4 réunion, maison habitation, construction optimisée, investissement CIOP, lodge paradise"
         canonical="https://lodgesparadise.com/maisons-3-facades"
       />
@@ -309,7 +309,7 @@ const Maisons3Facades = () => {
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <p className="text-4xl font-bold text-gold-500 mb-2">38,25%</p>
+              <p className="text-4xl font-bold text-gold-500 mb-2">35%</p>
               <p className="text-white">Crédit d'impôt sur votre investissement</p>
             </div>
             <div>

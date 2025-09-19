@@ -9,8 +9,6 @@ import ProjectCatalog from './components/ProjectCatalog';
 import MaterialsInteractive from './components/MaterialsInteractive';
 import MaterialsInteractiveMobile from './components/MaterialsInteractiveMobile';
 import DefiscalisationSection from './components/DefiscalisationSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import TestimonialsSectionMobile from './components/TestimonialsSectionMobile';
 import Footer from './components/Footer';
 
 function RealEstateApp() {
@@ -581,8 +579,6 @@ function RealEstateApp() {
       {/* Section Défiscalisation - Désactivée (section descriptive et calculateur supprimés)
       <DefiscalisationSection /> */}
 
-      {/* Section Témoignages */}
-      {isMobile ? <TestimonialsSectionMobile /> : <TestimonialsSection />}
 
       {/* Section Contact Immobilier */}
       <section id="contact" className="section" style={{ padding: '5rem 0', background: 'white' }}>

@@ -24,10 +24,14 @@ const NosProjets = () => {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-8">Nos Projets de Construction Premium</h1>
-          <p className="text-lg text-gray-700 text-center leading-relaxed">
+          <p className="text-lg text-gray-700 text-center leading-relaxed mb-4">
             Lodges Paradise vous propose trois gammes de projets immobiliers d'exception à La Réunion.
             Chaque projet est conçu avec des matériaux nobles, une architecture moderne et des finitions
-            haut de gamme, tout en étant éligible au crédit d'impôt CIOP jusqu'à 38,25%.
+            haut de gamme, tout en étant éligible au crédit d'impôt CIOP jusqu'à 35%. <strong>Avec l'appui de bureaux d'études locaux</strong>,
+            nos constructions allient sécurité, durabilité et performance face aux contraintes tropicales.
+          </p>
+          <p className="text-lg text-gray-700 text-center leading-relaxed">
+            Chaque réalisation bénéficie d'une <strong>garantie décennale</strong>, gage de confiance et de sérénité.
           </p>
         </div>
       </section>
@@ -196,7 +200,7 @@ const NosProjets = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-primary-900">Concrétisez Votre Projet Immobilier</h2>
           <p className="text-xl mb-8 text-gray-800 font-medium">
-            Tous nos projets sont éligibles au crédit d'impôt CIOP jusqu'à 38,25%.
+            Tous nos projets sont éligibles au crédit d'impôt CIOP jusqu'à 35%.
             <br />
             Contactez-nous pour une étude personnalisée de votre projet.
           </p>
