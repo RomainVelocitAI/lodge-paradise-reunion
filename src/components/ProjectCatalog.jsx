@@ -44,7 +44,7 @@ const ProjectCatalog = () => {
     <section className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-8">
         <div className="text-center mb-12">
-          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider">NOTRE CATALOGUE</span>
+          <span className="text-gold-500 font-bold text-xl uppercase tracking-wider">Notre catalogue</span>
           <h2 className="text-5xl font-bold mt-4 text-gray-900">
             Palette Produits Diversifiée
           </h2>

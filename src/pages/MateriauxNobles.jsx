@@ -88,7 +88,10 @@ const MateriauxNobles = () => {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Une Philosophie de Construction Unique</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">
+            <span className="text-gold-500 font-bold text-xl uppercase tracking-wider block mb-4">Notre approche</span>
+            Une Philosophie de Construction Unique
+          </h2>
           <p className="text-lg text-center max-w-4xl mx-auto mb-8 text-gray-700">
             Chez Lodges Paradise, nous croyons que la qualité d'un projet immobilier commence par le choix des matériaux.
             Notre approche combine tradition et innovation : nous puisons dans le savoir-faire ancestral de la construction
@@ -127,7 +130,10 @@ const MateriauxNobles = () => {
           </div>
 
           <div className="mt-20 bg-white rounded-2xl shadow-xl p-12">
-            <h2 className="text-3xl font-bold text-center mb-12">Les Avantages de Nos Matériaux Nobles</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">
+              <span className="text-gold-500 font-bold text-xl uppercase tracking-wider block mb-4">Nos matériaux d'exception</span>
+              Les Avantages de Nos Matériaux Nobles
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">

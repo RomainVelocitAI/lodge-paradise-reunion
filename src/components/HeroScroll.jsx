@@ -93,7 +93,7 @@ const HeroSection = ({ scrollYProgress }) => {
           transition={{ delay: 0.9, duration: 0.8 }}
           className="flex justify-center mb-12"
         >
-          <a href="#contact" className="px-8 py-4 bg-white text-darkblue-500 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105">
+          <a href="#contact" className="px-8 py-4 bg-gold-500 text-white rounded-lg font-semibold text-lg hover:bg-gold-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
             Prendre RDV
           </a>
         </motion.div>
@@ -210,7 +210,7 @@ const EnterpriseSection = ({ scrollYProgress }) => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="text-gold-500 font-bold text-lg uppercase tracking-wider">Votre Partenaire</span>
+            <span className="text-gold-500 font-bold text-xl uppercase tracking-wider">Votre Partenaire</span>
             <h2 className="text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gray-900">
               Lodges Paradise
             </h2>

@@ -78,26 +78,15 @@ function RealEstateApp() {
                 <Link to="/nos-projets" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Nos Lodges</Link>
                 <Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Prestations</Link>
                 <Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Fiscalité</Link>
-                <a href="#contact" style={{ 
-                  background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
-                  color: '#1e1b4b',
-                  padding: '0.625rem 1.5rem',
-                  borderRadius: '0.5rem',
-                  textDecoration: 'none',
-                  fontWeight: '600'
-                }}>Contact</a>
+                <a href="#contact"
+                  className="bg-gold-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-gold-600 transition-all duration-300 transform hover:scale-105"
+                  style={{ textDecoration: 'none' }}>Contact</a>
               </nav>
             )}
             {isMobile && (
-              <a href="#contact" style={{ 
-                background: 'linear-gradient(135deg, #D4AF37, #B8941F)',
-                color: '#1e1b4b',
-                padding: '0.5rem 1rem',
-                borderRadius: '0.5rem',
-                textDecoration: 'none',
-                fontWeight: '600',
-                fontSize: '0.875rem'
-              }}>Contact</a>
+              <a href="#contact"
+                className="bg-gold-500 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gold-600 transition-all duration-300"
+                style={{ textDecoration: 'none' }}>Contact</a>
             )}
           </div>
         </div>
