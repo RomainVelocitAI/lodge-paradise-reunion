@@ -9,12 +9,15 @@ import CatalogueLodges from './pages/CatalogueLodges';
 import MateriauxNobles from './pages/MateriauxNobles';
 import ZonesImplantation from './pages/ZonesImplantation';
 import InvestissementDefiscalisation from './pages/InvestissementDefiscalisation';
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import ScrollToTop from './components/ScrollToTop';
+import CookieBanner from './components/CookieBanner';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <CookieBanner />
       <Routes>
         {/* Page d'accueil - RealEstateApp reste intacte */}
         <Route path="/" element={<RealEstateApp />} />
@@ -28,6 +31,7 @@ function App() {
         <Route path="/materiaux-nobles" element={<MateriauxNobles />} />
         <Route path="/zones-implantation" element={<ZonesImplantation />} />
         <Route path="/investissement-defiscalisation" element={<InvestissementDefiscalisation />} />
+        <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
       </Routes>
     </Router>
   );
