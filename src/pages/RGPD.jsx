@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
@@ -10,7 +10,7 @@ const RGPD = () => {
         title="RGPD - Protection des Données | Lodges Paradise"
         description="Politique de protection des données personnelles de Lodges Paradise conformément au RGPD."
       />
-      <Navbar />
+      <Header />
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold mb-8 text-gray-900">Protection des Données Personnelles - RGPD</h1>
