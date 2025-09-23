@@ -10,6 +10,9 @@ import MateriauxNobles from './pages/MateriauxNobles';
 import ZonesImplantation from './pages/ZonesImplantation';
 import InvestissementDefiscalisation from './pages/InvestissementDefiscalisation';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
+import MentionsLegales from './pages/MentionsLegales';
+import CGV from './pages/CGV';
+import RGPD from './pages/RGPD';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
 
@@ -32,6 +35,9 @@ function App() {
         <Route path="/zones-implantation" element={<ZonesImplantation />} />
         <Route path="/investissement-defiscalisation" element={<InvestissementDefiscalisation />} />
         <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/cgv" element={<CGV />} />
+        <Route path="/rgpd" element={<RGPD />} />
       </Routes>
     </Router>
   );

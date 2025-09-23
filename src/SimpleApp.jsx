@@ -187,7 +187,7 @@ function SimpleApp() {
                 </div>
                 <div>
                   <strong>Email:</strong><br />
-                  <a href="mailto:contact@lodgeparadise.re" style={{ color: '#6366f1' }}>contact@lodgeparadise.re</a>
+                  <a href="mailto:contact@lodgesparadise.com" style={{ color: '#6366f1' }}>contact@lodgesparadise.com</a>
                 </div>
                 <div>
                   <strong>Horaires:</strong><br />

@@ -193,14 +193,14 @@ const EnterpriseSection = ({ scrollYProgress }) => {
 
   return (
     <motion.section
-      style={{ 
-        scale: isMobile ? 1 : scale, 
+      style={{
+        scale: isMobile ? 1 : scale,
         rotate: isMobile ? 0 : rotate,
         position: 'relative',
-        zIndex: 10
+        zIndex: 10,
+        paddingBottom: '10rem'
       }}
       className={`relative bg-gradient-to-b from-gray-50 to-white ${isMobile ? 'py-16' : 'py-20 min-h-screen'}`}
-      style={{ paddingBottom: '10rem' }}
     >
       <div className="container mx-auto px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -54,7 +54,7 @@ const Footer = () => {
     },
     { 
       icon: <Instagram size={24} />, 
-      href: "https://www.instagram.com/lodgeparadise.re", 
+      href: "https://www.instagram.com/lodgesparadise", 
       label: "Instagram",
       color: "#E4405F"
     }

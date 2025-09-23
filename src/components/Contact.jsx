@@ -55,7 +55,7 @@ const Contact = () => {
     {
       icon: <Mail size={20} />,
       title: "Email",
-      content: "contact@lodgeparadise.re",
+      content: "contact@lodgesparadise.com",
       subtitle: "Réponse sous 24h"
     },
     {
