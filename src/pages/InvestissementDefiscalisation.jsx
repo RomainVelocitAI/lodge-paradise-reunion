@@ -45,7 +45,7 @@ const InvestissementDefiscalisation = () => {
   return (
     <>
       <SEO
-        title="CIOP - Crédit d'Impôt Outre-Mer Production | Lodges Paradise"
+        title="Votre Investissement & Défiscalisation | Lodges Paradise"
         description="Bénéficiez du CIOP jusqu'à 35% de crédit d'impôt pour vos investissements productifs à La Réunion. Lodges Paradise vous accompagne dans vos projets."
         keywords="CIOP réunion, crédit impôt outre-mer, investissement productif, défiscalisation entreprise, équipements neufs"
         canonical="https://lodgesparadise.com/investissement-defiscalisation"

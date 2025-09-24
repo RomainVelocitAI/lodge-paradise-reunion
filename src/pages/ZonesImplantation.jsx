@@ -56,7 +56,7 @@ const ZonesImplantation = () => {
   return (
     <>
       <SEO 
-        title="Zones d'Implantation | Lodges Paradise La Réunion"
+        title="Nos Zones d'Implantation | Lodges Paradise La Réunion"
         description="Découvrez nos zones d'implantation privilégiées à La Réunion : Saint-Gilles, La Possession, Saint-Paul. Investissez dans les meilleurs emplacements de l'île."
         keywords="zones implantation réunion, immobilier saint-gilles, lodges la possession, investissement saint-paul"
         canonical="https://lodgesparadise.com/zones-implantation"

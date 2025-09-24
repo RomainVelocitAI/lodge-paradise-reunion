@@ -23,7 +23,7 @@ const NosProjets = () => {
       {/* Introduction */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-8">Nos Projets de Construction Premium</h1>
+          <h1 className="text-4xl font-bold text-center mb-8">Notre Catalogue de Construction Premium</h1>
           <p className="text-lg text-gray-700 text-center leading-relaxed mb-4">
             Lodges Paradise vous propose trois gammes de projets immobiliers d'exception à La Réunion.
             Chaque projet est conçu avec des matériaux nobles, une architecture moderne et des finitions

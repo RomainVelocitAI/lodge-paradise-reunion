@@ -46,15 +46,15 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { 
-      icon: <Facebook size={24} />, 
-      href: "https://www.facebook.com/profile.php?id=61569291653551", 
+    {
+      icon: <Facebook size={24} />,
+      href: "https://www.facebook.com/share/1EZFCdVJ7s/?mibextid=wwXIfr",
       label: "Facebook",
       color: "#1877F2"
     },
-    { 
-      icon: <Instagram size={24} />, 
-      href: "https://www.instagram.com/lodgesparadise", 
+    {
+      icon: <Instagram size={24} />,
+      href: "https://www.instagram.com/lodges.paradise?igsh=MXh4cGpra295NWFpNQ==",
       label: "Instagram",
       color: "#E4405F"
     }
@@ -222,8 +222,8 @@ const Footer = () => {
                   </>
                 ) : (
                   <>
-                    2 rue Jean Paul Sartre<br />
-                    97419 La Possession<br />
+                    8, ruelle boulot<br />
+                    97 400 SAINT-DENIS<br />
                     La Réunion
                   </>
                 )}
@@ -259,7 +259,7 @@ const Footer = () => {
                 onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
                 >
-                  0262 66 79 88
+                  +262(0)262 667988
                 </a>
               )}
             </div>
@@ -271,7 +271,7 @@ const Footer = () => {
               marginBottom: '20px'
             }}>
               <Mail size={18} style={{ color: '#D4AF37', flexShrink: 0 }} />
-              <a href="mailto:contact@lodgesparadise.com" style={{
+              <a href="mailto:info@lodgesparadise.com" style={{
                 color: '#94a3b8',
                 textDecoration: 'none',
                 fontSize: '0.95rem',
@@ -280,7 +280,7 @@ const Footer = () => {
               onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
               >
-                contact@lodgesparadise.com
+                info@lodgesparadise.com
               </a>
             </div>
             

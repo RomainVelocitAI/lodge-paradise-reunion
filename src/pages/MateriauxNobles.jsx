@@ -75,7 +75,7 @@ const MateriauxNobles = () => {
   return (
     <>
       <SEO 
-        title="Matériaux Nobles | Structure Métallique, Bois Exotiques & Pierre de Lave - Lodges Paradise"
+        title="Nos Matériaux Nobles | Structure Métallique, Bois Exotiques & Pierre de Lave - Lodges Paradise"
         description="Découvrez notre sélection exclusive de matériaux nobles : structure métallique galvanisée, bois exotiques premium (teck, ipé, padouk), pierre de lave locale de La Réunion, grandes baies vitrées et garde-corps en verre. Construction durable garantie 25 ans."
         keywords="matériaux nobles réunion, structure métallique, bois exotiques, teck, ipé, padouk, pierre de lave, grandes baies vitrées, garde-corps verre, construction durable, certification FSC, HQE réunion"
         canonical="https://lodgesparadise.com/materiaux-nobles"

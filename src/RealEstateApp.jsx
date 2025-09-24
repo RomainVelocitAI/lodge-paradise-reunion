@@ -410,7 +410,7 @@ function RealEstateApp() {
                   </ul>
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <Link to="/nos-projets" style={{ 
+                  <Link to="/nos-projets" style={{
                     display: 'inline-block',
                     background: 'linear-gradient(135deg, #0a0f1c, #1a1f2c)',
                     color: 'white',
@@ -420,11 +420,20 @@ function RealEstateApp() {
                     fontWeight: '600',
                     fontSize: '1.125rem',
                     boxShadow: '0 10px 30px rgba(239, 68, 68, 0.3)',
-                    transition: 'transform 0.3s'
+                    transition: 'all 0.3s ease',
+                    transform: 'translateY(0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(239, 68, 68, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(239, 68, 68, 0.3)';
                   }}>
                     Découvrir nos projets dans l'Ouest →
                   </Link>
-                  <a href="#contact" style={{ 
+                  <a href="#contact" style={{
                     display: 'inline-block',
                     background: '#D4AF37',
                     color: 'white',
@@ -434,7 +443,16 @@ function RealEstateApp() {
                     fontWeight: '600',
                     fontSize: '1.125rem',
                     boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)',
-                    transition: 'transform 0.3s'
+                    transition: 'all 0.3s ease',
+                    transform: 'translateY(0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(212, 175, 55, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(212, 175, 55, 0.3)';
                   }}>
                     Prendre RDV →
                   </a>
@@ -506,7 +524,7 @@ function RealEstateApp() {
                   </ul>
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  <Link to="/nos-projets" style={{ 
+                  <Link to="/nos-projets" style={{
                     display: 'inline-block',
                     background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
                     color: 'white',
@@ -516,11 +534,20 @@ function RealEstateApp() {
                     fontWeight: '600',
                     fontSize: '1.125rem',
                     boxShadow: '0 10px 30px rgba(245, 158, 11, 0.3)',
-                    transition: 'transform 0.3s'
+                    transition: 'all 0.3s ease',
+                    transform: 'translateY(0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(245, 158, 11, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(245, 158, 11, 0.3)';
                   }}>
                     Découvrir nos projets dans le Sud →
                   </Link>
-                  <a href="#contact" style={{ 
+                  <a href="#contact" style={{
                     display: 'inline-block',
                     background: '#1a1f2c',
                     color: 'white',
@@ -530,7 +557,16 @@ function RealEstateApp() {
                     fontWeight: '600',
                     fontSize: '1.125rem',
                     boxShadow: '0 10px 30px rgba(239, 68, 68, 0.3)',
-                    transition: 'transform 0.3s'
+                    transition: 'all 0.3s ease',
+                    transform: 'translateY(0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(239, 68, 68, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(239, 68, 68, 0.3)';
                   }}>
                     Prendre RDV →
                   </a>
@@ -642,7 +678,7 @@ function RealEstateApp() {
                     resize: 'vertical'
                   }}
                 ></textarea>
-                <button type="submit" style={{ 
+                <button type="submit" style={{
                   background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
                   color: 'white',
                   padding: '1rem',
@@ -650,7 +686,18 @@ function RealEstateApp() {
                   borderRadius: '0.5rem',
                   fontWeight: '600',
                   cursor: 'pointer',
-                  fontSize: '1rem'
+                  fontSize: '1rem',
+                  transition: 'all 0.3s ease',
+                  transform: 'translateY(0)',
+                  boxShadow: '0 4px 15px rgba(212, 175, 55, 0.3)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(212, 175, 55, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.boxShadow = '0 4px 15px rgba(212, 175, 55, 0.3)';
                 }}>
                   Demander une brochure
                 </button>

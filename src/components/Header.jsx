@@ -70,27 +70,27 @@ const Header = () => {
                   fontWeight: isActive('/nos-projets') || isActive('/villas-premium') || isActive('/maisons-3-facades') || isActive('/batiments-multiples') ? '600' : '500'
                 }}
               >
-                Nos Projets
+                Catalogue
               </Link>
-              <Link 
-                to="/materiaux-nobles" 
-                style={{ 
-                  textDecoration: 'none', 
-                  color: isActive('/materiaux-nobles') ? '#D4AF37' : '#374151', 
+              <Link
+                to="/materiaux-nobles"
+                style={{
+                  textDecoration: 'none',
+                  color: isActive('/materiaux-nobles') ? '#D4AF37' : '#374151',
                   fontWeight: isActive('/materiaux-nobles') ? '600' : '500'
                 }}
               >
                 Matériaux
               </Link>
-              <Link 
-                to="/zones-implantation" 
-                style={{ 
-                  textDecoration: 'none', 
-                  color: isActive('/zones-implantation') ? '#D4AF37' : '#374151', 
+              <Link
+                to="/zones-implantation"
+                style={{
+                  textDecoration: 'none',
+                  color: isActive('/zones-implantation') ? '#D4AF37' : '#374151',
                   fontWeight: isActive('/zones-implantation') ? '600' : '500'
                 }}
               >
-                Zones
+                Implantations
               </Link>
               <Link 
                 to="/investissement-defiscalisation" 
