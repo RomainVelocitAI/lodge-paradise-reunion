@@ -420,17 +420,17 @@ function RealEstateApp() {
                     textDecoration: 'none',
                     fontWeight: '600',
                     fontSize: '1.125rem',
-                    boxShadow: '0 10px 30px rgba(239, 68, 68, 0.3)',
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                     transition: 'all 0.3s ease',
                     transform: 'translateY(0)'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
-                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(239, 68, 68, 0.4)';
+                    e.currentTarget.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.15)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(239, 68, 68, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
                   }}>
                     Découvrir nos projets dans l'Ouest →
                   </Link>
@@ -443,17 +443,17 @@ function RealEstateApp() {
                     textDecoration: 'none',
                     fontWeight: '600',
                     fontSize: '1.125rem',
-                    boxShadow: '0 10px 30px rgba(212, 175, 55, 0.3)',
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                     transition: 'all 0.3s ease',
                     transform: 'translateY(0)'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
-                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(212, 175, 55, 0.4)';
+                    e.currentTarget.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.15)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(212, 175, 55, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
                   }}>
                     Prendre RDV →
                   </a>
@@ -534,17 +534,17 @@ function RealEstateApp() {
                     textDecoration: 'none',
                     fontWeight: '600',
                     fontSize: '1.125rem',
-                    boxShadow: '0 10px 30px rgba(245, 158, 11, 0.3)',
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                     transition: 'all 0.3s ease',
                     transform: 'translateY(0)'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
-                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(245, 158, 11, 0.4)';
+                    e.currentTarget.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.15)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(245, 158, 11, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
                   }}>
                     Découvrir nos projets dans le Sud →
                   </Link>
@@ -557,17 +557,17 @@ function RealEstateApp() {
                     textDecoration: 'none',
                     fontWeight: '600',
                     fontSize: '1.125rem',
-                    boxShadow: '0 10px 30px rgba(239, 68, 68, 0.3)',
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                     transition: 'all 0.3s ease',
                     transform: 'translateY(0)'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
-                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(239, 68, 68, 0.4)';
+                    e.currentTarget.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.15)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(239, 68, 68, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
                   }}>
                     Prendre RDV →
                   </a>
