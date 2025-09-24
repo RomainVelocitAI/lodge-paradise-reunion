@@ -104,7 +104,16 @@ const CookieBanner = () => {
                 </button>
                 <button
                   onClick={acceptAllCookies}
-                  className="flex items-center gap-2 px-5 py-2.5 bg-gold-500 text-white rounded-lg font-medium hover:bg-gold-600 transition-all duration-300 transform hover:scale-105"
+                  className="flex items-center gap-2 px-5 py-2.5 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+                  style={{
+                    background: '#D4AF37'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#B8941F';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = '#D4AF37';
+                  }}
                 >
                   <Check className="w-4 h-4" />
                   <span>J'accepte</span>

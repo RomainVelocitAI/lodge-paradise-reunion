@@ -184,7 +184,16 @@ const CookieModal = ({ onClose, onSave }) => {
               </button>
               <button
                 onClick={savePreferences}
-                className="flex-1 sm:flex-initial px-6 py-2.5 bg-gold-500 text-white rounded-lg font-medium hover:bg-gold-600 transition-all duration-300 transform hover:scale-105"
+                className="flex-1 sm:flex-initial px-6 py-2.5 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+                style={{
+                  background: '#D4AF37'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#B8941F';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#D4AF37';
+                }}
               >
                 Enregistrer mes préférences
               </button>

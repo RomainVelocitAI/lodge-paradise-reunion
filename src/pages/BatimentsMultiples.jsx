@@ -472,7 +472,16 @@ const BatimentsMultiples = () => {
           </div>
           <Link
             to="/investissement-defiscalisation"
-            className="inline-block bg-gold-500 text-white px-8 py-3 rounded-lg hover:bg-gold-600 transition-colors"
+            className="inline-block text-white px-8 py-3 rounded-lg transition-colors"
+            style={{
+              background: '#D4AF37'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#B8941F';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#D4AF37';
+            }}
           >
             Simuler Mon Investissement CIOP
           </Link>
@@ -490,7 +499,16 @@ const BatimentsMultiples = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/#contact-form"
-              className="inline-block bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gold-600 transition-colors"
+              className="inline-block text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+              style={{
+                background: '#D4AF37'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#B8941F';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = '#D4AF37';
+              }}
             >
               Recevoir une Étude Personnalisée
             </a>

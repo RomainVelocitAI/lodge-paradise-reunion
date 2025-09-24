@@ -104,8 +104,17 @@ const Header = () => {
               </Link>
               <a
                 href="#contact"
-                className="bg-gold-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-gold-600 transition-all duration-300 transform hover:scale-105"
-                style={{ textDecoration: 'none' }}
+                className="text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                style={{
+                  textDecoration: 'none',
+                  background: '#D4AF37'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#B8941F';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#D4AF37';
+                }}
               >
                 Contact
               </a>
@@ -115,8 +124,17 @@ const Header = () => {
           {isMobile && (
             <a
               href="#contact"
-              className="bg-gold-500 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gold-600 transition-all duration-300"
-              style={{ textDecoration: 'none' }}
+              className="text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300"
+              style={{
+                textDecoration: 'none',
+                background: '#D4AF37'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#B8941F';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = '#D4AF37';
+              }}
             >
               Contact
             </a>

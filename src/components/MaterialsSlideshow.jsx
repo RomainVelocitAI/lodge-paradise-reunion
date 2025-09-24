@@ -90,7 +90,16 @@ const MaterialsSlideshow = () => {
         <div className="text-center mt-12">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            style={{
+              background: '#D4AF37'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#B8941F';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#D4AF37';
+            }}
           >
             Commencez votre projet d'investissement
           </a>

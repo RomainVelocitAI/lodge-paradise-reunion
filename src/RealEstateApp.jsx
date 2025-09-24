@@ -680,7 +680,7 @@ function RealEstateApp() {
                   }}
                 ></textarea>
                 <button type="submit" style={{
-                  background: 'linear-gradient(135deg, #D4AF37, #BF9830)',
+                  background: '#D4AF37',
                   color: 'white',
                   padding: '1rem',
                   border: 'none',
@@ -693,10 +693,12 @@ function RealEstateApp() {
                   boxShadow: '0 4px 15px rgba(212, 175, 55, 0.3)'
                 }}
                 onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#B8941F';
                   e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)';
                   e.currentTarget.style.boxShadow = '0 6px 20px rgba(212, 175, 55, 0.4)';
                 }}
                 onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#D4AF37';
                   e.currentTarget.style.transform = 'translateY(0) scale(1)';
                   e.currentTarget.style.boxShadow = '0 4px 15px rgba(212, 175, 55, 0.3)';
                 }}>

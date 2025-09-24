@@ -222,9 +222,22 @@ const InvestissementDefiscalisation = () => {
                         onClick={() => setTaxRate(rate)}
                         className={`py-3 px-4 rounded-lg font-medium transition-all ${
                           taxRate === rate
-                            ? 'bg-purple-500 text-white shadow-lg'
-                            : 'bg-white text-gray-700 hover:bg-purple-100'
+                            ? 'text-white shadow-lg'
+                            : 'bg-white text-gray-700 hover:bg-gold-50'
                         }`}
+                        style={{
+                          background: taxRate === rate ? '#D4AF37' : undefined
+                        }}
+                        onMouseEnter={(e) => {
+                          if (taxRate === rate) {
+                            e.currentTarget.style.background = '#B8941F';
+                          }
+                        }}
+                        onMouseLeave={(e) => {
+                          if (taxRate === rate) {
+                            e.currentTarget.style.background = '#D4AF37';
+                          }
+                        }}
                       >
                         {rate}%
                       </button>

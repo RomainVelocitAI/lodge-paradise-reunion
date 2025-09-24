@@ -75,7 +75,16 @@ const NosProjets = () => {
                 </div>
                 <Link
                   to="/villas-premium"
-                  className="inline-block bg-gold-500 text-white px-8 py-3 rounded-lg hover:bg-gold-600 transition-colors"
+                  className="inline-block text-white px-8 py-3 rounded-lg transition-colors"
+                  style={{
+                    background: '#D4AF37'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#B8941F';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = '#D4AF37';
+                  }}
                 >
                   Découvrir nos Villas Premium
                 </Link>
@@ -134,7 +143,16 @@ const NosProjets = () => {
                 </div>
                 <Link
                   to="/maisons-3-facades"
-                  className="inline-block bg-gold-500 text-white px-8 py-3 rounded-lg hover:bg-gold-600 transition-colors"
+                  className="inline-block text-white px-8 py-3 rounded-lg transition-colors"
+                  style={{
+                    background: '#D4AF37'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#B8941F';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = '#D4AF37';
+                  }}
                 >
                   Découvrir nos Maisons 3 Façades
                 </Link>
@@ -177,7 +195,16 @@ const NosProjets = () => {
                 </div>
                 <Link
                   to="/batiments-multiples"
-                  className="inline-block bg-gold-500 text-white px-8 py-3 rounded-lg hover:bg-gold-600 transition-colors"
+                  className="inline-block text-white px-8 py-3 rounded-lg transition-colors"
+                  style={{
+                    background: '#D4AF37'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#B8941F';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = '#D4AF37';
+                  }}
                 >
                   Découvrir nos Programmes Multiples
                 </Link>
@@ -206,7 +233,16 @@ const NosProjets = () => {
           </p>
           <a
             href="/#contact-form"
-            className="inline-block bg-gold-500 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gold-600 transition-colors"
+            className="inline-block text-white px-10 py-4 rounded-lg text-lg font-semibold transition-colors"
+            style={{
+              background: '#D4AF37'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#B8941F';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#D4AF37';
+            }}
           >
             Demander un Devis Gratuit
           </a>

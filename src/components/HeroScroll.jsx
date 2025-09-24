@@ -93,7 +93,19 @@ const HeroSection = ({ scrollYProgress }) => {
           transition={{ delay: 0.9, duration: 0.8 }}
           className="flex justify-center mb-12"
         >
-          <a href="#contact" className="px-8 py-4 bg-gold-500 text-white rounded-lg font-semibold text-lg hover:bg-gold-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <a
+            href="#contact"
+            className="px-8 py-4 text-white rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            style={{
+              background: '#D4AF37'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#B8941F';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#D4AF37';
+            }}
+          >
             Prendre RDV
           </a>
         </motion.div>
@@ -261,7 +273,16 @@ const EnterpriseSection = ({ scrollYProgress }) => {
             >
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                style={{
+                  background: '#D4AF37'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#B8941F';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#D4AF37';
+                }}
               >
                 Découvrez votre potentiel d'investissement
               </a>
