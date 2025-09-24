@@ -39,7 +39,7 @@ const MaterialsSlideshow = () => {
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-8">
         <div className="text-center mb-12">
-          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider">NOTRE APPROCHE</span>
+          <span className="text-gold-500 font-bold text-xl uppercase tracking-wider">NOTRE APPROCHE</span>
           <h2 className="text-5xl font-bold mt-4 text-gray-900">
             Votre Investissement Clé en Main
           </h2>

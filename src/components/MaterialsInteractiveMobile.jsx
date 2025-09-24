@@ -64,7 +64,7 @@ const MaterialsInteractiveMobile = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4 block">
+          <span className="text-gold-500 font-bold text-xl uppercase tracking-wider mb-4 block">
             NOS MATÉRIAUX D'EXCEPTION
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">

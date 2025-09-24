@@ -48,7 +48,7 @@ const MaterialsSlideshowMobile = () => {
     }}>
       <div className="container mx-auto px-4" style={{ maxWidth: '800px' }}>
         <div className="text-center mb-10">
-          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider block mb-3">NOTRE APPROCHE</span>
+          <span className="text-gold-500 font-bold text-xl uppercase tracking-wider block mb-3">NOTRE APPROCHE</span>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Votre Investissement<br/>Clé en Main
           </h2>

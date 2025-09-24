@@ -75,9 +75,10 @@ function RealEstateApp() {
             </div>
             {!isMobile && (
               <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                <Link to="/nos-projets" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Nos Lodges</Link>
-                <Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Prestations</Link>
-                <Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Fiscalité</Link>
+                <Link to="/nos-projets" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Catalogue</Link>
+                <Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Matériaux</Link>
+                <Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Implantations</Link>
+                <Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Investir</Link>
                 <a href="#contact"
                   className="bg-gold-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-gold-600 transition-all duration-300 transform hover:scale-105"
                   style={{ textDecoration: 'none' }}>Contact</a>
@@ -297,8 +298,8 @@ function RealEstateApp() {
             }}>
               <span style={{ 
                 color: '#0a0f1c', 
-                fontWeight: '600', 
-                fontSize: '0.875rem', 
+                fontWeight: '700',
+                fontSize: '1.25rem',
                 textTransform: 'uppercase', 
                 letterSpacing: '0.1em',
                 display: 'block',
@@ -609,7 +610,7 @@ function RealEstateApp() {
       <section id="contact" className="section" style={{ padding: '5rem 0', background: 'white' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <span style={{ color: '#D4AF37', fontWeight: '600', fontSize: '0.875rem' }}>CONTACT</span>
+            <span style={{ color: '#D4AF37', fontWeight: '700', fontSize: '1.25rem' }}>CONTACT</span>
             <h2 style={{ fontSize: '2.5rem', marginTop: '1rem' }}>
               Concrétisez Votre Projet Immobilier
             </h2>

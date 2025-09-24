@@ -82,7 +82,7 @@ const MaterialsInteractive = () => {
       <div className="container mx-auto px-8">
         {/* Header Section */}
         <div className="w-full max-w-4xl mx-auto px-6 mb-8 text-center">
-          <span className="text-gold-500 font-semibold text-sm uppercase tracking-wider mb-4 block animate-fadeInTop delay-300">
+          <span className="text-gold-500 font-bold text-xl uppercase tracking-wider mb-4 block animate-fadeInTop delay-300">
             NOS MATÉRIAUX D'EXCEPTION
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight drop-shadow-lg animate-fadeInTop delay-300">
