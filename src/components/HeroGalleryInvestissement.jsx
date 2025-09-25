@@ -13,7 +13,7 @@ const HeroGalleryInvestissement = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const title = "Investissement & Défiscalisation";
+  const title = "Votre Investissement & Défiscalisation";
   const subtitle = "Optimisez votre patrimoine avec nos solutions clés en main";
   
   const images = [

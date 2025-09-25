@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as Icons from 'lucide-react';
 const { MapPin, Phone, Mail, Clock, Send, Check } = Icons;
 import './Contact.css';
@@ -13,6 +13,23 @@ const Contact = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isEurope, setIsEurope] = useState(false);
+
+  useEffect(() => {
+    // Détection de la géolocalisation basée sur l'IP
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        // Si le continent est Europe OU si le pays n'est pas La Réunion
+        if (data.continent_code === 'EU' || (data.country_code !== 'RE' && data.country !== 'Réunion')) {
+          setIsEurope(true);
+        }
+      })
+      .catch(error => {
+        console.log('Erreur géolocalisation:', error);
+        // En cas d'erreur, on reste sur le contact Réunion par défaut
+      });
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -43,26 +60,26 @@ const Contact = () => {
     {
       icon: <MapPin size={20} />,
       title: "Adresse",
-      content: "2 rue Jean Paul Sartre",
-      subtitle: "97419 La Possession, La Réunion"
+      content: isEurope ? "Avenue Gouverneur Bovesse 112, Boîte 17" : "8, ruelle boulot",
+      subtitle: isEurope ? "5100 Jambes-Namur, Belgique" : "97400 SAINT-DENIS, La Réunion"
     },
     {
       icon: <Phone size={20} />,
       title: "Téléphone",
-      content: "0262 66 79 88",
-      subtitle: "Disponible 7j/7"
+      content: isEurope ? "+32 81 68 04 41" : "+262(0)262 667988",
+      subtitle: "Sur rendez-vous"
     },
     {
       icon: <Mail size={20} />,
       title: "Email",
-      content: "contact@lodgesparadise.com",
+      content: "info@lodgesparadise.com",
       subtitle: "Réponse sous 24h"
     },
     {
       icon: <Clock size={20} />,
       title: "Horaires",
-      content: "Lun - Dim : 8h - 20h",
-      subtitle: "Service conciergerie 24/7"
+      content: "Lun - Sam : 9h - 18h",
+      subtitle: "Bureau de Vente sur RDV"
     }
   ];
 
@@ -192,9 +209,9 @@ const Contact = () => {
             </div>
 
             <div className="contact-cta">
-              <h4>Réservation urgente ?</h4>
+              <h4>Contact urgent ?</h4>
               <p>Appelez-nous directement pour une assistance immédiate</p>
-              <a href="tel:+262262667988" className="btn btn-primary">
+              <a href={isEurope ? "tel:+3281680441" : "tel:+262262667988"} className="btn btn-primary">
                 <Phone size={20} />
                 Appeler maintenant
               </a>

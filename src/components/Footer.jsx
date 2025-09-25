@@ -27,11 +27,11 @@ const Footer = () => {
     {
       title: "Navigation",
       links: [
-        { label: "Accueil", href: "#hero" },
-        { label: "Nos Projets", href: "/nos-projets" },
-        { label: "Zones d'Implantation", href: "/zones-implantation" },
-        { label: "Matériaux Nobles", href: "/materiaux-nobles" },
-        { label: "Investissement", href: "/investissement-defiscalisation" }
+        { label: "Accueil", href: "/" },
+        { label: "Catalogue", href: "/nos-projets" },
+        { label: "Matériaux", href: "/materiaux-nobles" },
+        { label: "Implantations", href: "/zones-implantation" },
+        { label: "Fiscalité", href: "/investissement-defiscalisation" }
       ]
     },
     {

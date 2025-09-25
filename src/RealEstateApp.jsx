@@ -373,11 +373,12 @@ function RealEstateApp() {
                     fontSize: '1.5rem',
                     fontWeight: 'bold'
                   }}>O</span>
-                  Zone Ouest - Côte sous le vent
+                  Zone Ouest - Côte privilégiée et ensoleillée
                 </h3>
                 <p style={{ color: '#4b5563', fontSize: '1.125rem', marginBottom: '2rem', lineHeight: '1.8' }}>
-                  Le littoral ouest représente le cœur touristique et résidentiel premium de La Réunion. 
+                  Le littoral ouest représente le cœur touristique et résidentiel premium de La Réunion.
                   Cette zone bénéficie d'un ensoleillement exceptionnel et abrite les plus belles plages de l'île.
+                  <br />
                   <strong>De La Possession à Saint-Leu</strong>, un territoire d'exception pour votre investissement.
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', gap: isMobile ? '1rem' : '2rem', marginBottom: '2rem' }}>
@@ -490,8 +491,9 @@ function RealEstateApp() {
                   Zone Sud - Dynamisme et expansion
                 </h3>
                 <p style={{ color: '#4b5563', fontSize: '1.125rem', marginBottom: '2rem', lineHeight: '1.8' }}>
-                  Le sud de l'île connaît une croissance exceptionnelle portée par le développement économique 
+                  Le sud de l'île connaît une croissance exceptionnelle portée par le développement économique
                   et l'expansion urbaine. Cette zone offre un excellent rapport qualité-prix pour les investisseurs.
+                  <br />
                   <strong>De l'Étang-Salé à Saint-Philippe</strong>, un territoire en pleine expansion.
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', gap: isMobile ? '1rem' : '2rem', marginBottom: '2rem' }}>

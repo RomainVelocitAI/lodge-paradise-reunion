@@ -14,7 +14,7 @@ const HeroGalleryProjets = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const title = "Nos Projets";
+  const title = "Notre Catalogue";
   const subtitle = "Découvrez nos réalisations exceptionnelles à La Réunion";
   
   const images = [

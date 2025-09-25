@@ -13,7 +13,7 @@ const HeroGalleryMateriaux = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const title = "Matériaux Nobles";
+  const title = "Nos Matériaux";
   const subtitle = "Excellence et durabilité pour vos projets d'exception";
   
   const images = [

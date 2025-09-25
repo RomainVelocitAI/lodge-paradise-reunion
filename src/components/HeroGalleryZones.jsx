@@ -13,7 +13,7 @@ const HeroGalleryZones = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const title = "Zones d'Implantation";
+  const title = "Nos Zones d'Implantation";
   const subtitle = "Découvrez les meilleurs emplacements de l'Ouest et du Sud de La Réunion";
   
   const images = [

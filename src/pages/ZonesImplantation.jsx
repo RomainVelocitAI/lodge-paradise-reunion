@@ -117,6 +117,33 @@ const ZonesImplantation = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-16 bg-gold-50">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6 text-primary-900">Trouvez l'Emplacement Idéal pour Votre Lodge</h2>
+          <p className="text-xl mb-8 text-gray-800 font-medium">
+            Nos experts connaissent parfaitement chaque zone et ses spécificités.
+            <br />
+            Contactez-nous pour une visite personnalisée des terrains disponibles.
+          </p>
+          <a
+            href="/#contact-form"
+            className="inline-block text-white px-10 py-4 rounded-lg text-lg font-semibold transition-colors"
+            style={{
+              background: '#D4AF37'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#B8941F';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#D4AF37';
+            }}
+          >
+            Demander un Devis Gratuit
+          </a>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

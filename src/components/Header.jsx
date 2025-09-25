@@ -100,7 +100,7 @@ const Header = () => {
                   fontWeight: isActive('/investissement-defiscalisation') ? '600' : '500'
                 }}
               >
-                Investir
+                Fiscalité
               </Link>
               <a
                 href="#contact"
