@@ -177,7 +177,7 @@ const MateriauxNobles = () => {
             Contactez-nous pour découvrir notre sélection complète et obtenir un devis personnalisé.
           </p>
           <a
-            href="/#contact-form"
+            href="/#contact"
             className="inline-block text-white px-10 py-4 rounded-lg text-lg font-semibold transition-colors"
             style={{
               background: '#D4AF37'

@@ -309,7 +309,7 @@ const InvestissementDefiscalisation = () => {
                   </div>
                 </div>
 
-                <a href="/#contact-form" className="block w-full mt-6 bg-gradient-to-r from-purple-500 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg text-center">
+                <a href="/#contact" className="block w-full mt-6 bg-gradient-to-r from-purple-500 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg text-center">
                   Demander une Étude Personnalisée
                 </a>
               </div>
@@ -536,7 +536,7 @@ const InvestissementDefiscalisation = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/#contact-form"
+                  href="/#contact"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
                 >
                   Demander un RDV

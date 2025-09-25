@@ -232,7 +232,7 @@ const NosProjets = () => {
             Contactez-nous pour une étude personnalisée de votre projet.
           </p>
           <a
-            href="/#contact-form"
+            href="/#contact"
             className="inline-block text-white px-10 py-4 rounded-lg text-lg font-semibold transition-colors"
             style={{
               background: '#D4AF37'
