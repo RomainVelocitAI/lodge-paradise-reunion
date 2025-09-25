@@ -11,6 +11,7 @@ import MaterialsInteractive from './components/MaterialsInteractive';
 import MaterialsInteractiveMobile from './components/MaterialsInteractiveMobile';
 import DefiscalisationSection from './components/DefiscalisationSection';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 function RealEstateApp() {
   const [selectedImage, setSelectedImage] = useState(0);
@@ -554,8 +555,23 @@ function RealEstateApp() {
       <DefiscalisationSection /> */}
 
 
-      {/* Section Contact Immobilier */}
-      <section id="contact" className="section" style={{ padding: '5rem 0', background: 'white' }}>
+      {/* Section Contact - Utilisation du composant Contact avec logique IP */}
+      <Contact />
+
+      {/* Footer */}
+      <Footer />
+
+      <style>{`
+        @keyframes bounce {
+          0%, 100% { transform: translateX(-50%) translateY(0); }
+          50% { transform: translateX(-50%) translateY(-10px); }
+        }
+      `}</style>
+    </div>
+  );
+}
+
+export default RealEstateApp; className="section" style={{ padding: '5rem 0', background: 'white' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <span style={{ color: '#D4AF37', fontWeight: '700', fontSize: '1.25rem' }}>CONTACT</span>
@@ -650,54 +666,3 @@ function RealEstateApp() {
                   e.currentTarget.style.transform = 'translateY(0) scale(1)';
                   e.currentTarget.style.boxShadow = '0 4px 15px rgba(212, 175, 55, 0.3)';
                 }}>
-                  Demander une brochure
-                </button>
-              </form>
-            </div>
-            
-            <div>
-              <h3 style={{ marginBottom: '1.5rem' }}>Bureau de Vente</h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <div>
-                  <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Adresse</strong><br />
-                  2 rue Jean Paul Sartre<br />
-                  97419 La Possession<br />
-                  La Réunion
-                </div>
-                <div>
-                  <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Téléphone</strong><br />
-                  <a href="tel:+262262667988" style={{ color: '#374151', fontSize: '1.25rem', fontWeight: '600' }}>
-                    0262 66 79 88
-                  </a>
-                </div>
-                <div>
-                  <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Email</strong><br />
-                  <a href="mailto:Info@lodgesparadise.com" style={{ color: '#374151' }}>
-                    Info@lodgesparadise.com
-                  </a>
-                </div>
-                <div>
-                  <strong style={{ color: '#D4AF37', textTransform: 'uppercase', fontSize: '0.875rem', letterSpacing: '0.05em' }}>Horaires Bureau de Vente</strong><br />
-                  Lundi - Samedi : 9h - 18h<br />
-                  <span style={{ color: '#D4AF37', fontWeight: '600' }}>Sur rendez-vous</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <Footer />
-
-      <style>{`
-        @keyframes bounce {
-          0%, 100% { transform: translateX(-50%) translateY(0); }
-          50% { transform: translateX(-50%) translateY(-10px); }
-        }
-      `}</style>
-    </div>
-  );
-}
-
-export default RealEstateApp;
