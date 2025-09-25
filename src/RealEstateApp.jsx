@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header';
 import HeroScroll from './components/HeroScroll';
 import MaterialsSlideshow from './components/MaterialsSlideshow';
 import MaterialsSlideshowMobile from './components/MaterialsSlideshowMobile';
@@ -36,62 +37,7 @@ function RealEstateApp() {
 
   return (
     <div className="App">
-      {/* Header */}
-      <header className="header" style={{ 
-        position: 'fixed', 
-        top: 0, 
-        left: 0, 
-        right: 0, 
-        background: 'white', 
-        boxShadow: '0 2px 20px rgba(0,0,0,0.08)', 
-        zIndex: 1000,
-        padding: isMobile ? '0.75rem 0' : '1rem 0'
-      }}>
-        <div className="container" style={{ padding: isMobile ? '0 1rem' : '0 2rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '1rem' }}>
-              <img 
-                src="/logo.jpg" 
-                alt="Lodges Paradise" 
-                style={{ 
-                  height: isMobile ? '40px' : '50px', 
-                  width: isMobile ? '40px' : '50px', 
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }} 
-              />
-              <div>
-                <h2 style={{ 
-                  margin: 0, 
-                  color: '#0a0f1c',
-                  fontSize: isMobile ? '1.25rem' : '1.75rem',
-                  fontWeight: '700',
-                  letterSpacing: '0.05em'
-                }}>
-                  LODGES PARADISE
-                </h2>
-                {!isMobile && <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>Votre Paradis Tropical à La Réunion</span>}
-              </div>
-            </div>
-            {!isMobile && (
-              <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                <Link to="/nos-projets" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Catalogue</Link>
-                <Link to="/materiaux-nobles" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Matériaux</Link>
-                <Link to="/zones-implantation" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Implantations</Link>
-                <Link to="/investissement-defiscalisation" style={{ textDecoration: 'none', color: '#374151', fontWeight: '500' }}>Investir</Link>
-                <a href="#contact"
-                  className="bg-gold-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-gold-600 transition-all duration-300 transform hover:scale-105"
-                  style={{ textDecoration: 'none' }}>Contact</a>
-              </nav>
-            )}
-            {isMobile && (
-              <a href="#contact"
-                className="bg-gold-500 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gold-600 transition-all duration-300"
-                style={{ textDecoration: 'none' }}>Contact</a>
-            )}
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Nouveau Hero avec animation de scroll */}
       <HeroScroll />
