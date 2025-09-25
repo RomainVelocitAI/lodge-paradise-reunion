@@ -61,7 +61,7 @@ const Contact = () => {
       icon: <MapPin size={20} />,
       title: "Adresse",
       content: isEurope ? "Avenue Gouverneur Bovesse 112, Boîte 17" : "8, ruelle boulot",
-      subtitle: isEurope ? "5100 Jambes-Namur, Belgique" : "97400 SAINT-DENIS, La Réunion"
+      subtitle: isEurope ? "5100 Jambes-Namur, Belgique" : "97 400 SAINT-DENIS, La Réunion"
     },
     {
       icon: <Phone size={20} />,
