@@ -5,21 +5,25 @@ import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [isEurope, setIsEurope] = useState(false);
+  const [location, setLocation] = useState('reunion'); // 'reunion', 'france', 'belgique'
 
   useEffect(() => {
     // Détection de la géolocalisation basée sur l'IP
     fetch('https://ipapi.co/json/')
       .then(response => response.json())
       .then(data => {
-        // Si le continent est Europe OU si le pays n'est pas La Réunion
-        if (data.continent_code === 'EU' || (data.country_code !== 'RE' && data.country !== 'Réunion')) {
-          setIsEurope(true);
+        // Détection selon le pays
+        if (data.country_code === 'BE') {
+          setLocation('belgique');
+        } else if (data.country_code === 'FR' && data.region !== 'Réunion' && data.region !== 'La Réunion') {
+          setLocation('france');
+        } else {
+          setLocation('reunion'); // Réunion et reste du monde
         }
       })
       .catch(error => {
         console.log('Erreur géolocalisation:', error);
-        // En cas d'erreur, on reste sur le footer Réunion par défaut
+        // En cas d'erreur, on reste sur Réunion par défaut
       });
   }, []);
 
@@ -213,12 +217,15 @@ const Footer = () => {
             }}>
               <MapPin size={18} style={{ color: '#D4AF37', flexShrink: 0, marginTop: '2px' }} />
               <span style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                {isEurope ? (
+                {location === 'belgique' ? (
                   <>
-                    Avenue Gouverneur Bovesse 112<br />
-                    Boîte 17<br />
+                    <strong style={{ color: '#D4AF37' }}>Belgique :</strong><br />
+                    Avenue G. Bovesse 112 bte 17<br />
                     5100 Jambes-Namur<br />
-                    Belgique
+                    <br />
+                    <strong style={{ color: '#D4AF37' }}>La Réunion :</strong><br />
+                    8, ruelle boulot<br />
+                    97 400 SAINT-DENIS
                   </>
                 ) : (
                   <>
@@ -237,31 +244,73 @@ const Footer = () => {
               marginBottom: '15px'
             }}>
               <Phone size={18} style={{ color: '#D4AF37', flexShrink: 0 }} />
-              {isEurope ? (
-                <a href="tel:+3281680441" style={{
-                  color: '#94a3b8',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.3s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
-                >
-                  +32 81 68 04 41
-                </a>
-              ) : (
-                <a href="tel:+262262667988" style={{
-                  color: '#94a3b8',
-                  textDecoration: 'none',
-                  fontSize: '0.95rem',
-                  transition: 'color 0.3s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
-                >
-                  +262(0)262 667988
-                </a>
-              )}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {location === 'france' && (
+                  <>
+                    <a href="tel:+262262667988" style={{
+                      color: '#94a3b8',
+                      textDecoration: 'none',
+                      fontSize: '0.95rem',
+                      transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
+                    >
+                      <strong>Réunion :</strong> +262(0)262 667988
+                    </a>
+                    <a href="tel:+33554544795" style={{
+                      color: '#94a3b8',
+                      textDecoration: 'none',
+                      fontSize: '0.95rem',
+                      transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
+                    >
+                      <strong>France :</strong> +33(0)5 54544795
+                    </a>
+                  </>
+                )}
+                {location === 'belgique' && (
+                  <>
+                    <a href="tel:+262262667988" style={{
+                      color: '#94a3b8',
+                      textDecoration: 'none',
+                      fontSize: '0.95rem',
+                      transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
+                    >
+                      <strong>Réunion :</strong> +262(0)262 667988
+                    </a>
+                    <a href="tel:+3281680441" style={{
+                      color: '#94a3b8',
+                      textDecoration: 'none',
+                      fontSize: '0.95rem',
+                      transition: 'color 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
+                    >
+                      <strong>Belgique :</strong> +32(0)81 680441
+                    </a>
+                  </>
+                )}
+                {location === 'reunion' && (
+                  <a href="tel:+262262667988" style={{
+                    color: '#94a3b8',
+                    textDecoration: 'none',
+                    fontSize: '0.95rem',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#D4AF37'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
+                  >
+                    +262(0)262 667988
+                  </a>
+                )}
+              </div>
             </div>
             
             <div className="contact-item" style={{

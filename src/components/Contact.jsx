@@ -13,21 +13,25 @@ const Contact = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isEurope, setIsEurope] = useState(false);
+  const [location, setLocation] = useState('reunion'); // 'reunion', 'france', 'belgique'
 
   useEffect(() => {
     // Détection de la géolocalisation basée sur l'IP
     fetch('https://ipapi.co/json/')
       .then(response => response.json())
       .then(data => {
-        // Si le continent est Europe OU si le pays n'est pas La Réunion
-        if (data.continent_code === 'EU' || (data.country_code !== 'RE' && data.country !== 'Réunion')) {
-          setIsEurope(true);
+        // Détection selon le pays
+        if (data.country_code === 'BE') {
+          setLocation('belgique');
+        } else if (data.country_code === 'FR' && data.region !== 'Réunion' && data.region !== 'La Réunion') {
+          setLocation('france');
+        } else {
+          setLocation('reunion'); // Réunion et reste du monde
         }
       })
       .catch(error => {
         console.log('Erreur géolocalisation:', error);
-        // En cas d'erreur, on reste sur le contact Réunion par défaut
+        // En cas d'erreur, on reste sur Réunion par défaut
       });
   }, []);
 
@@ -56,17 +60,47 @@ const Contact = () => {
     }, 500);
   };
 
+  const getContactInfo = () => {
+    let addressContent, addressSubtitle, phoneContent;
+
+    if (location === 'belgique') {
+      addressContent = [
+        { label: "Belgique :", value: "Avenue G. Bovesse 112 bte 17, 5100 Jambes-Namur" },
+        { label: "La Réunion :", value: "8, ruelle boulot, 97 400 SAINT-DENIS" }
+      ];
+      phoneContent = [
+        { label: "Réunion :", value: "+262(0)262 667988", href: "tel:+262262667988" },
+        { label: "Belgique :", value: "+32(0)81 680441", href: "tel:+3281680441" }
+      ];
+    } else if (location === 'france') {
+      addressContent = "8, ruelle boulot";
+      addressSubtitle = "97 400 SAINT-DENIS, La Réunion";
+      phoneContent = [
+        { label: "Réunion :", value: "+262(0)262 667988", href: "tel:+262262667988" },
+        { label: "France :", value: "+33(0)5 54544795", href: "tel:+33554544795" }
+      ];
+    } else {
+      addressContent = "8, ruelle boulot";
+      addressSubtitle = "97 400 SAINT-DENIS, La Réunion";
+      phoneContent = "+262(0)262 667988";
+    }
+
+    return { addressContent, addressSubtitle, phoneContent };
+  };
+
+  const { addressContent, addressSubtitle, phoneContent } = getContactInfo();
+
   const contactInfo = [
     {
       icon: <MapPin size={20} />,
       title: "Adresse",
-      content: isEurope ? "Avenue Gouverneur Bovesse 112, Boîte 17" : "8, ruelle boulot",
-      subtitle: isEurope ? "5100 Jambes-Namur, Belgique" : "97 400 SAINT-DENIS, La Réunion"
+      content: addressContent,
+      subtitle: addressSubtitle
     },
     {
       icon: <Phone size={20} />,
       title: "Téléphone",
-      content: isEurope ? "+32 81 68 04 41" : "+262(0)262 667988",
+      content: phoneContent,
       subtitle: "Sur rendez-vous"
     },
     {
@@ -201,8 +235,27 @@ const Contact = () => {
                   </div>
                   <div className="info-content">
                     <h4>{info.title}</h4>
-                    <p className="info-main">{info.content}</p>
-                    <p className="info-sub">{info.subtitle}</p>
+                    {Array.isArray(info.content) ? (
+                      info.content.map((item, idx) => (
+                        <div key={idx} style={{ marginBottom: idx < info.content.length - 1 ? '8px' : '0' }}>
+                          {item.href ? (
+                            <p className="info-main">
+                              <strong>{item.label}</strong>
+                              <a href={item.href} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                {item.value}
+                              </a>
+                            </p>
+                          ) : (
+                            <p className="info-main">
+                              <strong>{item.label}</strong> {item.value}
+                            </p>
+                          )}
+                        </div>
+                      ))
+                    ) : (
+                      <p className="info-main">{info.content}</p>
+                    )}
+                    {info.subtitle && <p className="info-sub">{info.subtitle}</p>}
                   </div>
                 </div>
               ))}
@@ -211,7 +264,7 @@ const Contact = () => {
             <div className="contact-cta">
               <h4>Contact urgent ?</h4>
               <p>Appelez-nous directement pour une assistance immédiate</p>
-              <a href={isEurope ? "tel:+3281680441" : "tel:+262262667988"} className="btn btn-primary">
+              <a href={location === 'belgique' ? "tel:+3281680441" : location === 'france' ? "tel:+33554544795" : "tel:+262262667988"} className="btn btn-primary">
                 <Phone size={20} />
                 Appeler maintenant
               </a>
